@@ -1,0 +1,45 @@
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { LOCALES, LOCALE_LABELS, DEFAULT_LOCALE, type Locale } from '@/lib/i18n';
+
+/** Strip any leading locale segment so we have a "naked" path to re-prefix. */
+function stripLocale(pathname: string): string {
+  const match = pathname.match(/^\/(fr|ar)(\/.*)?$/);
+  if (match) return match[2] || '/';
+  return pathname || '/';
+}
+
+function pathForLocale(locale: Locale, basePath: string): string {
+  const clean = basePath.startsWith('/') ? basePath : `/${basePath}`;
+  return locale === DEFAULT_LOCALE ? clean : `/${locale}${clean}`;
+}
+
+export function LocaleSwitcher({ currentLocale }: { currentLocale: Locale }) {
+  const pathname = usePathname() || '/';
+  const naked = stripLocale(pathname);
+
+  return (
+    <details className="group relative">
+      <summary className="cursor-pointer list-none rounded-full border border-brand-night/20 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-night hover:border-brand-terracotta">
+        {currentLocale}
+      </summary>
+      <ul className="absolute right-0 z-10 mt-2 w-36 rounded-md border border-brand-night/10 bg-white p-1 shadow-lg">
+        {LOCALES.map((l) => (
+          <li key={l}>
+            <Link
+              hrefLang={l}
+              href={pathForLocale(l, naked)}
+              className={`block rounded px-3 py-2 text-sm hover:bg-brand-cream ${
+                l === currentLocale ? 'font-semibold text-brand-terracotta' : ''
+              }`}
+            >
+              {LOCALE_LABELS[l]}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </details>
+  );
+}

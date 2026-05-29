@@ -117,7 +117,7 @@ export function RentACarView({ locale }: { locale: Locale }) {
   return (
     <>
       <JsonLd id="ld-autorental" data={CAR_RENTAL_JSONLD} />
-      <JsonLd id="ld-faq-cars" data={faqJsonLd(FAQS[locale])} />
+      <JsonLd id="ld-faq-cars" data={faqJsonLd(FAQS[locale], locale)} />
       <JsonLd
         id="ld-breadcrumb-cars"
         data={breadcrumbJsonLd([

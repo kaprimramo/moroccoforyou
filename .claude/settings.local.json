@@ -6,7 +6,22 @@
       "Bash(node_modules/.bin/next *)",
       "Bash(node_modules/.bin/tsc --noEmit)",
       "Bash(npm view *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)",
+      "WebFetch(domain:www.pexels.com)",
+      "WebFetch(domain:images.pexels.com)",
+      "PowerShell(npx tsc --noEmit 2>&1 | Select-Object -First 60)",
+      "PowerShell(npm run *)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(npx vercel --version 2>&1)",
+      "PowerShell(npx vercel whoami 2>&1)",
+      "PowerShell(npx vercel --prod --yes 2>&1 | Select-Object -Last 40)",
+      "PowerShell(npx vercel --prod --yes 2>&1 | Select-Object -Last 15)",
+      "PowerShell(curl.exe -s \"https://www.moroccoforyou.com/robots.txt\" 2>$null2)",
+      "PowerShell(curl.exe -s \"https://www.moroccoforyou.com/robots.txt\" 2>$null)",
+      "PowerShell(New-Item *)",
+      "PowerShell(curl.exe -s \"https://www.moroccoforyou.com/36811f9c07ed4ff1ad49d782e547ab27.txt\" 2>$null)"
     ]
   }
 }

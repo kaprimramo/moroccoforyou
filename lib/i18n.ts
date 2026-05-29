@@ -15,7 +15,10 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   ar: 'العربية',
 };
 
-export const SITE_URL = 'https://moroccoforyou.com';
+// Canonical host. The Vercel project 301-redirects the apex (moroccoforyou.com)
+// to the www subdomain, so every canonical, sitemap entry, OG URL and JSON-LD
+// link must use www to avoid Google Search Console "Redirect error".
+export const SITE_URL = 'https://www.moroccoforyou.com';
 
 export function localizedUrl(locale: Locale, path: string): string {
   const clean = path.startsWith('/') ? path : `/${path}`;

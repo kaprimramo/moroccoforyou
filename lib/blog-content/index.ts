@@ -1,0 +1,14 @@
+// Side-effect imports. Each file registers its EN/FR/AR posts into
+// BLOG_POSTS by calling `BLOG_POSTS.push(...)`. Importing this barrel from a
+// page (or from `lib/blog.ts`) triggers registration once at module load.
+
+import './01-how-many-days';
+import './02-first-time-tips';
+import './03-solo-female';
+import './04-marrakech-street-food';
+import './05-itinerary-10-days-budget';
+import './06-best-beaches';
+import './07-marrakech-to-chefchaouen';
+import './08-dress-code';
+import './09-fes-self-guided';
+import './10-rent-a-car-tips';

@@ -1,100 +1,48 @@
 /**
- * Image URLs hotlink to Unsplash's public CDN. Free for any use under the
- * Unsplash License (https://unsplash.com/license). Photo IDs were chosen to
- * roughly match each destination — replace any that don't fit your brand.
- *
- * The width query param controls served resolution. We default to 1600 for
- * heroes and 800 for gallery thumbs.
+ * Hero and gallery images for each destination, served from Pexels' free CDN.
+ * Pexels images are free for any use under the Pexels License
+ * (https://www.pexels.com/license/). IDs below were sourced directly from
+ * Pexels search results for each Moroccan city, so each photo is specific to
+ * the destination it represents.
  */
 
-function u(id: string, w = 1600): string {
-  return `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`;
+function p(id: number, w = 1600): string {
+  return `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
 }
 
-export const HERO_HOMEPAGE = u('1489493512598-d08130f49bea');
+// Atlas mountains / kasbah at sunset — Morocco wide
+export const HERO_HOMEPAGE = p(10551201);
 
 export const HERO_BY_SLUG: Record<string, string> = {
-  marrakech: u('1597212618440-806262de4f6b'),
-  fes: u('1539020140153-e479b8c22e70'),
-  chefchaouen: u('1548013146-72479768bada'),
-  'sahara-merzouga': u('1547235001-d703406d3a89'),
-  casablanca: u('1577084219074-7e3691e6ab50'),
-  essaouira: u('1591012040290-3c12dcf41a91'),
-  tangier: u('1576081793525-7e8c1be51d65'),
-  rabat: u('1583062828094-fb7d70d75f3c'),
-  agadir: u('1572252009286-268acec5ca0a'),
-  'ait-ben-haddou': u('1585129777188-94600bc7ee76'),
-  ouarzazate: u('1542340000-3ed10c5db8f1'),
-  'atlas-imlil': u('1545569341-9eb8b30979d9'),
-  dakhla: u('1604999333679-b86d54738315'),
+  marrakech: p(30124130),
+  fes: p(5472532),
+  chefchaouen: p(9422948),
+  'sahara-merzouga': p(4694737),
+  casablanca: p(36467138),
+  essaouira: p(6655418),
+  tangier: p(30355061),
+  rabat: p(30532042),
+  agadir: p(18841386),
+  'ait-ben-haddou': p(13811651),
+  ouarzazate: p(23456866),
+  'atlas-imlil': p(33662300),
+  dakhla: p(36770358),
 };
 
 export const GALLERY_BY_SLUG: Record<string, string[]> = {
-  marrakech: [
-    u('1531232073976-d4f0c8f10c75', 800),
-    u('1539650116574-75c0c6d73cbe', 800),
-    u('1517825738774-7de9363ef735', 800),
-  ],
-  fes: [
-    u('1583062828094-fb7d70d75f3c', 800),
-    u('1582719508461-905c673771fd', 800),
-    u('1539020140153-e479b8c22e70', 800),
-  ],
-  chefchaouen: [
-    u('1577515693946-d6f2f8a14a06', 800),
-    u('1591289009723-aef022f3b69d', 800),
-    u('1559339352-11d035aa65de', 800),
-  ],
-  'sahara-merzouga': [
-    u('1489493512598-d08130f49bea', 800),
-    u('1568556547011-3b80b8e07e07', 800),
-    u('1574236170880-faf57f5ce2c6', 800),
-  ],
-  casablanca: [
-    u('1597212720291-936f7c9c4d6a', 800),
-    u('1611140284444-2c6cb6e7af44', 800),
-    u('1596895114632-6e1c0bbb4cb6', 800),
-  ],
-  essaouira: [
-    u('1592509255531-1c93e69fdab0', 800),
-    u('1571907483089-c8cbf9c0c9d5', 800),
-    u('1602941525421-8f8b81d3edbb', 800),
-  ],
-  tangier: [
-    u('1581952976147-5a2d15560349', 800),
-    u('1564677527e64-7a04e3d3c2e0', 800),
-    u('1577086664693-894d8405334a', 800),
-  ],
-  rabat: [
-    u('1578321709308-9ca5fdc92e96', 800),
-    u('1576081793525-7e8c1be51d65', 800),
-    u('1583062828094-fb7d70d75f3c', 800),
-  ],
-  agadir: [
-    u('1561501900-3701fa6a0864', 800),
-    u('1551918120-9739cb430c6d', 800),
-    u('1593628891891-e90c456f7e30', 800),
-  ],
-  'ait-ben-haddou': [
-    u('1542340000-3ed10c5db8f1', 800),
-    u('1604999333679-b86d54738315', 800),
-    u('1539635278303-d4002c07eae3', 800),
-  ],
-  ouarzazate: [
-    u('1585129777188-94600bc7ee76', 800),
-    u('1604999333679-b86d54738315', 800),
-    u('1547235001-d703406d3a89', 800),
-  ],
-  'atlas-imlil': [
-    u('1547489432-cf93fa6c71ec', 800),
-    u('1531366936337-7c912a4589a7', 800),
-    u('1490480340985-23a4bc6b8c44', 800),
-  ],
-  dakhla: [
-    u('1559827260-dc66d52bef19', 800),
-    u('1572252009286-268acec5ca0a', 800),
-    u('1518837695005-2083093ee35b', 800),
-  ],
+  marrakech: [p(17649841, 1000), p(6621125, 1000), p(22711558, 1000)],
+  fes: [p(5472534, 1000), p(29595710, 1000), p(20117785, 1000)],
+  chefchaouen: [p(3889763, 1000), p(37764129, 1000), p(16639219, 1000)],
+  'sahara-merzouga': [p(19190939, 1000), p(30099211, 1000), p(4805548, 1000)],
+  casablanca: [p(1378421, 1000), p(29994223, 1000), p(30359726, 1000)],
+  essaouira: [p(33539749, 1000), p(13308443, 1000), p(30326411, 1000)],
+  tangier: [p(10205137, 1000), p(20890430, 1000), p(11344766, 1000)],
+  rabat: [p(33202191, 1000), p(30532036, 1000), p(19084081, 1000)],
+  agadir: [p(30557503, 1000), p(35166170, 1000), p(2958393, 1000)],
+  'ait-ben-haddou': [p(13811656, 1000), p(13811658, 1000), p(14267612, 1000)],
+  ouarzazate: [p(29595717, 1000), p(34856121, 1000), p(37700623, 1000)],
+  'atlas-imlil': [p(37684069, 1000), p(37401852, 1000), p(37401857, 1000)],
+  dakhla: [p(36757010, 1000), p(30142739, 1000), p(36717165, 1000)],
 };
 
 /** Car slugs recommended for the destination — references car IDs in lib/cars.ts. */

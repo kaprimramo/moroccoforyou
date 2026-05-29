@@ -48,7 +48,7 @@ export function DestinationView({ slug, locale }: { slug: string; locale: Locale
           containsPlace: d.highlights[locale],
         })}
       />
-      <JsonLd id="ld-faq-destination" data={faqJsonLd(d.faqs[locale])} />
+      <JsonLd id="ld-faq-destination" data={faqJsonLd(d.faqs[locale], locale)} />
       <JsonLd
         id="ld-breadcrumb"
         data={breadcrumbJsonLd([
@@ -139,6 +139,66 @@ export function DestinationView({ slug, locale }: { slug: string; locale: Locale
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-10">
+        <h2 className="font-display text-3xl font-bold text-brand-night">
+          {t.destination.about(name)}
+        </h2>
+        <p className="mt-4 max-w-3xl whitespace-pre-line text-brand-night/80">
+          {d.longDescription[locale]}
+        </p>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-10">
+        <h2 className="font-display text-3xl font-bold text-brand-night">
+          {t.destination.thingsToDo(name)}
+        </h2>
+        <ol className="mt-6 grid gap-3 sm:grid-cols-2">
+          {d.thingsToDo[locale].map((item, i) => (
+            <li
+              key={item}
+              className="flex items-start gap-3 rounded-xl border border-brand-night/10 bg-white p-4"
+            >
+              <span
+                aria-hidden
+                className="mt-0.5 inline-flex h-7 w-7 flex-none items-center justify-center rounded-full bg-brand-terracotta/10 text-sm font-semibold text-brand-terracotta"
+              >
+                {i + 1}
+              </span>
+              <span className="text-brand-night/90">{item}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-10">
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="md:col-span-2">
+            <h2 className="font-display text-3xl font-bold text-brand-night">
+              {t.destination.tipsTitle(name)}
+            </h2>
+            <ul className="mt-6 space-y-3">
+              {d.localTips[locale].map((tip) => (
+                <li
+                  key={tip}
+                  className="flex items-start gap-3 rounded-xl border border-brand-night/10 bg-white p-4"
+                >
+                  <span aria-hidden className="mt-0.5 text-brand-oasis">★</span>
+                  <span className="text-brand-night/90">{tip}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <aside className="self-start rounded-2xl bg-brand-night p-6 text-brand-cream">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand-sand">
+              {t.destination.pricesTitle(name)}
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-brand-cream/90">
+              {d.prices[locale]}
+            </p>
+          </aside>
+        </div>
       </section>
 
       {gallery.length > 0 && (

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import '../globals.css';
 import { SITE_URL } from '@/lib/i18n';
 import { LocaleShell } from '@/components/LocaleShell';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -24,5 +25,10 @@ export const viewport: Viewport = {
 };
 
 export default function EnLayout({ children }: { children: React.ReactNode }) {
-  return <LocaleShell locale="en">{children}</LocaleShell>;
+  return (
+    <LocaleShell locale="en">
+      {children}
+      <GoogleAnalytics gaId="G-GM2BJLWEF1" />
+    </LocaleShell>
+  );
 }

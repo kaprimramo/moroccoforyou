@@ -53,6 +53,11 @@ export function Footer({ locale }: { locale: Locale }) {
                 {t.footer.aiPlanner}
               </a>
             </li>
+            <li>
+              <Link href="/blog/" className="text-brand-cream/80 hover:text-white">
+                {t.nav.blog}
+              </Link>
+            </li>
           </ul>
         </div>
         <div id="contact">

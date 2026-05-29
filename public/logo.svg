@@ -1,0 +1,32 @@
+<svg width="260" height="60" viewBox="0 0 260 60" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>MoroccoForYou</title>
+
+  <g transform="translate(30, 30)">
+    <circle cx="0" cy="0" r="22" fill="none" stroke="#0F1B2D" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#0F1B2D" stroke-width="0.4" opacity="0.2"/>
+
+    <line x1="0" y1="-16" x2="-10" y2="9" stroke="#1D9E75" stroke-width="0.8" opacity="0.5"/>
+    <line x1="0" y1="-16" x2="10" y2="9" stroke="#1D9E75" stroke-width="0.8" opacity="0.5"/>
+    <line x1="-10" y1="9" x2="10" y2="9" stroke="#1D9E75" stroke-width="0.8" opacity="0.5"/>
+    <line x1="0" y1="-16" x2="0" y2="9" stroke="#1D9E75" stroke-width="0.6" opacity="0.3"/>
+    <line x1="-10" y1="9" x2="0" y2="0" stroke="#1D9E75" stroke-width="0.6" opacity="0.3"/>
+    <line x1="10" y1="9" x2="0" y2="0" stroke="#1D9E75" stroke-width="0.6" opacity="0.3"/>
+
+    <circle cx="0" cy="-16" r="2.5" fill="#1D9E75"/>
+    <circle cx="-10" cy="9" r="2.5" fill="#1D9E75"/>
+    <circle cx="10" cy="9" r="2.5" fill="#1D9E75"/>
+    <circle cx="0" cy="0" r="2" fill="#C8783A"/>
+
+    <polygon points="0,-22 2,-14 0,-17 -2,-14" fill="#C8783A"/>
+    <polygon points="0,22 2,14 0,17 -2,14" fill="#0F1B2D" opacity="0.35"/>
+    <polygon points="-22,0 -14,2 -17,0 -14,-2" fill="#0F1B2D" opacity="0.35"/>
+    <polygon points="22,0 14,2 17,0 14,-2" fill="#0F1B2D" opacity="0.35"/>
+  </g>
+
+  <text x="60" y="24" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#0F1B2D" letter-spacing="0.5">MoroccoFor<tspan fill="#C8783A">You</tspan></text>
+
+  <rect x="60" y="30" width="36" height="12" rx="6" fill="#1D9E75"/>
+  <text x="78" y="39" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#FAF7F2" letter-spacing="1.5">AI</text>
+
+  <text x="102" y="39" font-family="Arial, sans-serif" font-size="7" fill="#0F1B2D" letter-spacing="2.5" opacity="0.35"> TRAVEL · MOROCCO</text>
+</svg>

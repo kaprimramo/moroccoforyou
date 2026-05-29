@@ -5,6 +5,7 @@ export type Dictionary = {
     destinations: string;
     rentACar: string;
     planMyTrip: string;
+    blog: string;
   };
   hero: {
     eyebrow: string;
@@ -76,6 +77,10 @@ export type Dictionary = {
     carsTitle: (name: string) => string;
     carsSubtitle: string;
     seeAllCars: string;
+    about: (name: string) => string;
+    thingsToDo: (name: string) => string;
+    tipsTitle: (name: string) => string;
+    pricesTitle: (name: string) => string;
   };
   rentACar: {
     eyebrow: string;
@@ -126,7 +131,7 @@ export type Dictionary = {
 };
 
 const en: Dictionary = {
-  nav: { destinations: 'Destinations', rentACar: 'Rent a car', planMyTrip: 'Plan my trip' },
+  nav: { destinations: 'Destinations', rentACar: 'Rent a car', planMyTrip: 'Plan my trip', blog: 'Blog' },
   hero: {
     eyebrow: 'Morocco, designed for you',
     title: 'Your Morocco trip — planned by AI, run by locals.',
@@ -205,6 +210,10 @@ const en: Dictionary = {
     carsTitle: (name) => `Cars for your ${name} trip`,
     carsSubtitle: 'Pick up at Casablanca Airport or any major Moroccan city.',
     seeAllCars: 'See full fleet →',
+    about: (name) => `About ${name}`,
+    thingsToDo: (name) => `Things to do in ${name}`,
+    tipsTitle: (name) => `Local tips for ${name}`,
+    pricesTitle: (name) => `${name} — typical prices`,
   },
   rentACar: {
     eyebrow: 'MoroccoForYou Cars',
@@ -265,7 +274,7 @@ const en: Dictionary = {
 };
 
 const fr: Dictionary = {
-  nav: { destinations: 'Destinations', rentACar: 'Location de voiture', planMyTrip: 'Planifier mon voyage' },
+  nav: { destinations: 'Destinations', rentACar: 'Location de voiture', planMyTrip: 'Planifier mon voyage', blog: 'Blog' },
   hero: {
     eyebrow: 'Le Maroc, conçu pour vous',
     title: 'Votre voyage au Maroc — planifié par l’IA, organisé par des locaux.',
@@ -344,6 +353,10 @@ const fr: Dictionary = {
     carsTitle: (name) => `Voitures pour votre voyage à ${name}`,
     carsSubtitle: 'Prise en charge à l’aéroport de Casablanca ou dans toute grande ville marocaine.',
     seeAllCars: 'Voir toute la flotte →',
+    about: (name) => `À propos de ${name}`,
+    thingsToDo: (name) => `Que faire à ${name}`,
+    tipsTitle: (name) => `Conseils locaux à ${name}`,
+    pricesTitle: (name) => `${name} — prix indicatifs`,
   },
   rentACar: {
     eyebrow: 'MoroccoForYou Cars',
@@ -404,7 +417,7 @@ const fr: Dictionary = {
 };
 
 const ar: Dictionary = {
-  nav: { destinations: 'الوجهات', rentACar: 'تأجير السيارات', planMyTrip: 'خطط لرحلتي' },
+  nav: { destinations: 'الوجهات', rentACar: 'تأجير السيارات', planMyTrip: 'خطط لرحلتي', blog: 'مدونة' },
   hero: {
     eyebrow: 'المغرب، مصمم من أجلك',
     title: 'رحلتك في المغرب — يخطط لها الذكاء الاصطناعي، وينظمها سكان المغرب.',
@@ -483,6 +496,10 @@ const ar: Dictionary = {
     carsTitle: (name) => `سيارات لرحلتك إلى ${name}`,
     carsSubtitle: 'الاستلام من مطار الدار البيضاء أو من أي مدينة مغربية كبرى.',
     seeAllCars: 'عرض الأسطول كاملًا →',
+    about: (name) => `عن ${name}`,
+    thingsToDo: (name) => `ماذا تفعل في ${name}`,
+    tipsTitle: (name) => `نصائح محلية في ${name}`,
+    pricesTitle: (name) => `${name} — أسعار إرشادية`,
   },
   rentACar: {
     eyebrow: 'MoroccoForYou Cars',

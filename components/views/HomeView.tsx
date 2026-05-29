@@ -8,7 +8,7 @@ import { TrustSignals } from '@/components/TrustSignals';
 import { FAQ } from '@/components/FAQ';
 import { JsonLd } from '@/components/JsonLd';
 import { WhatsAppCTA } from '@/components/WhatsAppCTA';
-import { faqJsonLd } from '@/lib/seo';
+import { faqJsonLd, websiteJsonLd } from '@/lib/seo';
 import { HERO_HOMEPAGE } from '@/lib/destination-media';
 
 const HOME_FAQS: Record<Locale, { question: string; answer: string }[]> = {
@@ -83,7 +83,8 @@ export function HomeView({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <JsonLd data={faqJsonLd(faqs)} id="ld-faq-home" />
+      <JsonLd data={faqJsonLd(faqs, locale)} id="ld-faq-home" />
+      <JsonLd data={websiteJsonLd()} id="ld-website" />
 
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-sand/40 via-brand-cream to-brand-cream">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-2 md:py-24">

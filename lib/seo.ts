@@ -96,18 +96,39 @@ export function touristDestinationJsonLd(args: {
   };
 }
 
-export function faqJsonLd(faqs: { question: string; answer: string }[]) {
+export function faqJsonLd(
+  faqs: { question: string; answer: string }[],
+  locale: Locale = 'en',
+) {
+  const langMap: Record<Locale, string> = { en: 'en', fr: 'fr', ar: 'ar' };
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    inLanguage: langMap[locale],
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['[itemprop="acceptedAnswer"]'],
+    },
     mainEntity: faqs.map((f) => ({
       '@type': 'Question',
       name: f.question,
       acceptedAnswer: {
         '@type': 'Answer',
         text: f.answer,
+        inLanguage: langMap[locale],
       },
     })),
+  };
+}
+
+export function websiteJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    url: SITE_URL,
+    name: SITE_NAME,
+    publisher: { '@type': 'Organization', name: SITE_NAME },
+    inLanguage: ['en', 'fr', 'ar'],
   };
 }
 
@@ -130,8 +151,25 @@ export function organizationJsonLd() {
     '@type': 'TravelAgency',
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
+    logo: `${SITE_URL}/logo.svg`,
+    description:
+      'MoroccoForYou is a Morocco-based travel agency offering AI-planned itineraries, private drivers, riad bookings, and car rental at Casablanca and Marrakech airports.',
     areaServed: { '@type': 'Country', name: 'Morocco' },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'MA',
+      addressLocality: 'Casablanca',
+    },
+    availableLanguage: ['en', 'fr', 'ar'],
+    knowsAbout: [
+      'Morocco travel',
+      'Marrakech itineraries',
+      'Sahara desert tours',
+      'Morocco car rental',
+      'Fes guided tours',
+      'Chefchaouen travel guide',
+      'Atlas Mountains trekking',
+    ],
     sameAs: [],
   };
 }

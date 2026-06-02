@@ -18,6 +18,8 @@ const EN: BlogPost = {
   author: 'MoroccoForYou Editorial',
   readingMinutes: 10,
   intro: 'Driving in Morocco is one of the best ways to explore the country at your own pace. From the winding Atlas mountain roads to the straight desert highways leading to Merzouga, a self-drive trip gives you freedom that buses and trains cannot match. Before you pick up the keys at Casablanca Airport CMN, here is everything you need to know — road rules, safety, best routes, petrol prices, and which car to rent.',
+  description: 'Essential guide to driving in Morocco for tourists: road rules, safety tips, best routes, petrol prices and car rental from €29/day at Casablanca Airport CMN.',
+  keyword: 'driving in Morocco tips for tourists',
   sections: [
     {
       heading: 'Is Driving in Morocco Safe for Tourists?',
@@ -125,6 +127,8 @@ const FR: BlogPost = {
   author: 'MoroccoForYou Editorial',
   readingMinutes: 10,
   intro: 'Louer une voiture au Maroc est l\'une des meilleures façons d\'explorer le pays à votre rythme. Des cols de l\'Atlas aux routes du désert vers Merzouga, un road trip en voiture vous offre une liberté que les bus et trains ne peuvent pas égaler. Voici tout ce qu\'il faut savoir avant de récupérer vos clés à l\'aéroport Mohammed V de Casablanca (CMN) — code de la route, sécurité, meilleures routes, prix du carburant et quel véhicule choisir.',
+  description: 'Guide complet pour conduire au Maroc : code de la route, sécurité, meilleures routes, prix carburant et location voiture dès 29€/jour à l\'aéroport CMN.',
+  keyword: 'conduire au Maroc conseils touristes',
   sections: [
     {
       heading: 'Est-il sûr de conduire au Maroc en tant que touriste ?',
@@ -232,6 +236,8 @@ const AR: BlogPost = {
   author: 'فريق MoroccoForYou',
   readingMinutes: 10,
   intro: 'استئجار سيارة والتنقل بحرية في المغرب هو أفضل طريقة لاكتشاف البلاد بوتيرتك الخاصة. من ممرات جبال الأطلس الملتوية إلى طرق الصحراء المستقيمة نحو مرزوقة، يمنحك السفر بالسيارة حرية لا يضاهيها باص ولا قطار. قبل أن تستلم مفاتيح سيارتك من مطار محمد الخامس بالدار البيضاء (CMN)، إليك كل ما تحتاج معرفته — قواعد المرور، الأمان، أفضل الطرق، أسعار الوقود، وأنسب السيارات.',
+  description: 'دليل شامل لقيادة السيارة في المغرب: قواعد المرور، الأمان، أفضل الطرق، أسعار الوقود واستئجار سيارة من 29€/يوم من مطار CMN.',
+  keyword: 'قيادة السيارة في المغرب دليل السائح',
   sections: [
     {
       heading: 'هل القيادة في المغرب آمنة للسياح؟',

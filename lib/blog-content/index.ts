@@ -13,3 +13,4 @@ import './08-dress-code';
 import './09-fes-self-guided';
 import './10-rent-a-car-tips';
 import './11-driving-in-morocco';
+import './12-morocco-2-weeks-itinerary';

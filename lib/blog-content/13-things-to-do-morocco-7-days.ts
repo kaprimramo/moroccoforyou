@@ -4,7 +4,7 @@ const SLUG_EN = 'things-to-do-in-morocco-7-days';
 const SLUG_FR = 'que-faire-au-maroc-7-jours';
 const SLUG_AR = 'ma-tafal-fi-al-maghrib-7-ayam';
 const ALTERNATES = { en: SLUG_EN, fr: SLUG_FR, ar: SLUG_AR } as const;
-const COVER = pex(3889843);
+const COVER = pex(34329675);
 
 const EN: BlogPost = {
   slug: SLUG_EN,

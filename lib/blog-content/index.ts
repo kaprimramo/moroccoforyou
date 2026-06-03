@@ -15,3 +15,4 @@ import './10-rent-a-car-tips';
 import './11-driving-in-morocco';
 import './12-morocco-2-weeks-itinerary';
 import './13-things-to-do-morocco-7-days';
+import './14-morocco-budget-backpacker';

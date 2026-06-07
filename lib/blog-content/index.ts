@@ -20,3 +20,4 @@ import './15-best-time-sahara';
 import './16-morocco-hammam';
 import './17-rent-car-fes';
 import './18-marrakech-fes-drive';
+import './19-casablanca-airport-to-city';

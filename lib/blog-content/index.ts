@@ -17,3 +17,4 @@ import './12-morocco-2-weeks-itinerary';
 import './13-things-to-do-morocco-7-days';
 import './14-morocco-budget-backpacker';
 import './15-best-time-sahara';
+import './16-morocco-hammam';

@@ -6,7 +6,7 @@ import { homePath, destinationPath, rentACarPath } from '@/lib/paths';
 import { LocaleSwitcher } from './LocaleSwitcher';
 import type { Locale } from '@/lib/i18n';
 
-export function Header({ locale }: { locale: Locale }) {
+export function Header({ locale, alternates }: { locale: Locale; alternates?: Partial<Record<Locale, string>> }) {
   const t = dict(locale);
   return (
     <header className="sticky top-0 z-40 border-b border-brand-night/10 bg-brand-cream/90 backdrop-blur">
@@ -38,7 +38,7 @@ export function Header({ locale }: { locale: Locale }) {
           <a href="#contact" className="rounded-full bg-brand-oasis px-4 py-2 text-white hover:bg-brand-night">
             {t.nav.planMyTrip}
           </a>
-          <LocaleSwitcher currentLocale={locale} />
+          <LocaleSwitcher currentLocale={locale} alternates={alternates} />
         </nav>
       </div>
     </header>

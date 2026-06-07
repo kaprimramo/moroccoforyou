@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LOCALES, LOCALE_LABELS, DEFAULT_LOCALE, type Locale } from '@/lib/i18n';
 
-/** Strip any leading locale segment so we have a "naked" path to re-prefix. */
 function stripLocale(pathname: string): string {
   const match = pathname.match(/^\/(fr|ar)(\/.*)?$/);
   if (match) return match[2] || '/';
@@ -16,9 +15,28 @@ function pathForLocale(locale: Locale, basePath: string): string {
   return locale === DEFAULT_LOCALE ? clean : `/${locale}${clean}`;
 }
 
-export function LocaleSwitcher({ currentLocale }: { currentLocale: Locale }) {
+export function LocaleSwitcher({ 
+  currentLocale,
+  alternates,
+}: { 
+  currentLocale: Locale;
+  alternates?: Partial<Record<Locale, string>>;
+}) {
   const pathname = usePathname() || '/';
   const naked = stripLocale(pathname);
+
+  function getHref(l: Locale): string {
+    // ila kaynin alternates (blog articles) — stakhdam slug dial langue
+    if (alternates) {
+      const slug = alternates[l];
+      if (slug) {
+        if (l === 'en') return `/blog/${slug}/`;
+        return `/${l}/blog/${slug}/`;
+      }
+    }
+    // sinon — normal path switching
+    return pathForLocale(l, naked);
+  }
 
   return (
     <details className="group relative">
@@ -30,7 +48,7 @@ export function LocaleSwitcher({ currentLocale }: { currentLocale: Locale }) {
           <li key={l}>
             <Link
               hrefLang={l}
-              href={pathForLocale(l, naked)}
+              href={getHref(l)}
               className={`block rounded px-3 py-2 text-sm hover:bg-brand-cream ${
                 l === currentLocale ? 'font-semibold text-brand-terracotta' : ''
               }`}

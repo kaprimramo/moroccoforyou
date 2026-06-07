@@ -13,6 +13,7 @@ import { buildMetadata } from '@/lib/seo';
 type Params = { slug: string };
 
 export function generateStaticParams(): Params[] {
+  void require('@/lib/blog-content');
   return getBlogSlugsByLang('fr').map((slug) => ({ slug }));
 }
 

@@ -155,7 +155,14 @@ const LOCAL_BUSINESS_JSONLD = {
   },
   openingHours: 'Mo-Su 00:00-23:59',
   priceRange: 'MAD 250 - MAD 1100',
-  areaServed: ['Casablanca', 'Marrakech', 'Fes', 'Rabat', 'Tangier', 'Agadir'],
+  areaServed: [
+    { '@type': 'City', name: 'Casablanca' },
+    { '@type': 'City', name: 'Marrakech' },
+    { '@type': 'City', name: 'Fes' },
+    { '@type': 'City', name: 'Rabat' },
+    { '@type': 'City', name: 'Tangier' },
+    { '@type': 'City', name: 'Agadir' }
+  ],
   hasMap: 'https://share.google/lppJQBuy1u0qTgtqi',
 };
 
@@ -319,7 +326,7 @@ export function RentACarView({ locale }: { locale: Locale }) {
               <p className="text-xs font-semibold uppercase tracking-widest text-brand-terracotta mb-1">
                 Phone / WhatsApp
               </p>
-              
+              <a 
                 href="tel:+212634276534"
                 className="font-semibold text-brand-night hover:text-brand-terracotta"
               >

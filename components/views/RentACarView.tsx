@@ -17,13 +17,11 @@ const FAQS: Record<Locale, { question: string; answer: string }[]> = {
   en: [
     {
       question: 'Where do I pick up the car at Casablanca Airport?',
-      answer:
-        'Our driver meets you in the arrivals hall of Casablanca Mohammed V Airport (CMN) with a MoroccoForYou Cars sign. Pickup is included free of charge 24/7.',
+      answer: 'Our driver meets you in the arrivals hall of Casablanca Mohammed V Airport (CMN) with a MoroccoForYou Cars sign. Pickup is included free of charge 24/7.',
     },
     {
       question: 'What documents do I need to rent a car in Morocco?',
-      answer:
-        'A valid driving licence held for at least 1 year, your passport or national ID, and a credit or debit card for the deposit. International driving permits are accepted but not required for most nationalities.',
+      answer: 'A valid driving licence held for at least 1 year, your passport or national ID, and a credit or debit card for the deposit. International driving permits are accepted but not required for most nationalities.',
     },
     {
       question: 'Is the mileage unlimited?',
@@ -31,110 +29,91 @@ const FAQS: Record<Locale, { question: string; answer: string }[]> = {
     },
     {
       question: 'Can I drop the car off in another city?',
-      answer:
-        'Yes. One-way rentals are available to Marrakech, Fes, Agadir, Tangier, and other major cities. Additional fees may apply depending on the route.',
+      answer: 'Yes. One-way rentals are available to Marrakech, Fes, Agadir, Tangier, and other major cities. Additional fees may apply depending on the route.',
     },
     {
       question: 'Is the price in MAD or EUR?',
-      answer:
-        'Prices on this page are shown in Moroccan Dirhams (MAD) with an indicative EUR equivalent. You can pay in either at pickup.',
+      answer: 'Prices on this page are shown in Moroccan Dirhams (MAD) with an indicative EUR equivalent. You can pay in either at pickup.',
     },
     {
       question: 'How much does it cost to rent a car at Casablanca Airport?',
-      answer:
-        'Economy cars start from MAD 250/day (€23). Compact cars from MAD 250/day. SUV Dacia Duster from MAD 350/day (€32). All prices include unlimited mileage and basic insurance.',
+      answer: 'Economy cars start from MAD 250/day (23EUR). Compact cars from MAD 250/day. SUV Dacia Duster from MAD 350/day (32EUR). All prices include unlimited mileage and basic insurance.',
     },
     {
       question: 'Can I rent a car at CMN without a credit card?',
-      answer:
-        'Most agencies require a credit card for the deposit. MoroccoForYou Cars accepts debit cards on prior arrangement. Contact us on WhatsApp to discuss options.',
+      answer: 'Most agencies require a credit card for the deposit. MoroccoForYou Cars accepts debit cards on prior arrangement. Contact us on WhatsApp to discuss options.',
     },
     {
       question: 'Is it safe to drive in Morocco?',
-      answer:
-        'Yes — Morocco has good paved roads between all major cities. The Casablanca–Marrakech motorway (A7) is fully dual carriageway. Drive on the right, speed limit 120 km/h on motorways.',
+      answer: 'Yes — Morocco has good paved roads between all major cities. The Casablanca-Marrakech motorway (A7) is fully dual carriageway. Drive on the right, speed limit 120 km/h on motorways.',
     },
   ],
   fr: [
     {
-      question: 'Où récupère-t-on la voiture à l\'aéroport de Casablanca ?',
-      answer:
-        'Notre chauffeur vous accueille dans le hall des arrivées de l\'aéroport Mohammed V (CMN) avec un panneau MoroccoForYou Cars. Accueil inclus 24/7.',
+      question: "Ou recupere-t-on la voiture a l'aeroport de Casablanca ?",
+      answer: "Notre chauffeur vous accueille dans le hall des arrivees de l'aeroport Mohammed V (CMN) avec un panneau MoroccoForYou Cars. Accueil inclus 24/7.",
     },
     {
       question: 'Quels documents pour louer une voiture au Maroc ?',
-      answer:
-        'Un permis de conduire valide depuis au moins 1 an, passeport ou CNI, et une carte bancaire pour la caution. Le permis international est accepté mais non obligatoire pour la plupart des nationalités.',
+      answer: "Un permis de conduire valide depuis au moins 1 an, passeport ou CNI, et une carte bancaire pour la caution. Le permis international est accepte mais non obligatoire pour la plupart des nationalites.",
     },
     {
-      question: 'Le kilométrage est-il illimité ?',
-      answer: 'Oui — toutes nos locations incluent le kilométrage illimité au Maroc.',
+      question: 'Le kilometrage est-il illimite ?',
+      answer: 'Oui — toutes nos locations incluent le kilometrage illimite au Maroc.',
     },
     {
       question: 'Puis-je rendre la voiture dans une autre ville ?',
-      answer:
-        'Oui. Les locations aller simple sont possibles vers Marrakech, Fès, Agadir, Tanger et d\'autres grandes villes. Des frais peuvent s\'appliquer.',
+      answer: "Oui. Les locations aller simple sont possibles vers Marrakech, Fes, Agadir, Tanger et d'autres grandes villes. Des frais peuvent s'appliquer.",
     },
     {
       question: 'Le prix est-il en MAD ou EUR ?',
-      answer:
-        'Les prix sont affichés en dirhams marocains (MAD) avec un équivalent indicatif en EUR. Paiement en MAD ou EUR au retrait.',
+      answer: 'Les prix sont affiches en dirhams marocains (MAD) avec un equivalent indicatif en EUR. Paiement en MAD ou EUR au retrait.',
     },
     {
-      question: 'Combien coûte la location d\'une voiture à l\'aéroport de Casablanca ?',
-      answer:
-        'Les voitures économiques démarrent à 250 MAD/jour (23€). SUV Dacia Duster à partir de 350 MAD/jour (32€). Kilométrage illimité et assurance de base inclus.',
+      question: "Combien coute la location d'une voiture a l'aeroport de Casablanca ?",
+      answer: 'Les voitures economiques demarrent a 250 MAD/jour (23EUR). SUV Dacia Duster a partir de 350 MAD/jour (32EUR). Kilometrage illimite et assurance de base inclus.',
     },
     {
-      question: 'Puis-je louer sans carte de crédit ?',
-      answer:
-        'La plupart des agences exigent une carte de crédit pour la caution. MoroccoForYou Cars accepte les cartes de débit sur arrangement préalable. Contactez-nous sur WhatsApp.',
+      question: 'Puis-je louer sans carte de credit ?',
+      answer: 'La plupart des agences exigent une carte de credit pour la caution. MoroccoForYou Cars accepte les cartes de debit sur arrangement prealable. Contactez-nous sur WhatsApp.',
     },
     {
-      question: 'Est-il sûr de conduire au Maroc ?',
-      answer:
-        'Oui — le Maroc dispose de bonnes routes goudronnées entre toutes les grandes villes. L\'autoroute Casablanca–Marrakech (A7) est en 2×2 voies. On roule à droite, limite 120 km/h sur autoroute.',
+      question: 'Est-il sur de conduire au Maroc ?',
+      answer: "Oui — le Maroc dispose de bonnes routes goudron nees entre toutes les grandes villes. L'autoroute Casablanca-Marrakech (A7) est en 2x2 voies. On roule a droite, limite 120 km/h sur autoroute.",
     },
   ],
   ar: [
     {
-      question: 'أين أستلم السيارة في مطار الدار البيضاء؟',
-      answer:
-        'يلتقي بكم سائقنا في صالة الوصول بمطار محمد الخامس (CMN) حاملاً لافتة MoroccoForYou Cars. الاستقبال مجاني على مدار الساعة.',
+      question: 'اين استلم السيارة في مطار الدار البيضاء؟',
+      answer: 'يلتقي بكم سائقنا في صالة الوصول بمطار محمد الخامس (CMN) حاملا لافتة MoroccoForYou Cars. الاستقبال مجاني على مدار الساعة.',
     },
     {
-      question: 'ما الوثائق المطلوبة لتأجير سيارة في المغرب؟',
-      answer:
-        'رخصة قيادة سارية منذ سنة على الأقل، وجواز السفر أو البطاقة الوطنية، وبطاقة ائتمانية للضمان. رخصة القيادة الدولية مقبولة لكن غير ضرورية لمعظم الجنسيات.',
+      question: 'ما الوثائق المطلوبة لتاجير سيارة في المغرب؟',
+      answer: 'رخصة قيادة سارية منذ سنة على الاقل، وجواز السفر او البطاقة الوطنية، وبطاقة ائتمانية للضمان.',
     },
     {
       question: 'هل الكيلومترات غير محدودة؟',
-      answer: 'نعم — جميع تأجيراتنا تشمل كيلومترات غير محدودة داخل المغرب.',
+      answer: 'نعم — جميع تاجيراتنا تشمل كيلومترات غير محدودة داخل المغرب.',
     },
     {
-      question: 'هل يمكنني تسليم السيارة في مدينة أخرى؟',
-      answer:
-        'نعم. التأجير في اتجاه واحد متاح إلى مراكش وفاس وأكادير وطنجة ومدن كبرى أخرى. قد تُطبَّق رسوم إضافية.',
+      question: 'هل يمكنني تسليم السيارة في مدينة اخرى؟',
+      answer: 'نعم. التاجير في اتجاه واحد متاح الى مراكش وفاس واكادير وطنجة ومدن كبرى اخرى.',
     },
     {
-      question: 'هل السعر بالدرهم أم باليورو؟',
-      answer:
-        'الأسعار المعروضة بالدرهم المغربي (MAD) مع ما يعادلها باليورو. الدفع ممكن بالدرهم أو اليورو عند الاستلام.',
+      question: 'هل السعر بالدرهم ام باليورو؟',
+      answer: 'الاسعار المعروضة بالدرهم المغربي (MAD) مع ما يعادلها باليورو. الدفع ممكن بالدرهم او اليورو عند الاستلام.',
     },
     {
       question: 'كم يكلف استئجار سيارة في مطار الدار البيضاء؟',
-      answer:
-        'السيارات الاقتصادية من 250 درهم/يوم (23€). داشيا دوستر SUV من 350 درهم/يوم (32€). الكيلومترات غير محدودة والتأمين الأساسي مشمولان.',
+      answer: 'السيارات الاقتصادية من 250 درهم/يوم (23EUR). داشيا دوستر SUV من 350 درهم/يوم (32EUR).',
     },
     {
       question: 'هل يمكن الاستئجار بدون بطاقة ائتمان؟',
-      answer:
-        'معظم الوكالات تشترط بطاقة ائتمان للضمان. MoroccoForYou Cars يقبل بطاقات الخصم بترتيب مسبق. تواصل معنا عبر واتساب.',
+      answer: 'معظم الوكالات تشترط بطاقة ائتمان للضمان. MoroccoForYou Cars يقبل بطاقات الخصم بترتيب مسبق.',
     },
     {
       question: 'هل القيادة في المغرب آمنة؟',
-      answer:
-        'نعم — المغرب يملك طرقاً معبّدة جيدة بين جميع المدن الكبرى. طريق الدار البيضاء–مراكش السريع (A7) ازدواجي كامل. القيادة على اليمين، حد السرعة 120 كم/س على الطرق السريعة.',
+      answer: 'نعم — المغرب يملك طرقا معبدة جيدة بين جميع المدن الكبرى. القيادة على اليمين، حد السرعة 120 كم/س على الطرق السريعة.',
     },
   ],
 };
@@ -147,12 +126,12 @@ const CAR_RENTAL_JSONLD = {
   areaServed: { '@type': 'Country', name: 'Morocco' },
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Aéroport Mohammed V',
+    streetAddress: 'Aeroport Mohammed V',
     addressLocality: 'Casablanca',
     addressCountry: 'MA',
   },
   telephone: '+212634276534',
-  priceRange: 'MAD 250 – MAD 1,100 / day',
+  priceRange: 'MAD 250 - MAD 1100 / day',
   parentOrganization: { '@type': 'Organization', name: 'MoroccoForYou' },
 };
 
@@ -165,7 +144,7 @@ const LOCAL_BUSINESS_JSONLD = {
   telephone: '+212634276534',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Aéroport Mohammed V',
+    streetAddress: 'Aeroport Mohammed V',
     addressLocality: 'Casablanca',
     addressCountry: 'MA',
   },
@@ -261,12 +240,11 @@ export function RentACarView({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      {/* Mid-page CTA */}
       <section className="mx-auto max-w-4xl px-4 py-8">
         <div className="rounded-2xl bg-brand-terracotta/10 border border-brand-terracotta/20 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <p className="font-bold text-brand-night text-lg">Ready to book your car at CMN?</p>
-            <p className="text-brand-night/70 text-sm mt-1">Reply within 1 hour · Free airport meet & greet · From MAD 250/day</p>
+            <p className="text-brand-night/70 text-sm mt-1">Reply within 1 hour · Free airport meet and greet · From MAD 250/day</p>
           </div>
           <WhatsAppCTA
             message="Hi MoroccoForYou Cars! I'd like to book a car at Casablanca Airport (CMN)."
@@ -275,20 +253,19 @@ export function RentACarView({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      {/* SEO Content Section */}
       <section className="mx-auto max-w-4xl px-4 py-10">
         <h2 className="font-display text-2xl font-bold text-brand-night mb-6">
           Car Rental at Casablanca Airport (CMN) — Everything You Need to Know
         </h2>
         <div className="space-y-4 text-brand-night/80 leading-relaxed">
           <p>
-            MoroccoForYou Cars offers professional meet-and-greet car rental at Casablanca Mohammed V Airport (CMN) — Morocco&apos;s largest international airport. Your driver waits in arrivals 24/7 with a name board, so you walk straight to your car without queuing at a counter.
+            MoroccoForYou Cars offers professional meet-and-greet car rental at Casablanca Mohammed V Airport (CMN) — Morocco largest international airport. Your driver waits in arrivals 24/7 with a name board, so you walk straight to your car without queuing at a counter.
           </p>
           <p>
-            Economy cars start from <strong>MAD 250/day (€23 / $25)</strong> with unlimited mileage and basic insurance included. Need a 4x4 for the Atlas Mountains or the Sahara? Our Dacia Duster starts from <strong>MAD 350/day (€32)</strong> — the most popular choice for Morocco road trips.
+            Economy cars start from <strong>MAD 250/day (23EUR / $25)</strong> with unlimited mileage and basic insurance included. Need a 4x4 for the Atlas Mountains or the Sahara? Our Dacia Duster starts from <strong>MAD 350/day (32EUR)</strong> — the most popular choice for Morocco road trips.
           </p>
           <p>
-            One-way rentals are available from Casablanca Airport (CMN) to Marrakech, Fes, Agadir, Rabat, and Tangier. Drop-off fee applies depending on route. The Casablanca–Marrakech motorway (A7) is fully paved dual carriageway — 240 km, 2h30 drive.
+            One-way rentals are available from Casablanca Airport (CMN) to Marrakech, Fes, Agadir, Rabat, and Tangier. Drop-off fee applies depending on route. The Casablanca-Marrakech motorway (A7) is fully paved dual carriageway — 240 km, 2h30 drive.
           </p>
           <p>
             All MoroccoForYou Cars rentals include: unlimited mileage within Morocco, free airport meet-and-greet at CMN, 24/7 roadside assistance, and basic third-party insurance. Book on WhatsApp for instant confirmation — we reply within 1 hour.
@@ -298,11 +275,11 @@ export function RentACarView({ locale }: { locale: Locale }) {
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           <div className="rounded-xl border border-brand-night/10 bg-white p-4 text-center">
             <p className="text-2xl font-bold text-brand-terracotta">MAD 250</p>
-            <p className="text-sm text-brand-night/70 mt-1">Economy from €23/day</p>
+            <p className="text-sm text-brand-night/70 mt-1">Economy from 23EUR/day</p>
           </div>
           <div className="rounded-xl border border-brand-night/10 bg-white p-4 text-center">
             <p className="text-2xl font-bold text-brand-terracotta">24/7</p>
-            <p className="text-sm text-brand-night/70 mt-1">Airport meet & greet</p>
+            <p className="text-sm text-brand-night/70 mt-1">Airport meet and greet</p>
           </div>
           <div className="rounded-xl border border-brand-night/10 bg-white p-4 text-center">
             <p className="text-2xl font-bold text-brand-terracotta">∞</p>
@@ -311,7 +288,6 @@ export function RentACarView({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      {/* Google Maps + Contact */}
       <section className="mx-auto max-w-4xl px-4 py-10">
         <h2 className="font-display text-2xl font-bold text-brand-night mb-6">
           Find Us at Casablanca Airport (CMN)
@@ -342,7 +318,7 @@ export function RentACarView({ locale }: { locale: Locale }) {
             </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-brand-terracotta mb-1">
-               Phone / WhatsApp
+                Phone / WhatsApp
               </p>
               
                 href="tel:+212634276534"
@@ -369,6 +345,7 @@ export function RentACarView({ locale }: { locale: Locale }) {
           </div>
         </div>
       </section>
+
       <section className="mx-auto max-w-6xl px-4 py-12">
         <FAQ faqs={FAQS[locale]} locale={locale} title={t.faqTitle} />
       </section>

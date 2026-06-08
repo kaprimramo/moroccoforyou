@@ -16,6 +16,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { FAQ } from '@/components/FAQ';
 import { WhatsAppCTA } from '@/components/WhatsAppCTA';
 import { TrustSignals } from '@/components/TrustSignals';
+import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { breadcrumbJsonLd, faqJsonLd } from '@/lib/seo';
 import { destinationPath, homePath } from '@/lib/paths';
 import { localizedUrl, type Locale } from '@/lib/i18n';
@@ -55,8 +56,7 @@ const LABELS: Record<Lang, {
     peopleAlsoAsk: 'People also ask',
     readNext: 'Read next',
     ctaTitle: 'Plan your Morocco trip with us',
-    ctaBody:
-      'MoroccoForYou is a Morocco-based agency. Tell us your dates on WhatsApp — we reply within an hour with a draft itinerary, hotel options and a car or driver quote.',
+    ctaBody: 'MoroccoForYou is a Morocco-based agency. Tell us your dates on WhatsApp — we reply within an hour with a draft itinerary, hotel options and a car or driver quote.',
     ctaButton: 'Start on WhatsApp',
     dateLocale: 'en-US',
     blogIndexPath: '/blog/',
@@ -75,12 +75,11 @@ const LABELS: Record<Lang, {
     peopleAlsoAsk: 'Autres questions',
     readNext: 'À lire ensuite',
     ctaTitle: 'Planifiez votre voyage au Maroc avec nous',
-    ctaBody:
-      'MoroccoForYou est une agence basée au Maroc. Donnez-nous vos dates sur WhatsApp — nous répondons dans l’heure avec un itinéraire, des hôtels et un devis voiture ou chauffeur.',
+    ctaBody: 'MoroccoForYou est une agence basée au Maroc. Donnez-nous vos dates sur WhatsApp — nous répondons dans l\'heure avec un itinéraire, des hôtels et un devis voiture ou chauffeur.',
     ctaButton: 'Démarrer sur WhatsApp',
     dateLocale: 'fr-FR',
     blogIndexPath: '/fr/blog/',
-    whatsappMessage: (t) => `Bonjour MoroccoForYou ! Je viens de lire votre article "${t}" et j’aimerais de l’aide pour planifier un voyage au Maroc.`,
+    whatsappMessage: (t) => `Bonjour MoroccoForYou ! Je viens de lire votre article "${t}" et j'aimerais de l'aide pour planifier un voyage au Maroc.`,
   },
   ar: {
     blogEyebrow: 'مدونة السفر إلى المغرب',
@@ -95,8 +94,7 @@ const LABELS: Record<Lang, {
     peopleAlsoAsk: 'يسأل الناس أيضًا',
     readNext: 'اقرأ بعد ذلك',
     ctaTitle: 'خطط لرحلتك إلى المغرب معنا',
-    ctaBody:
-      'MoroccoForYou وكالة سفر مقرّها المغرب. أرسل لنا تواريخك عبر واتساب — نرد خلال ساعة ببرنامج مقترح وفنادق وعرض سيارة أو سائق.',
+    ctaBody: 'MoroccoForYou وكالة سفر مقرّها المغرب. أرسل لنا تواريخك عبر واتساب — نرد خلال ساعة ببرنامج مقترح وفنادق وعرض سيارة أو سائق.',
     ctaButton: 'ابدأ عبر واتساب',
     dateLocale: 'ar-MA',
     blogIndexPath: '/ar/blog/',
@@ -141,7 +139,11 @@ export function BlogPostView({ slug, locale }: { slug: string; locale: Locale })
         ])}
       />
 
-      <nav aria-label="Breadcrumb" className="mx-auto max-w-3xl px-4 pt-6 text-sm text-brand-night/60">
+      <div className="mx-auto max-w-3xl px-4 pt-4 flex justify-end">
+        <LocaleSwitcher currentLocale={locale} alternates={post.alternates} />
+      </div>
+
+      <nav aria-label="Breadcrumb" className="mx-auto max-w-3xl px-4 pt-2 text-sm text-brand-night/60">
         <ol className="flex flex-wrap items-center gap-2">
           <li>
             <Link href={homePath(locale)} className="hover:underline">
@@ -180,7 +182,6 @@ export function BlogPostView({ slug, locale }: { slug: string; locale: Locale })
         </header>
 
         <div className="mt-8 aspect-[16/9] overflow-hidden rounded-2xl bg-brand-sand">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={post.coverImage}
             alt={post.coverAlt ?? post.title}
@@ -322,7 +323,6 @@ export function BlogPostView({ slug, locale }: { slug: string; locale: Locale })
                   className="group flex flex-col overflow-hidden rounded-2xl border border-brand-night/10 bg-white transition hover:border-brand-terracotta"
                 >
                   <div className="aspect-[16/10] overflow-hidden bg-brand-sand">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={p.coverImage}
                       alt={p.coverAlt ?? p.title}

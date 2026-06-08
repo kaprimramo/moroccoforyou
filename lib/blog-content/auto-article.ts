@@ -1,1 +1,0 @@
-AI learns patterns from data to make decisions.

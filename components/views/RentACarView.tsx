@@ -342,7 +342,7 @@ export function RentACarView({ locale }: { locale: Locale }) {
             </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-brand-terracotta mb-1">
-                Phone / WhatsApp
+               Phone / WhatsApp
               </p>
               
                 href="tel:+212634276534"
@@ -369,7 +369,6 @@ export function RentACarView({ locale }: { locale: Locale }) {
           </div>
         </div>
       </section>
-
       <section className="mx-auto max-w-6xl px-4 py-12">
         <FAQ faqs={FAQS[locale]} locale={locale} title={t.faqTitle} />
       </section>

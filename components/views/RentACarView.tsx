@@ -162,7 +162,6 @@ const LOCAL_BUSINESS_JSONLD = {
 export function RentACarView({ locale }: { locale: Locale }) {
   const t = dict(locale).rentACar;
   const tCommon = dict(locale);
-
   return (
     <>
       <JsonLd id="ld-autorental" data={CAR_RENTAL_JSONLD} />

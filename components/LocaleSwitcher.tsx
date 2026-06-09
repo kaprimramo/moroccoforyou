@@ -20,25 +20,26 @@ export function LocaleSwitcher({
   alternates,
 }: { 
   currentLocale: Locale;
+  // alternates daba katmchi direct b l-path l-kamel dyal l-article fga3 l-lughat
   alternates?: Partial<Record<Locale, string>>;
 }) {
   const pathname = usePathname() || '/';
   const naked = stripLocale(pathname);
 
   function getHref(l: Locale): string {
-    if (alternates) {
-      const slug = alternates[l];
-      if (slug) {
-        if (l === 'en') return `/blog/${slug}/`;
-        return `/${l}/blog/${slug}/`;
-      }
-      if (l === 'en') return '/blog/';
-      return `/${l}/blog/`;
+    // 1. Ila kayn lien direct dyal l-article f had l-lugha (f l-alternates object)
+    if (alternates && alternates[l]) {
+      return alternates[l]!;
     }
+
+    // 2. Ila l-user f chi article walakin ma-passyach lih alternate link dyal l-lugha l-khra
+    // hna kanreddouh direct l l-page d l-blog dyal dik l-lugha
     if (naked.startsWith('/blog/') && naked !== '/blog/') {
       if (l === 'en') return '/blog/';
       return `/${l}/blog/`;
     }
+
+    // 3. Pou les pages l-3adin (Home, Car rental, Contact...), kanbedlo ghir locale prefix
     return pathForLocale(l, naked);
   }
 

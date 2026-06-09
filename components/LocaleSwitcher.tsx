@@ -26,15 +26,19 @@ export function LocaleSwitcher({
   const naked = stripLocale(pathname);
 
   function getHref(l: Locale): string {
-    // ila kaynin alternates (blog articles) — stakhdam slug dial langue
     if (alternates) {
       const slug = alternates[l];
       if (slug) {
         if (l === 'en') return `/blog/${slug}/`;
         return `/${l}/blog/${slug}/`;
       }
+      if (l === 'en') return '/blog/';
+      return `/${l}/blog/`;
     }
-    // sinon — normal path switching
+    if (naked.startsWith('/blog/') && naked !== '/blog/') {
+      if (l === 'en') return '/blog/';
+      return `/${l}/blog/`;
+    }
     return pathForLocale(l, naked);
   }
 

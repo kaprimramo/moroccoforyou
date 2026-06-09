@@ -26,27 +26,22 @@ export function LocaleSwitcher({
   const naked = stripLocale(pathname);
 
   function getHref(l: Locale): string {
-    // 1. Ila alternates fiha l-data
+    // 1. Ila alternates fiha l-data (Slugs passyin direct)
     if (alternates && alternates[l]) {
       const val = alternates[l]!;
-      
-      // A. Ila kanti katpassi l-path l-kamel direct (b7al /fr/blog/article)
-      if (val.startsWith('/')) {
-        return val;
-      }
-      
-      // B. Ila kanti katpassi ghir l-slug bo7do (b7al 'location-voiture')
+      if (val.startsWith('/')) return val;
       if (l === 'en') return `/blog/${val}/`;
       return `/${l}/blog/${val}/`;
     }
 
-    // 2. Fallback: Ila l-user f chi article dyal l-blog walakin l-alternates makaynach
+    // 2. L-7AL L-Ddynamic L-SMART:
+    // Ila l-user f article d l-blog, ghir badal lih l-prefix d lugha d dake l-url direct!
     if (naked.startsWith('/blog/') && naked !== '/blog/') {
-      if (l === 'en') return '/blog/';
-      return `/${l}/blog/`;
+      if (l === 'en') return naked; // Kay-7iyd /fr/ aw /ar/ o kay-khalli l-path d en s7i7
+      return `/${l}${naked}`;       // Kay-zid /fr/ aw /ar/ l l-path l-7ali d l-article
     }
 
-    // 3. Pou les pages l-3adin
+    // 3. Pou les pages l-3adin (Home, Cars, Contact...)
     return pathForLocale(l, naked);
   }
 

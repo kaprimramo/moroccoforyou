@@ -16,7 +16,6 @@ import { JsonLd } from '@/components/JsonLd';
 import { FAQ } from '@/components/FAQ';
 import { WhatsAppCTA } from '@/components/WhatsAppCTA';
 import { TrustSignals } from '@/components/TrustSignals';
-import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { breadcrumbJsonLd, faqJsonLd } from '@/lib/seo';
 import { destinationPath, homePath } from '@/lib/paths';
 import { localizedUrl, type Locale } from '@/lib/i18n';
@@ -139,13 +138,7 @@ export function BlogPostView({ slug, locale }: { slug: string; locale: Locale })
         ])}
       />
 
-      {post.alternates && (
-  <div className="mx-auto max-w-3xl px-4 pt-4 flex justify-end">
-    <LocaleSwitcher currentLocale={locale} alternates={post.alternates} />
-  </div>
-)}
-
-      <nav aria-label="Breadcrumb" className="mx-auto max-w-3xl px-4 pt-2 text-sm text-brand-night/60">
+      <nav aria-label="Breadcrumb" className="mx-auto max-w-3xl px-4 pt-6 text-sm text-brand-night/60">
         <ol className="flex flex-wrap items-center gap-2">
           <li>
             <Link href={homePath(locale)} className="hover:underline">

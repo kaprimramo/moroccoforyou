@@ -17,7 +17,7 @@ function pathForLocale(locale: Locale, basePath: string): string {
 
 export function LocaleSwitcher({ 
   currentLocale,
-  alternates,
+  alternates: propsAlternates,
 }: { 
   currentLocale: Locale;
   alternates?: Partial<Record<Locale, string>>;
@@ -25,8 +25,13 @@ export function LocaleSwitcher({
   const pathname = usePathname() || '/';
   const naked = stripLocale(pathname);
 
+  // Smart Hack: Ghadi n-9raw l-alternates direct mn l-Metadata dyal s-site 
+  // dakhil window.__NEXT_DATA__ aw documents ila Next.js m-storingha, 
+  // Aw n-khelliwha t-khdem direct m3a props.
+  const alternates = propsAlternates;
+
   function getHref(l: Locale): string {
-    // 1. Ila alternates fiha l-data (Slugs passyin direct)
+    // 1. Ila alternates fiha l-data s7i7a (Slugs dyal l-articlât)
     if (alternates && alternates[l]) {
       const val = alternates[l]!;
       if (val.startsWith('/')) return val;
@@ -34,14 +39,14 @@ export function LocaleSwitcher({
       return `/${l}/blog/${val}/`;
     }
 
-    // 2. L-7AL L-Ddynamic L-SMART:
-    // Ila l-user f article d l-blog, ghir badal lih l-prefix d lugha d dake l-url direct!
+    // 2. Dynamic Fallback safe: Ila mal9ach alternates m9adda f dynamic slug,
+    // ghadi n-goulou lih y-welli dki: ila l-user m7rk f dynamic article, khllih fih.
     if (naked.startsWith('/blog/') && naked !== '/blog/') {
-      if (l === 'en') return naked; // Kay-7iyd /fr/ aw /ar/ o kay-khalli l-path d en s7i7
-      return `/${l}${naked}`;       // Kay-zid /fr/ aw /ar/ l l-path l-7ali d l-article
+      if (l === 'en') return naked;
+      return `/${l}${naked}`;
     }
 
-    // 3. Pou les pages l-3adin (Home, Cars, Contact...)
+    // 3. Pou les pages l-3adin (Home, Cars...)
     return pathForLocale(l, naked);
   }
 

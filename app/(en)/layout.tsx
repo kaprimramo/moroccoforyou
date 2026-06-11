@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'MoroccoForYou' }],
   formatDetection: { email: false, telephone: false },
   icons: { icon: '/favicon.ico' },
+  verification: {
+    other: {
+      'p:domain_verify': ['f7c5b602d0c7d2b75897061267efa5dc'],
+    },
+  },
 };
 
 export const viewport: Viewport = {

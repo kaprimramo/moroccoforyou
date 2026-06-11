@@ -14,6 +14,11 @@ export const metadata: Metadata = {
     'خطط لرحلتك المثالية في المغرب مع MoroccoForYou: مخطط ذكاء اصطناعي، سائقون خاصون، وتأجير سيارات بمطار الدار البيضاء. الحجز عبر واتساب.',
   applicationName: 'MoroccoForYou',
   icons: { icon: '/favicon.ico' },
+  verification: {
+    other: {
+      'p:domain_verify': ['f7c5b602d0c7d2b75897061267efa5dc'],
+    },
+  },
 };
 
 export const viewport: Viewport = {

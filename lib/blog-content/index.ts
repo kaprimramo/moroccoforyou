@@ -23,3 +23,4 @@ import './18-marrakech-fes-drive';
 import './19-casablanca-airport-to-city';
 import './20-casablanca-to-marrakech-by-car';
 import './21-casablanca-nightlife';
+import './22-best-car-rent-casablanca';

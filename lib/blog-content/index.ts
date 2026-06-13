@@ -26,3 +26,4 @@ import './21-casablanca-nightlife';
 import './22-best-car-rent-casablanca';
 import './23-casablanca-agadir-by-car';
 import './24-morocco-world-cup-2030-guide';
+import './25-things-to-do-casablanca-one-day';

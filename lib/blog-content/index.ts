@@ -30,3 +30,4 @@ import './25-things-to-do-casablanca-one-day';
 import './26-plan-morocco-trip-ai';
 import './27-why-ai-morocco-travel-wrong';
 import './28-best-car-morocco-ai-itinerary';
+import './29-car-rental-casablanca-german-tourists';

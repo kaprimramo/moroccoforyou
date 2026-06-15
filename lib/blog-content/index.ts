@@ -28,3 +28,4 @@ import './23-casablanca-agadir-by-car';
 import './24-morocco-world-cup-2030-guide';
 import './25-things-to-do-casablanca-one-day';
 import './26-plan-morocco-trip-ai';
+import './27-why-ai-morocco-travel-wrong';

@@ -25,7 +25,7 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   const meta = buildMetadata({
     title: post.metaTitle ?? post.title,
     description: post.metaDescription ?? post.description,
-    path: `/blog/${post.slug}/`,
+    path: `/ar/blog/${post.slug}/`, // 👈 FIX SEO: path khasso i-koun fih /ar/
     locale: 'ar',
     image: post.coverImage,
   });
@@ -41,5 +41,17 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
 }
 
 export default function Page({ params }: { params: Params }) {
-  return <BlogPostView slug={params.slug} locale="ar" />;
+  // 1. Fetchi l-post d l-Arabe hna f l-page
+  const post = getBlogPostInLang(params.slug, 'ar');
+
+  // 2. Mapping dyal les custom alternates slugs m9addin
+  const alternatesPaths: Record<string, string> = {};
+  if (post?.alternates) {
+    if (post.alternates.en) alternatesPaths['en'] = `/blog/${post.alternates.en}/`;
+    if (post.alternates.fr) alternatesPaths['fr'] = `/fr/blog/${post.alternates.fr}/`;
+    if (post.alternates.ar) alternatesPaths['ar'] = `/ar/blog/${post.alternates.ar}/`;
+  }
+
+  // 3. Passi l-alternates l l-view direct
+  return <BlogPostView slug={params.slug} locale="ar" alternates={alternatesPaths} />;
 }

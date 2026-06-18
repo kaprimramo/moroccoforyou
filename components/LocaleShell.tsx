@@ -8,9 +8,10 @@ import { organizationJsonLd } from '@/lib/seo';
 type Props = {
   locale: Locale;
   children: ReactNode;
+  alternates?: Partial<Record<Locale, string>>; // 👈 Zdna had l-prop hna
 };
 
-export function LocaleShell({ locale, children }: Props) {
+export function LocaleShell({ locale, children, alternates }: Props) {
   const dir = LOCALE_DIRECTION[locale];
   return (
     <html lang={locale} dir={dir}>
@@ -21,7 +22,10 @@ export function LocaleShell({ locale, children }: Props) {
         >
           Skip to content
         </a>
-        <Header locale={locale} />
+        
+        {/* 👈 Passina l-alternates direct l l-Header hna */}
+        <Header locale={locale} alternates={alternates} />
+        
         <main id="main">{children}</main>
         <Footer locale={locale} />
         <JsonLd data={organizationJsonLd()} id="ld-org" />

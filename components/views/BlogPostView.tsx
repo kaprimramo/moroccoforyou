@@ -20,8 +20,9 @@ import { breadcrumbJsonLd, faqJsonLd } from '@/lib/seo';
 import { destinationPath, homePath } from '@/lib/paths';
 import { localizedUrl, type Locale } from '@/lib/i18n';
 import { notFound } from 'next/navigation';
+import { LocaleShell } from '../LocaleShell'; // 👈 Zدنا l-import dyal l-Shell dyalk hna (9add l-path ila b3id)
 
-type Lang = NonNullable<BlogPost['lang']>;
+type Params = { slug: string };
 
 const LABELS: Record<Lang, {
   blogEyebrow: string;
@@ -101,6 +102,8 @@ const LABELS: Record<Lang, {
   },
 };
 
+type Lang = NonNullable<BlogPost['lang']>;
+
 function formatDate(iso: string, locale: string): string {
   return new Date(iso).toLocaleDateString(locale, {
     year: 'numeric',
@@ -109,7 +112,16 @@ function formatDate(iso: string, locale: string): string {
   });
 }
 
-export function BlogPostView({ slug, locale }: { slug: string; locale: Locale }) {
+// 👈 Zدنا prop alternates hna f l-interface
+export function BlogPostView({ 
+  slug, 
+  locale,
+  alternates 
+}: { 
+  slug: string; 
+  locale: Locale;
+  alternates?: Partial<Record<Locale, string>>;
+}) {
   const post = getBlogPostInLang(slug, locale);
   if (!post) notFound();
 
@@ -126,7 +138,8 @@ export function BlogPostView({ slug, locale }: { slug: string; locale: Locale })
     .slice(0, 4);
 
   return (
-    <>
+    // 👈 Wrapina kamil wast LocaleShell blast l-fragment l-khawi
+    <LocaleShell locale={locale} alternates={alternates}>
       <JsonLd id="ld-blog" data={blogPostingJsonLd(post, url)} />
       <JsonLd id="ld-blog-faq" data={faqJsonLd(post.faqs, lang)} />
       <JsonLd
@@ -339,6 +352,6 @@ export function BlogPostView({ slug, locale }: { slug: string; locale: Locale })
           </div>
         </section>
       )}
-    </>
+    </LocaleShell>
   );
 }

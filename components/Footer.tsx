@@ -65,7 +65,7 @@ export function Footer({ locale }: { locale: Locale }) {
             {t.footer.contact}
           </p>
           <ul className="mt-3 space-y-2 text-sm text-brand-cream/80">
-            <li>WhatsApp: +212 600 000 000</li>
+            <li>WhatsApp: +212 634 276 534</li>
             <li>Email: hello@moroccoforyou.com</li>
             <li>{t.footer.languages}</li>
           </ul>

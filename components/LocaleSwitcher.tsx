@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LOCALES, LOCALE_LABELS, DEFAULT_LOCALE, type Locale } from '@/lib/i18n';
 
@@ -25,9 +24,6 @@ export function LocaleSwitcher({
   const pathname = usePathname() || '/';
   const naked = stripLocale(pathname);
 
-  // Smart Hack: Ghadi n-9raw l-alternates direct mn l-Metadata dyal s-site 
-  // dakhil window.__NEXT_DATA__ aw documents ila Next.js m-storingha, 
-  // Aw n-khelliwha t-khdem direct m3a props.
   const alternates = propsAlternates;
 
   function getHref(l: Locale): string {
@@ -39,14 +35,13 @@ export function LocaleSwitcher({
       return `/${l}/blog/${val}/`;
     }
 
-    // 2. Dynamic Fallback safe: Ila mal9ach alternates m9adda f dynamic slug,
-    // ghadi n-goulou lih y-welli dki: ila l-user m7rk f dynamic article, khllih fih.
+    // 2. Dynamic Fallback safe: Ila mal9ach alternates m9adda f dynamic slug
     if (naked.startsWith('/blog/') && naked !== '/blog/') {
       if (l === 'en') return naked;
       return `/${l}${naked}`;
     }
 
-    // 3. Pou les pages l-3adin (Home, Cars...)
+    // 3. Pour les pages l-3adin (Home, Cars...)
     return pathForLocale(l, naked);
   }
 
@@ -58,7 +53,8 @@ export function LocaleSwitcher({
       <ul className="absolute right-0 z-10 mt-2 w-36 rounded-md border border-brand-night/10 bg-white p-1 shadow-lg">
         {LOCALES.map((l) => (
           <li key={l}>
-            <Link
+            {/* 💡 Slla7na hna: Beddelna Link b <a> tag normal bach dynamic router fresh reload i-wqe3 smoothly */}
+            <a
               hrefLang={l}
               href={getHref(l)}
               className={`block rounded px-3 py-2 text-sm hover:bg-brand-cream ${
@@ -66,7 +62,7 @@ export function LocaleSwitcher({
               }`}
             >
               {LOCALE_LABELS[l]}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

@@ -31,9 +31,12 @@ function alternatesFor(path: string) {
 function blogAlternatesFor(post: (typeof BLOG_POSTS)[number]) {
   if (!post.alternates) return undefined;
   const languages: Record<string, string> = {};
-  if (post.alternates.en) languages['en'] = localizedUrl('en', blogPath('en', post.alternates.en));
-  if (post.alternates.fr) languages['fr'] = localizedUrl('fr', blogPath('fr', post.alternates.fr));
-  if (post.alternates.ar) languages['ar'] = localizedUrl('ar', blogPath('ar', post.alternates.ar));
+  
+  // Slla7na l-paths hna bach i-kouno direct o structural clean
+  if (post.alternates.en) languages['en'] = localizedUrl('en', `/blog/${post.alternates.en}/`);
+  if (post.alternates.fr) languages['fr'] = localizedUrl('fr', `/blog/${post.alternates.fr}/`);
+  if (post.alternates.ar) languages['ar'] = localizedUrl('ar', `/blog/${post.alternates.ar}/`);
+  
   languages['x-default'] = languages['en'] ?? Object.values(languages)[0];
   return { languages };
 }
@@ -42,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
 
+  // 1. Static Pages & Destinations mapping
   for (const { path, priority, changeFrequency } of LOCALIZED_PATHS) {
     for (const locale of LOCALES) {
       entries.push({
@@ -54,11 +58,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Per-post entries with hreflang alternates between EN/FR/AR siblings.
+  // 2. Per-post entries clean dynamic routing structure
   for (const post of BLOG_POSTS) {
     const lang = post.lang ?? 'en';
+    
+    // Gaddo dynamic clean link explicit framework format
+    const cleanBlogPath = `/blog/${post.slug}/`;
+
     entries.push({
-      url: localizedUrl(lang, blogPath(lang, post.slug)),
+      url: localizedUrl(lang, cleanBlogPath),
       lastModified: new Date(post.updatedISO ?? post.publishedISO),
       changeFrequency: 'monthly',
       priority: 0.7,

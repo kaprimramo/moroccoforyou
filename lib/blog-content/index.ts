@@ -33,3 +33,4 @@ import './28-best-car-morocco-ai-itinerary';
 import './29-car-rental-casablanca-german-tourists';
 import './30-casablanca-airport-car-rental';
 import './31-morocco-cultural-rules-couples';
+import './32-car-rental-casablanca-no-deposit';

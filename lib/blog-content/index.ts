@@ -35,3 +35,4 @@ import './30-casablanca-airport-car-rental';
 import './31-morocco-cultural-rules-couples';
 import './32-car-rental-casablanca-no-deposit';
 import './33-how-to-get-from-casablanca-to-chefchaouen';
+import './34-casablanca-to-rabat-by-car';

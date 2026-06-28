@@ -40,10 +40,8 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
 }
 
 export default function Page({ params }: { params: Params }) {
-  // 1. Fetchi l-post hna f l-page bach n-jbdou les alternates dyal l-lughat nishan
   const post = getBlogPostInLang(params.slug, 'en');
 
-  // 2. Créer object alternates m9add b absolute URLs aw full paths 
   const alternatesPaths: Record<string, string> = {};
   if (post?.alternates) {
     if (post.alternates.en) alternatesPaths['en'] = `/blog/${post.alternates.en}/`;
@@ -51,6 +49,5 @@ export default function Page({ params }: { params: Params }) {
     if (post.alternates.ar) alternatesPaths['ar'] = `/ar/blog/${post.alternates.ar}/`;
   }
 
-  // 3. Passi l-alternates direct l l-component BlogPostView
   return <BlogPostView slug={params.slug} locale="en" alternates={alternatesPaths} />;
 }

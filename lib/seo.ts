@@ -35,6 +35,14 @@ export function buildMetadata({
         'x-default': localizedUrl('en', path),
       },
     },
+    other: {
+      'geo.region': locale === 'ar' ? 'AE' : locale === 'fr' ? 'EU' : 'US',
+      'geo.placename': 'Morocco',
+      'geo.position': '33.5731;-7.5898',
+      ICBM: '33.5731, -7.5898',
+      'target-market': locale === 'ar' ? 'GCC' : locale === 'fr' ? 'Europe' : 'USA',
+      'content-language': locale,
+    },
     openGraph: {
       title,
       description,

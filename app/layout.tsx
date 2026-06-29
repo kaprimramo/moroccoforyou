@@ -10,17 +10,7 @@ export const metadata: Metadata = {
     default: 'MoroccoForYou — Tailor-made trips, drivers & car rental in Morocco',
     template: '%s · MoroccoForYou',
   },
-  description:
-    'Plan your perfect Morocco trip with MoroccoForYou: AI itinerary planner, private drivers, and car rental at Casablanca Airport. WhatsApp booking, EN / FR / AR support.',
-  applicationName: 'MoroccoForYou',
-  authors: [{ name: 'MoroccoForYou' }],
-  formatDetection: { email: false, telephone: false },
-  icons: { icon: '/favicon.ico' },
-  verification: {
-    other: {
-      'p:domain_verify': ['f7c5b602d0c7d2b75897061267efa5dc'],
-    },
-  },
+  // ... (باقي الـ Metadata ديالك كيف هي)
 };
 
 export const viewport: Viewport = {
@@ -31,9 +21,13 @@ export const viewport: Viewport = {
 
 export default function EnLayout({ children }: { children: React.ReactNode }) {
   return (
-    <LocaleShell locale="en">
-      {children}
-      <GoogleAnalytics gaId="G-GM2BJLWEF1" />
-    </LocaleShell>
+    <html lang="en">
+      <body>
+        <LocaleShell locale="en">
+          {children}
+          <GoogleAnalytics gaId="G-GM2BJLWEF1" />
+        </LocaleShell>
+      </body>
+    </html>
   );
 }

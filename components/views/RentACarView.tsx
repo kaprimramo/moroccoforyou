@@ -9,7 +9,8 @@ import { TrustSignals } from '@/components/TrustSignals';
 import { FAQ } from '@/components/FAQ';
 import { JsonLd } from '@/components/JsonLd';
 import { WhatsAppCTA } from '@/components/WhatsAppCTA';
-import { breadcrumbJsonLd, faqJsonLd } from '@/lib/seo';
+import { LocaleShell } from '@/components/LocaleShell';
+import { breadcrumbJsonLd, faqJsonLd, localBusinessJsonLd, LOCAL_BUSINESS_ID } from '@/lib/seo';
 
 const PATH = '/rent-a-car/casablanca-airport/';
 
@@ -118,6 +119,8 @@ const FAQS: Record<Locale, { question: string; answer: string }[]> = {
   ],
 };
 
+// AutoRental references the canonical LocalBusiness by @id so search engines
+// merge them into a single business entity instead of treating them as two.
 const CAR_RENTAL_JSONLD = {
   '@context': 'https://schema.org',
   '@type': 'AutoRental',
@@ -126,53 +129,23 @@ const CAR_RENTAL_JSONLD = {
   areaServed: { '@type': 'Country', name: 'Morocco' },
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Aeroport Mohammed V',
+    streetAddress: 'Aéroport Mohammed V',
     addressLocality: 'Casablanca',
     addressCountry: 'MA',
   },
   telephone: '+212634276534',
   priceRange: 'MAD 250 - MAD 1100 / day',
   parentOrganization: { '@type': 'Organization', name: 'MoroccoForYou' },
-};
-
-const LOCAL_BUSINESS_JSONLD = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'MoroccoForYou Cars',
-  image: 'https://www.moroccoforyou.com/logo.svg',
-  url: `${SITE_URL}${PATH}`,
-  telephone: '+212634276534',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Aeroport Mohammed V',
-    addressLocality: 'Casablanca',
-    addressCountry: 'MA',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 33.376427683483136,
-    longitude: -7.567062446346052,
-  },
-  openingHours: 'Mo-Su 00:00-23:59',
-  priceRange: 'MAD 250 - MAD 1100',
-  areaServed: [
-    { '@type': 'City', name: 'Casablanca' },
-    { '@type': 'City', name: 'Marrakech' },
-    { '@type': 'City', name: 'Fes' },
-    { '@type': 'City', name: 'Rabat' },
-    { '@type': 'City', name: 'Tangier' },
-    { '@type': 'City', name: 'Agadir' }
-  ],
-  hasMap: 'https://share.google/lppJQBuy1u0qTgtqi',
+  isPartOf: { '@id': LOCAL_BUSINESS_ID },
 };
 
 export function RentACarView({ locale }: { locale: Locale }) {
   const t = dict(locale).rentACar;
   const tCommon = dict(locale);
   return (
-    <>
+    <LocaleShell locale={locale}>
       <JsonLd id="ld-autorental" data={CAR_RENTAL_JSONLD} />
-      <JsonLd id="ld-localbusiness" data={LOCAL_BUSINESS_JSONLD} />
+      <JsonLd id="ld-localbusiness" data={localBusinessJsonLd()} />
       <JsonLd id="ld-faq-cars" data={faqJsonLd(FAQS[locale], locale)} />
       <JsonLd
         id="ld-breadcrumb-cars"
@@ -372,6 +345,6 @@ export function RentACarView({ locale }: { locale: Locale }) {
           </Link>
         </div>
       </section>
-    </>
+    </LocaleShell>
   );
 }

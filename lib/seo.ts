@@ -153,6 +153,47 @@ export function breadcrumbJsonLd(items: { name: string; url: string }[]) {
   };
 }
 
+/** Canonical LocalBusiness node. Stable @id so multiple pages can reference
+ * the same entity without producing duplicate or conflicting business cards
+ * in search results. */
+export const LOCAL_BUSINESS_ID = `${SITE_URL}/#localbusiness`;
+
+export function localBusinessJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': LOCAL_BUSINESS_ID,
+    name: 'MoroccoForYou Cars',
+    image: `${SITE_URL}/logo.svg`,
+    url: `${SITE_URL}/rent-a-car/casablanca-airport/`,
+    telephone: '+212634276534',
+    email: 'hello@moroccoforyou.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Aéroport Mohammed V',
+      addressLocality: 'Casablanca',
+      postalCode: '20250',
+      addressCountry: 'MA',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 33.376427683483136,
+      longitude: -7.567062446346052,
+    },
+    openingHours: 'Mo-Su 00:00-23:59',
+    priceRange: 'MAD 250 - MAD 1100',
+    areaServed: [
+      { '@type': 'City', name: 'Casablanca' },
+      { '@type': 'City', name: 'Marrakech' },
+      { '@type': 'City', name: 'Fes' },
+      { '@type': 'City', name: 'Rabat' },
+      { '@type': 'City', name: 'Tangier' },
+      { '@type': 'City', name: 'Agadir' },
+    ],
+    hasMap: 'https://share.google/lppJQBuy1u0qTgtqi',
+  };
+}
+
 export function organizationJsonLd() {
   return {
     '@context': 'https://schema.org',

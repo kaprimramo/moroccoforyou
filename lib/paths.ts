@@ -1,9 +1,8 @@
-import { DEFAULT_LOCALE, type Locale } from './i18n';
+import { localePath, type Locale } from './i18n';
 
-export function localePath(locale: Locale, path: string): string {
-  const clean = path.startsWith('/') ? path : `/${path}`;
-  return locale === DEFAULT_LOCALE ? clean : `/${locale}${clean}`;
-}
+// Re-export the canonical implementation from i18n.ts. Callers can keep
+// importing `localePath` from `@/lib/paths` for backwards compatibility.
+export { localePath };
 
 export function homePath(locale: Locale) {
   return localePath(locale, '/');

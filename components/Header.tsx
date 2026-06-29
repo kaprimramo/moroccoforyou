@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import { DESTINATIONS } from '@/lib/destinations';
 import { dict } from '@/lib/dictionaries';

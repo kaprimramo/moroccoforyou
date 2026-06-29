@@ -1,9 +1,10 @@
-import type { Metadata, Viewport } from 'next';
-import '../globals.css';
+import type { Metadata } from 'next';
 import { SITE_URL } from '@/lib/i18n';
-import { LocaleShell } from '@/components/LocaleShell';
-import { GoogleAnalytics } from '@next/third-parties/google';
 
+// Locale-specific metadata defaults that descend to every /fr/* page.
+// Layout itself is a transparent pass-through — chrome (Header/Footer/etc)
+// is rendered inside each view via <LocaleShell>, and Google Analytics is
+// declared once in the root layout. See lib/seo.ts for shared schemas.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -21,17 +22,6 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = {
-  themeColor: '#0F1B2D',
-  width: 'device-width',
-  initialScale: 1,
-};
-
 export default function FrLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <LocaleShell locale="fr">
-      {children}
-      <GoogleAnalytics gaId="G-GM2BJLWEF1" />
-    </LocaleShell>
-  );
+  return <>{children}</>;
 }

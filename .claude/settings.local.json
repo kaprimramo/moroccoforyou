@@ -21,7 +21,10 @@
       "PowerShell(curl.exe -s \"https://www.moroccoforyou.com/robots.txt\" 2>$null2)",
       "PowerShell(curl.exe -s \"https://www.moroccoforyou.com/robots.txt\" 2>$null)",
       "PowerShell(New-Item *)",
-      "PowerShell(curl.exe -s \"https://www.moroccoforyou.com/36811f9c07ed4ff1ad49d782e547ab27.txt\" 2>$null)"
+      "PowerShell(curl.exe -s \"https://www.moroccoforyou.com/36811f9c07ed4ff1ad49d782e547ab27.txt\" 2>$null)",
+      "Bash(grep -v \"//\"2)",
+      "PowerShell(Get-Content *)",
+      "PowerShell(Test-Path *)"
     ]
   }
 }

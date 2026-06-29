@@ -57,6 +57,8 @@ export function normalizePath(path: string): string {
   return path;
 }
 
+/** Locale-prefixed path. EN (default) lives at the root; FR/AR get a /{locale} prefix.
+ * Single source of truth — `lib/paths.ts` re-exports this. */
 export function localePath(locale: Locale, path: string): string {
   const clean = normalizePath(path);
   return locale === DEFAULT_LOCALE ? clean : `/${locale}${clean}`;

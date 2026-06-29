@@ -10,6 +10,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { WhatsAppCTA } from '@/components/WhatsAppCTA';
 import { faqJsonLd, websiteJsonLd } from '@/lib/seo';
 import { HERO_HOMEPAGE } from '@/lib/destination-media';
+import { LocaleShell } from '@/components/LocaleShell';
 
 const HOME_FAQS: Record<Locale, { question: string; answer: string }[]> = {
   en: [
@@ -82,7 +83,7 @@ export function HomeView({ locale }: { locale: Locale }) {
   const faqs = HOME_FAQS[locale];
 
   return (
-    <>
+    <LocaleShell locale={locale}>
       <JsonLd data={faqJsonLd(faqs, locale)} id="ld-faq-home" />
       <JsonLd data={websiteJsonLd()} id="ld-website" />
 
@@ -193,6 +194,6 @@ export function HomeView({ locale }: { locale: Locale }) {
           </Link>
         </div>
       </section>
-    </>
+    </LocaleShell>
   );
 }

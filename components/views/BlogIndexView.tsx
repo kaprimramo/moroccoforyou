@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { getBlogPostsByLang, blogPath } from '@/lib/blog';
 import { homePath } from '@/lib/paths';
 import type { Locale } from '@/lib/i18n';
+import { LocaleShell } from '@/components/LocaleShell';
 
 const LABELS: Record<Locale, {
   eyebrow: string;
@@ -55,7 +56,7 @@ export function BlogIndexView({ locale }: { locale: Locale }) {
   );
 
   return (
-    <>
+    <LocaleShell locale={locale}>
       <nav aria-label="Breadcrumb" className="mx-auto max-w-6xl px-4 pt-6 text-sm text-brand-night/60">
         <ol className="flex flex-wrap items-center gap-2">
           <li>
@@ -122,6 +123,6 @@ export function BlogIndexView({ locale }: { locale: Locale }) {
           })}
         </div>
       </section>
-    </>
+    </LocaleShell>
   );
 }

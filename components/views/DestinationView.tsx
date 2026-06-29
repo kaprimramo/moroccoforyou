@@ -17,6 +17,7 @@ import { TrustSignals } from '@/components/TrustSignals';
 import { WhatsAppCTA } from '@/components/WhatsAppCTA';
 import { HotelCard } from '@/components/HotelCard';
 import { CarCard } from '@/components/CarCard';
+import { LocaleShell } from '@/components/LocaleShell';
 import { breadcrumbJsonLd, faqJsonLd, touristDestinationJsonLd } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 
@@ -36,7 +37,7 @@ export function DestinationView({ slug, locale }: { slug: string; locale: Locale
   const other = DESTINATIONS.filter((x) => x.slug !== d.slug).slice(0, 4);
 
   return (
-    <>
+    <LocaleShell locale={locale}>
       <JsonLd
         id="ld-destination"
         data={touristDestinationJsonLd({
@@ -307,6 +308,6 @@ export function DestinationView({ slug, locale }: { slug: string; locale: Locale
           ))}
         </div>
       </section>
-    </>
+    </LocaleShell>
   );
 }

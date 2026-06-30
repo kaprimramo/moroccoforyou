@@ -8,9 +8,6 @@
 
 html {
   scroll-behavior: smooth;
-  /* `clip` prevents horizontal scrolling without creating a scroll container,
-     so position: sticky on the Header keeps working. Supported in all modern
-     browsers (Chrome 90+, Firefox 81+, Safari 16.4+). */
   overflow-x: clip;
 }
 
@@ -22,28 +19,22 @@ body {
   font-feature-settings: 'liga';
 }
 
-/* Long unbreakable strings (URLs, tokens) inside prose-style content
-   shouldn't be able to widen the viewport on mobile. */
 article p,
 article li {
   overflow-wrap: anywhere;
 }
 
-/* Images should never escape their containers. Explicit Tailwind height
-   classes (e.g. h-9, h-full) override this thanks to higher specificity. */
 img {
   max-width: 100%;
 }
 
-/* --- PERMANENT FIX: Hide 'skip-to-content' links entirely --- */
-a[href*="content"], 
-[class*="skip-"] {
+/* --- KILL THE SKIP LINK --- */
+a[href*="#main"], 
+[href*="#main"] {
   display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;
   opacity: 0 !important;
-  height: 0 !important;
-  width: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  position: absolute !important;
+  z-index: -9999 !important;
 }

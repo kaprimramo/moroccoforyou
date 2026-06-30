@@ -35,25 +35,15 @@ img {
   max-width: 100%;
 }
 
-/* Hide skip-to-content link unless it's focused for accessibility */
-.skip-to-content {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.skip-to-content:focus {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-  padding: 1rem;
-  background: white;
-  color: black;
-  z-index: 9999;
-  outline: 2px solid black;
+/* --- PERMANENT FIX: Hide 'skip-to-content' links entirely --- */
+a[href*="content"], 
+[class*="skip-"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }

@@ -6,6 +6,8 @@ export type Dictionary = {
     rentACar: string;
     planMyTrip: string;
     blog: string;
+    openMenu: string;
+    closeMenu: string;
   };
   hero: {
     eyebrow: string;
@@ -131,7 +133,7 @@ export type Dictionary = {
 };
 
 const en: Dictionary = {
-  nav: { destinations: 'Destinations', rentACar: 'Rent a car', planMyTrip: 'Plan my trip', blog: 'Blog' },
+  nav: { destinations: 'Destinations', rentACar: 'Rent a car', planMyTrip: 'Plan my trip', blog: 'Blog', openMenu: 'Open menu', closeMenu: 'Close menu' },
   hero: {
     eyebrow: 'Morocco, designed for you',
     title: 'Your Morocco trip — planned by AI, run by locals.',
@@ -274,7 +276,7 @@ const en: Dictionary = {
 };
 
 const fr: Dictionary = {
-  nav: { destinations: 'Destinations', rentACar: 'Location de voiture', planMyTrip: 'Planifier mon voyage', blog: 'Blog' },
+  nav: { destinations: 'Destinations', rentACar: 'Location de voiture', planMyTrip: 'Planifier mon voyage', blog: 'Blog', openMenu: 'Ouvrir le menu', closeMenu: 'Fermer le menu' },
   hero: {
     eyebrow: 'Le Maroc, conçu pour vous',
     title: 'Votre voyage au Maroc — planifié par l’IA, organisé par des locaux.',
@@ -417,7 +419,7 @@ const fr: Dictionary = {
 };
 
 const ar: Dictionary = {
-  nav: { destinations: 'الوجهات', rentACar: 'تأجير السيارات', planMyTrip: 'خطط لرحلتي', blog: 'مدونة' },
+  nav: { destinations: 'الوجهات', rentACar: 'تأجير السيارات', planMyTrip: 'خطط لرحلتي', blog: 'مدونة', openMenu: 'فتح القائمة', closeMenu: 'إغلاق القائمة' },
   hero: {
     eyebrow: 'المغرب، مصمم من أجلك',
     title: 'رحلتك في المغرب — يخطط لها الذكاء الاصطناعي، وينظمها سكان المغرب.',

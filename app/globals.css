@@ -8,6 +8,10 @@
 
 html {
   scroll-behavior: smooth;
+  /* `clip` prevents horizontal scrolling without creating a scroll container,
+     so position: sticky on the Header keeps working. Supported in all modern
+     browsers (Chrome 90+, Firefox 81+, Safari 16.4+). */
+  overflow-x: clip;
 }
 
 body {
@@ -16,4 +20,17 @@ body {
 
 [dir='rtl'] body {
   font-feature-settings: 'liga';
+}
+
+/* Long unbreakable strings (URLs, tokens) inside prose-style content
+   shouldn't be able to widen the viewport on mobile. */
+article p,
+article li {
+  overflow-wrap: anywhere;
+}
+
+/* Images should never escape their containers. Explicit Tailwind height
+   classes (e.g. h-9, h-full) override this thanks to higher specificity. */
+img {
+  max-width: 100%;
 }

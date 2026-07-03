@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { DESTINATIONS } from '@/lib/destinations';
 import { dict } from '@/lib/dictionaries';
-import { homePath, destinationPath, rentACarPath } from '@/lib/paths';
+import { homePath, destinationPath, rentACarPath, plannerPath } from '@/lib/paths';
 import { LocaleSwitcher } from './LocaleSwitcher';
 import type { Locale } from '@/lib/i18n';
 
@@ -59,9 +59,16 @@ export function Header({
           <Link href="/blog/" className="hover:text-brand-terracotta">
             {t.nav.blog}
           </Link>
+          <Link
+            href={plannerPath(locale)}
+            className="inline-flex items-center gap-1.5 rounded-full bg-brand-terracotta px-4 py-2 text-white hover:bg-brand-night"
+          >
+            <span aria-hidden>✦</span>
+            {t.nav.aiPlanner}
+          </Link>
           <a
             href="#contact"
-            className="rounded-full bg-brand-oasis px-4 py-2 text-white hover:bg-brand-night"
+            className="rounded-full border border-brand-night/20 px-4 py-2 text-brand-night hover:border-brand-terracotta"
           >
             {t.nav.planMyTrip}
           </a>
@@ -171,9 +178,18 @@ export function Header({
                 </Link>
               </li>
               <li className="px-1 pt-2">
+                <Link
+                  href={plannerPath(locale)}
+                  className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-brand-terracotta px-4 py-2.5 font-semibold text-white hover:bg-brand-night"
+                >
+                  <span aria-hidden>✦</span>
+                  {t.nav.aiPlanner}
+                </Link>
+              </li>
+              <li className="px-1">
                 <a
                   href="#contact"
-                  className="inline-flex w-full items-center justify-center rounded-full bg-brand-oasis px-4 py-2.5 font-semibold text-white hover:bg-brand-night"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-brand-night/20 px-4 py-2.5 font-semibold text-brand-night hover:border-brand-terracotta"
                 >
                   {t.nav.planMyTrip}
                 </a>

@@ -15,3 +15,7 @@ export function destinationPath(locale: Locale, slug: string) {
 export function rentACarPath(locale: Locale) {
   return localePath(locale, '/rent-a-car/casablanca-airport/');
 }
+
+export function plannerPath(locale: Locale) {
+  return localePath(locale, '/planner/');
+}

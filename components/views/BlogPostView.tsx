@@ -2,7 +2,9 @@
 // Must be the first import (before '@/lib/blog') to avoid TDZ on the array.
 import '@/lib/blog-content';
 
+import { Fragment } from 'react';
 import Link from 'next/link';
+import { AIPlannerCTA } from '@/components/AIPlannerCTA';
 import {
   BLOG_POSTS,
   blogPostingJsonLd,
@@ -128,6 +130,29 @@ export function BlogPostView({
   const lang: Lang = post.lang ?? 'en';
   const t = LABELS[lang];
   const url = blogUrl(lang, post.slug);
+
+  // Where to inject the AI Planner CTA. Editorial rule: after the 2nd
+  // paragraph overall (intro counts as #1, so we land inside section 0 at
+  // its first <p>). If a post has no sections or the first section has no
+  // paragraphs, the loop leaves the indices at -1 and no CTA is rendered
+  // inline — the standalone CTA card can still live elsewhere on the page.
+  let ctaSectionIdx = -1;
+  let ctaParagraphIdx = -1;
+  {
+    let seen = 1; // intro counted as the 1st paragraph
+    for (let si = 0; si < post.sections.length && ctaSectionIdx === -1; si++) {
+      const paras = post.sections[si].paragraphs;
+      for (let pi = 0; pi < paras.length; pi++) {
+        seen++;
+        if (seen >= 2) {
+          ctaSectionIdx = si;
+          ctaParagraphIdx = pi;
+          break;
+        }
+      }
+    }
+  }
+
   const related = (post.relatedPosts ?? [])
     .map((s) => BLOG_POSTS.find((p) => p.slug === s))
     .filter((p): p is NonNullable<typeof p> => Boolean(p))
@@ -199,13 +224,16 @@ export function BlogPostView({
 
         <p className="mt-8 text-lg leading-relaxed text-brand-night/90">{post.intro}</p>
 
-        {post.sections.map((s) => (
+        {post.sections.map((s, si) => (
           <section key={s.heading} className="mt-10">
             <h2 className="font-display text-2xl font-bold text-brand-night">{s.heading}</h2>
             {s.paragraphs.map((para, i) => (
-              <p key={i} className="mt-3 leading-relaxed text-brand-night/85">
-                {para}
-              </p>
+              <Fragment key={i}>
+                <p className="mt-3 leading-relaxed text-brand-night/85">{para}</p>
+                {si === ctaSectionIdx && i === ctaParagraphIdx && (
+                  <AIPlannerCTA locale={locale} variant="inline" />
+                )}
+              </Fragment>
             ))}
             {s.list && (
               <ul className="mt-4 list-disc space-y-2 ps-6 text-brand-night/85">

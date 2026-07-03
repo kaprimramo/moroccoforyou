@@ -8,6 +8,7 @@ import { LOCALES, SITE_URL, localizedUrl, type Locale } from '@/lib/i18n';
 
 const LOCALIZED_PATHS = [
   { path: '/', priority: 1.0, changeFrequency: 'weekly' as const },
+  { path: '/planner/', priority: 0.95, changeFrequency: 'weekly' as const },
   {
     path: '/rent-a-car/casablanca-airport/',
     priority: 0.9,

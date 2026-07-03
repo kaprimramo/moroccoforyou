@@ -50,7 +50,7 @@ const EN: BlogPost = {
       },
     },
     {
-      heading: 'How to Get from Casablanca to Rabat — All Options Compared',
+      heading: '00000 git add .How to Get from Casablanca to Rabat — All Options Compared',
       paragraphs: [
         'There are four practical ways to travel between Casablanca and Rabat, each with different trade-offs depending on your priorities.',
       ],

@@ -37,3 +37,4 @@ import './32-car-rental-casablanca-no-deposit';
 import './33-how-to-get-from-casablanca-to-chefchaouen';
 import './34-casablanca-to-rabat-by-car';
 import './35-best-places-to-dine-in-casablanca';
+import './36-casablanca-travel-guide';

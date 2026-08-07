@@ -808,4 +808,4 @@ if (legacyEN) {
   legacyEN.updatedISO = '2026-08-05';
 }
 
-BLOG_POSTS.push(FR, AR);
+BLOG_POSTS.push(EN, FR, AR)

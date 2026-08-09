@@ -766,11 +766,4 @@ const AR: BlogPost = {
   alternates: ALTERNATES,
 };
 
-const legacyEN = BLOG_POSTS.find((p) => p.slug === SLUG_EN && (p.lang ?? 'en') === 'en');
-if (legacyEN) {
-  Object.assign(legacyEN, EN);
-} else {
-  BLOG_POSTS.push(EN);
-}
-
-BLOG_POSTS.push(FR, AR);
+BLOG_POSTS.push(EN, FR, AR);

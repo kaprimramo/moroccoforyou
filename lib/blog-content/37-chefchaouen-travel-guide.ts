@@ -766,4 +766,9 @@ const AR: BlogPost = {
   alternates: ALTERNATES,
 };
 
+[SLUG_EN, SLUG_FR, SLUG_AR].forEach((slug) => {
+  const idx = BLOG_POSTS.findIndex((p) => p.slug === slug);
+  if (idx !== -1) BLOG_POSTS.splice(idx, 1);
+});
+
 BLOG_POSTS.push(EN, FR, AR);

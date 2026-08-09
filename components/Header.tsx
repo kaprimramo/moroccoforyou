@@ -5,10 +5,6 @@ import { homePath, destinationPath, rentACarPath, plannerPath } from '@/lib/path
 import { LocaleSwitcher } from './LocaleSwitcher';
 import type { Locale } from '@/lib/i18n';
 
-// Tiny inline behaviour for the mobile <details> menu: close on outside
-// click, on link click, and on Escape. Stays inline so Header remains a
-// pure server component (no 'use client' boundary) and all nav links stay
-// in the SSR HTML for crawlers.
 const MOBILE_MENU_SCRIPT = `(function(){function close(){var o=document.querySelector('details[data-mobile-menu][open]');if(o)o.removeAttribute('open');}document.addEventListener('click',function(e){var o=document.querySelector('details[data-mobile-menu][open]');if(!o)return;var t=e.target;var inside=t.closest&&t.closest('details[data-mobile-menu]');if(inside!==o){close();return;}var l=t.closest&&t.closest('a[href]');if(l&&!l.closest('[data-no-close]'))close();});document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});})();`;
 
 export function Header({
@@ -31,7 +27,7 @@ export function Header({
           <img src="/logo.svg" alt="MoroccoForYou" className="h-9 w-auto md:h-10" />
         </Link>
 
-        {/* Desktop navigation (≥ md) */}
+        {/* Desktop navigation */}
         <nav
           aria-label="Primary"
           className="hidden items-center gap-6 text-sm font-medium md:flex"
@@ -66,62 +62,32 @@ export function Header({
             <span aria-hidden>✦</span>
             {t.nav.aiPlanner}
           </Link>
-          <a
-            href="#contact"
+          <Link
+            href={plannerPath(locale)}
             className="rounded-full border border-brand-night/20 px-4 py-2 text-brand-night hover:border-brand-terracotta"
           >
             {t.nav.planMyTrip}
-          </a>
+          </Link>
           <LocaleSwitcher currentLocale={locale} alternates={alternates} />
         </nav>
 
-        {/* Mobile hamburger (< md). Uses <details> so links stay in the
-            crawlable DOM and the menu works without JS. The inline script
-            below adds polish (close on outside-click, link-click, Escape). */}
+        {/* Mobile */}
         <details data-mobile-menu className="group relative md:hidden">
           <summary
             aria-label={t.nav.openMenu}
             className="inline-flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-md text-brand-night hover:bg-brand-night/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-terracotta [&::-webkit-details-marker]:hidden"
           >
-            {/* Hamburger icon (closed state) */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-              className="block group-open:hidden"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="block group-open:hidden">
               <line x1="3" y1="6" x2="21" y2="6" />
               <line x1="3" y1="12" x2="21" y2="12" />
               <line x1="3" y1="18" x2="21" y2="18" />
             </svg>
-            {/* Close icon (open state) */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-              className="hidden group-open:block"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="hidden group-open:block">
               <line x1="18" y1="6" x2="6" y2="18" />
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </summary>
 
-          {/* Slide-down panel. fixed so it overlays page content; inset-x-2
-              keeps a small gutter on either side at any screen width. */}
           <nav
             aria-label="Mobile primary"
             className="fixed inset-x-2 top-[3.75rem] z-50 max-h-[calc(100vh-4rem)] overflow-y-auto rounded-2xl border border-brand-night/10 bg-white shadow-2xl"
@@ -131,19 +97,7 @@ export function Header({
                 <details className="group/sub">
                   <summary className="flex cursor-pointer list-none items-center justify-between rounded-lg px-3 py-2.5 font-medium text-brand-night hover:bg-brand-cream [&::-webkit-details-marker]:hidden">
                     <span>{t.nav.destinations}</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                      className="transition group-open/sub:rotate-180"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="transition group-open/sub:rotate-180">
                       <polyline points="6 9 12 15 18 9" />
                     </svg>
                   </summary>
@@ -187,12 +141,12 @@ export function Header({
                 </Link>
               </li>
               <li className="px-1">
-                <a
-                  href="#contact"
+                <Link
+                  href={plannerPath(locale)}
                   className="inline-flex w-full items-center justify-center rounded-full border border-brand-night/20 px-4 py-2.5 font-semibold text-brand-night hover:border-brand-terracotta"
                 >
                   {t.nav.planMyTrip}
-                </a>
+                </Link>
               </li>
               <li
                 data-no-close

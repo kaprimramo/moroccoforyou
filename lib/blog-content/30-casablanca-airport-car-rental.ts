@@ -17,10 +17,9 @@ const EN: BlogPost = {
   coverImage: COVER,
   coverAlt: 'Car rental Casablanca Mohammed V Airport CMN — MoroccoForYou Cars free meet and greet arrivals hall',
   publishedISO: '2026-06-17',
-  updatedISO: '2026-08-05',
   author: 'Omar L. — Morocco Car Rental Specialist, Casablanca',
   readingMinutes: 13,
-  intro: 'Casablanca Mohammed V Airport (CMN) is Morocco\'s largest airport and the best starting point for a Morocco road trip. MoroccoForYou Cars offers a unique service: your car is waiting in the arrivals hall, our driver meets you with a sign showing your name, and you\'re on the road in under 20 minutes after landing — no queue, no counter. Economy cars from 250 MAD/day (€23), Dacia Duster 4x4 from 350 MAD/day (€32), unlimited mileage, available 24/7. Our office is at Terminal 1, Casablanca Mohammed V Airport (CMN), Nouaceur 27000, Morocco.',
+  intro: 'Casablanca Mohammed V Airport (CMN) is Morocco\'s largest airport and the best starting point for a Morocco road trip. MoroccoForYou Cars offers a unique service: your car is waiting in the arrivals hall, our driver meets you with a sign showing your name, and you\'re on the road in under 20 minutes after landing — no queue, no counter. Economy cars from 250 MAD/day (€23), Dacia Duster 4x4 from 350 MAD/day (€32), unlimited mileage, available 24/7.',
   sections: [
     {
       heading: 'Book Your Car in 60 Seconds — Quick Reservation Form',
@@ -53,34 +52,10 @@ const EN: BlogPost = {
       },
     },
     {
-      heading: 'Why Book Direct with MoroccoForYou — Not Hertz, Avis or Europcar',
-      paragraphs: [
-        'International chains (Hertz, Avis, Europcar, Sixt) are present at CMN but consistently more expensive and slower than booking direct with a local agency. Here is the honest comparison our clients ask about most.',
-      ],
-      table: {
-        caption: 'MoroccoForYou Cars vs international chains at CMN — honest comparison 2026',
-        headers: ['Feature', 'MoroccoForYou Cars', 'Hertz / Avis / Europcar'],
-        rows: [
-          ['Economy car price', 'MAD 250/day (€23)', 'MAD 350–500/day (€32–46)'],
-          ['Airport pickup', 'Free meet & greet in arrivals', 'Counter queue 30–60 min peak'],
-          ['Hidden fees', 'None — all-inclusive price on WhatsApp', 'Airport surcharge, young driver fee, fuel policy'],
-          ['Insurance pressure', 'Basic included, no pressure to upgrade', 'Counter staff incentivized to sell extras'],
-          ['Booking confirmation', 'WhatsApp in 1 hour', 'Online only, no local contact'],
-          ['Flight delay handling', 'We track your flight automatically', 'Counter may close — you wait'],
-          ['One-way fees', 'Declared upfront in writing', 'Often revealed only at pickup'],
-          ['Local knowledge', 'Casablanca-based since 2019', 'International franchise'],
-        ],
-      },
-      callout: {
-        label: '💡 The Real Price Difference',
-        body: 'A 7-day economy car rental at Hertz CMN typically costs MAD 2,800–3,500 (€260–325) with insurance and fees. The same 7-day rental with MoroccoForYou Cars: MAD 1,750 (€162) all-inclusive. The difference funds a full extra day in Morocco. Book on WhatsApp: +212 634 276 534',
-      },
-    },
-    {
       heading: 'What Makes MoroccoForYou Cars Different at CMN',
       paragraphs: [
         'Most car rental agencies at Casablanca Airport require you to queue at a counter — 30 to 60 minutes at peak times. MoroccoForYou Cars works differently: you book on WhatsApp, we confirm within 1 hour, and our driver is waiting in the arrivals hall with your name on a board when you land. No queue. No paperwork surprises. No hidden fees.',
-        'We are a Casablanca-based agency that has operated at CMN since 2019. We know every flight schedule, every terminal exit, and every road out of the airport. When you land at 2am after a delayed flight, we are there. When you need a Duster for the Sahara with 24 hours notice, we have it. German-speaking travelers (Mietwagen Casablanca Flughafen / Autovermietung CMN) can reach us in English or French — we serve clients from Germany, Austria and Switzerland regularly.',
+        'We are a Casablanca-based agency that has operated at CMN since 2019. We know every flight schedule, every terminal exit, and every road out of the airport. When you land at 2am after a delayed flight, we are there. When you need a Duster for the Sahara with 24 hours notice, we have it.',
       ],
       callout: {
         label: '✅ What\'s Included in Every MoroccoForYou Rental',
@@ -91,7 +66,6 @@ const EN: BlogPost = {
       heading: 'Driving From CMN Airport — Where Can You Go?',
       paragraphs: [
         'CMN is 35 km southeast of Casablanca city centre, connected directly to Morocco\'s motorway network. From the airport car park, follow signs for "Sortie / A7" and you\'re on the toll motorway within 5 minutes.',
-        'Planning your route from CMN? Read our dedicated driving guides: Casablanca to Rabat (1h20 drive, MAD 33 toll), Casablanca to Agadir (5h drive, MAD 164 toll), and Casablanca to Chefchaouen (4h drive). Each guide includes real toll costs, fuel estimates, and the local road tips our Casablanca-based team uses every day.',
       ],
       table: {
         caption: 'Driving distances and times from Casablanca Airport (CMN) 2026',
@@ -283,7 +257,7 @@ const EN: BlogPost = {
     { question: 'Is it cheaper to rent a car at Casablanca Airport or in the city?', answer: 'City centre agencies (Casablanca-Maârif area) can be 10–15% cheaper but require an additional taxi journey from the airport. MoroccoForYou Cars delivers directly to CMN arrivals at airport prices — the convenience difference outweighs the small price premium.' },
   ],
   relatedDestinations: ['casablanca', 'marrakech', 'fes', 'agadir'],
-  relatedPosts: ['casablanca-travel-guide', 'best-car-to-rent-in-casablanca-morocco', 'why-ai-morocco-travel-advice-is-wrong'],
+  relatedPosts: ['best-car-to-rent-in-casablanca-morocco', 'why-ai-morocco-travel-advice-is-wrong', 'best-car-to-rent-for-morocco-ai-itinerary'],
   alternates: ALTERNATES,
 };
 
@@ -298,10 +272,9 @@ const FR: BlogPost = {
   coverImage: COVER,
   coverAlt: 'Location voiture aéroport Casablanca Mohammed V CMN — MoroccoForYou Cars accueil gratuit hall arrivées',
   publishedISO: '2026-06-17',
-  updatedISO: '2026-08-05',
   author: 'Omar L. — Spécialiste Location Voiture Maroc, Casablanca',
   readingMinutes: 13,
-  intro: 'L\'aéroport Mohammed V de Casablanca (CMN) est le plus grand aéroport du Maroc et le point de départ idéal pour un road trip dans le pays. MoroccoForYou Cars propose un service unique : votre véhicule vous attend dans le hall des arrivées, notre chauffeur vous accueille avec une pancarte à votre nom, et vous prenez la route en moins de 20 minutes après l\'atterrissage — sans file d\'attente, sans comptoir. Voitures économiques dès 250 MAD/jour (23€), Dacia Duster 4x4 dès 350 MAD/jour (32€), kilométrage illimité, disponible 24h/24 et 7j/7. Notre bureau est au Terminal 1, Aéroport Mohammed V de Casablanca (CMN), Nouaceur 27000, Maroc.',
+  intro: 'L\'aéroport Mohammed V de Casablanca (CMN) est le plus grand aéroport du Maroc et le point de départ idéal pour un road trip dans le pays. MoroccoForYou Cars propose un service unique : votre véhicule vous attend dans le hall des arrivées, notre chauffeur vous accueille avec une pancarte à votre nom, et vous prenez la route en moins de 20 minutes après l\'atterrissage — sans file d\'attente, sans comptoir. Voitures économiques dès 250 MAD/jour (23€), Dacia Duster 4x4 dès 350 MAD/jour (32€), kilométrage illimité, disponible 24h/24 et 7j/7.',
   sections: [
     {
       heading: 'Réservez votre voiture en 60 secondes — Formulaire rapide',
@@ -334,34 +307,10 @@ const FR: BlogPost = {
       },
     },
     {
-      heading: 'Pourquoi réserver en direct avec MoroccoForYou — Pas Hertz, Avis ou Europcar',
-      paragraphs: [
-        'Les chaînes internationales (Hertz, Avis, Europcar, Sixt) sont présentes à CMN mais systématiquement plus chères et plus lentes que la réservation directe avec une agence locale. Voici la comparaison honnête que nos clients demandent le plus.',
-      ],
-      table: {
-        caption: 'MoroccoForYou Cars vs chaînes internationales à CMN — comparaison honnête 2026',
-        headers: ['Caractéristique', 'MoroccoForYou Cars', 'Hertz / Avis / Europcar'],
-        rows: [
-          ['Prix voiture économique', 'MAD 250/jour (23€)', 'MAD 350–500/jour (32–46€)'],
-          ['Prise en charge aéroport', 'Accueil gratuit aux arrivées', 'File comptoir 30–60 min en pointe'],
-          ['Frais cachés', 'Aucun — prix tout compris sur WhatsApp', 'Supplément aéroport, jeune conducteur, politique carburant'],
-          ['Pression assurance', 'Base incluse, aucune pression', 'Personnel incentivé à vendre des extras'],
-          ['Confirmation réservation', 'WhatsApp en 1 heure', 'En ligne uniquement, pas de contact local'],
-          ['Gestion retard vol', 'Nous suivons votre vol automatiquement', 'Comptoir peut fermer — vous attendez'],
-          ['Frais aller simple', 'Déclarés dès la réservation par écrit', 'Souvent révélés seulement au retrait'],
-          ['Connaissance locale', 'Basé à Casablanca depuis 2019', 'Franchise internationale'],
-        ],
-      },
-      callout: {
-        label: '💡 La vraie différence de prix',
-        body: 'Une location économique 7 jours chez Hertz CMN coûte typiquement MAD 2 800–3 500 (260–325€) avec assurance et frais. La même location 7 jours chez MoroccoForYou Cars : MAD 1 750 (162€) tout compris. La différence finance une journée complète de plus au Maroc. Réservez sur WhatsApp : +212 634 276 534',
-      },
-    },
-    {
       heading: 'Ce qui rend MoroccoForYou Cars différent à CMN',
       paragraphs: [
         'La plupart des agences de location à l\'aéroport de Casablanca vous font faire la queue au comptoir — 30 à 60 minutes aux heures de pointe. MoroccoForYou Cars fonctionne différemment : vous réservez sur WhatsApp, nous confirmons sous 1 heure, et notre chauffeur vous attend dans le hall des arrivées avec votre nom sur une pancarte à l\'atterrissage.',
-        'Nous sommes une agence basée à Casablanca qui opère à CMN depuis 2019. Nous connaissons chaque horaire de vol, chaque sortie de terminal, chaque route hors de l\'aéroport. Les voyageurs germanophones (Mietwagen Casablanca Flughafen / Autovermietung CMN) peuvent nous contacter en anglais ou français — nous servons régulièrement des clients d\'Allemagne, d\'Autriche et de Suisse.',
+        'Nous sommes une agence basée à Casablanca qui opère à CMN depuis 2019. Nous connaissons chaque horaire de vol, chaque sortie de terminal, chaque route hors de l\'aéroport. Quand vous atterrissez à 2h du matin après un vol retardé, nous sommes là.',
       ],
       callout: {
         label: '✅ Ce qui est inclus dans chaque location MoroccoForYou',
@@ -372,7 +321,6 @@ const FR: BlogPost = {
       heading: 'Depuis l\'aéroport CMN — Où pouvez-vous aller ?',
       paragraphs: [
         'CMN est à 35 km au sud-est du centre de Casablanca, connecté directement au réseau autoroutier marocain. Depuis le parking de l\'aéroport, suivez les panneaux "Sortie / A7" et vous êtes sur l\'autoroute à péage en 5 minutes.',
-        'Vous planifiez votre itinéraire depuis CMN ? Consultez nos guides dédiés : Casablanca à Rabat (1h20 de trajet, MAD 33 de péage), Casablanca à Agadir (5h de trajet, MAD 164 de péage), et Casablanca à Chefchaouen (4h de trajet). Chaque guide inclut les vrais coûts de péage, les estimations de carburant et les conseils routiers locaux.',
       ],
       table: {
         caption: 'Distances et temps de trajet depuis l\'aéroport de Casablanca (CMN) 2026',
@@ -539,11 +487,9 @@ const FR: BlogPost = {
     { question: 'Est-il moins cher de louer une voiture à l\'aéroport de Casablanca ou en ville ?', answer: 'Les agences en centre-ville (quartier Maârif) peuvent être 10–15% moins chères mais nécessitent un trajet taxi supplémentaire depuis l\'aéroport. MoroccoForYou Cars livre directement aux arrivées CMN à des prix aéroport — la différence de commodité l\'emporte sur la légère différence de prix.' },
   ],
   relatedDestinations: ['casablanca', 'marrakech', 'fes', 'agadir'],
-  relatedPosts: ['guide-voyage-casablanca', 'meilleure-voiture-louer-casablanca-maroc', 'pourquoi-conseils-voyage-maroc-ia-sont-faux'],
+  relatedPosts: ['meilleure-voiture-louer-casablanca-maroc', 'pourquoi-conseils-voyage-maroc-ia-sont-faux', 'meilleure-voiture-louer-itineraire-maroc-ia'],
   alternates: ALTERNATES,
-};
-
-const AR: BlogPost = {
+};const AR: BlogPost = {
   slug: SLUG_AR,
   lang: 'ar',
   metaTitle: 'استئجار سيارة مطار الدار البيضاء CMN — من 23€/يوم | استقبال مجاني',
@@ -554,10 +500,9 @@ const AR: BlogPost = {
   coverImage: COVER,
   coverAlt: 'استئجار سيارة مطار الدار البيضاء محمد الخامس CMN — MoroccoForYou Cars استقبال مجاني صالة الوصول',
   publishedISO: '2026-06-17',
-  updatedISO: '2026-08-05',
   author: 'عمر ل. — متخصص تأجير السيارات بالمغرب، الدار البيضاء',
   readingMinutes: 13,
-  intro: 'مطار محمد الخامس بالدار البيضاء (CMN) هو أكبر مطارات المغرب ونقطة الانطلاق المثالية لرحلة برية في البلاد. تقدم MoroccoForYou Cars خدمة فريدة: سيارتك تنتظرك في صالة الوصول، سائقنا يستقبلك بلافتة تحمل اسمك، وتنطلق في طريقك خلال 20 دقيقة من الهبوط — بلا طابور، بلا طاولة. سيارات اقتصادية من 250 درهم/يوم (23€)، داشيا دوستر 4x4 من 350 درهم/يوم (32€)، كيلومترات غير محدودة، متاح 24/7. مكتبنا في الطرفية 1، مطار محمد الخامس الدولي (CMN)، نواصر 27000، المغرب.',
+  intro: 'مطار محمد الخامس بالدار البيضاء (CMN) هو أكبر مطارات المغرب ونقطة الانطلاق المثالية لرحلة برية في البلاد. تقدم MoroccoForYou Cars خدمة فريدة: سيارتك تنتظرك في صالة الوصول، سائقنا يستقبلك بلافتة تحمل اسمك، وتنطلق في طريقك خلال 20 دقيقة من الهبوط — بلا طابور، بلا طاولة. سيارات اقتصادية من 250 درهم/يوم (23€)، داشيا دوستر 4x4 من 350 درهم/يوم (32€)، كيلومترات غير محدودة، متاح 24/7.',
   sections: [
     {
       heading: 'احجز سيارتك في 60 ثانية — نموذج الحجز السريع',
@@ -590,34 +535,10 @@ const AR: BlogPost = {
       },
     },
     {
-      heading: 'لماذا تحجز مباشرة مع MoroccoForYou — وليس Hertz أو Avis أو Europcar',
-      paragraphs: [
-        'السلاسل الدولية (Hertz وAvis وEuropcar وSixt) موجودة في CMN لكنها باستمرار أغلى وأبطأ من الحجز المباشر مع وكالة محلية. إليك المقارنة الصادقة التي يسأل عنها عملاؤنا أكثر.',
-      ],
-      table: {
-        caption: 'MoroccoForYou Cars مقابل السلاسل الدولية في CMN — مقارنة صادقة 2026',
-        headers: ['الميزة', 'MoroccoForYou Cars', 'Hertz / Avis / Europcar'],
-        rows: [
-          ['سعر السيارة الاقتصادية', 'MAD 250/يوم (23€)', 'MAD 350–500/يوم (32–46€)'],
-          ['الاستلام من المطار', 'استقبال مجاني في صالة الوصول', 'طابور الطاولة 30–60 دقيقة في الذروة'],
-          ['الرسوم المخفية', 'لا شيء — سعر شامل عبر واتساب', 'رسوم مطار، سائق شاب، سياسة الوقود'],
-          ['ضغط التأمين', 'أساسي مشمول، لا ضغط', 'الموظفون محفَّزون لبيع إضافات'],
-          ['تأكيد الحجز', 'واتساب خلال ساعة', 'عبر الإنترنت فقط، لا تواصل محلي'],
-          ['معالجة تأخر الرحلة', 'نتابع رحلتك تلقائياً', 'الطاولة قد تغلق — تنتظر'],
-          ['رسوم الاتجاه الواحد', 'معلنة مسبقاً كتابةً', 'غالباً تُكشف عند الاستلام فقط'],
-          ['المعرفة المحلية', 'مقيم في الدار البيضاء منذ 2019', 'امتياز دولي'],
-        ],
-      },
-      callout: {
-        label: '💡 فارق السعر الحقيقي',
-        body: 'إيجار سيارة اقتصادية 7 أيام عند Hertz CMN يكلف عادةً MAD 2,800–3,500 (260–325€) مع التأمين والرسوم. نفس الإيجار 7 أيام مع MoroccoForYou Cars: MAD 1,750 (162€) شامل كل شيء. الفرق يموّل يوماً كاملاً إضافياً في المغرب. احجز على واتساب: +212 634 276 534',
-      },
-    },
-    {
       heading: 'ما الذي يميز MoroccoForYou Cars في CMN',
       paragraphs: [
         'معظم وكالات تأجير السيارات في مطار الدار البيضاء تجعلك تنتظر في طابور عند الطاولة — 30 إلى 60 دقيقة في أوقات الذروة. MoroccoForYou Cars تعمل بشكل مختلف: تحجز عبر واتساب، نؤكد خلال ساعة، وسائقنا ينتظرك في صالة الوصول بلافتة تحمل اسمك عند الهبوط.',
-        'نحن وكالة مقرها الدار البيضاء تعمل في CMN منذ 2019. المسافرون الناطقون بالألمانية (Mietwagen Casablanca Flughafen / Autovermietung CMN) يمكنهم التواصل معنا بالإنجليزية أو الفرنسية — نخدم عملاء من ألمانيا والنمسا وسويسرا بانتظام.',
+        'نحن وكالة مقرها الدار البيضاء تعمل في CMN منذ 2019. نعرف كل جدول رحلات، كل مخرج، كل طريق من المطار. عندما تهبط الساعة 2 صباحاً بعد رحلة متأخرة، نكون هناك.',
       ],
       callout: {
         label: '✅ ما يشمله كل إيجار MoroccoForYou',
@@ -628,7 +549,6 @@ const AR: BlogPost = {
       heading: 'من مطار CMN — أين يمكنك الذهاب؟',
       paragraphs: [
         'CMN على بعد 35 كم جنوب شرق وسط مدينة الدار البيضاء، متصل مباشرة بشبكة الطرق السريعة المغربية. من موقف السيارات في المطار، اتبع لافتات "Sortie / A7" وستكون على الطريق السريع خلال 5 دقائق.',
-        'تخطط لمسارك من CMN؟ اقرأ أدلتنا المخصصة: الدار البيضاء إلى الرباط (1:20 ساعة، MAD 33 رسوم)، الدار البيضاء إلى أكادير (5 ساعات، MAD 164 رسوم)، والدار البيضاء إلى شفشاون (4 ساعات). كل دليل يتضمن تكاليف الرسوم الحقيقية وتقديرات الوقود ونصائح الطريق المحلية.',
       ],
       table: {
         caption: 'المسافات وأوقات القيادة من مطار الدار البيضاء (CMN) 2026',
@@ -795,17 +715,16 @@ const AR: BlogPost = {
     { question: 'هل أرخص استئجار سيارة في مطار الدار البيضاء أم في المدينة؟', answer: 'وكالات وسط المدينة (حي المعاريف) قد تكون أرخص بـ10–15% لكنها تتطلب رحلة تاكسي إضافية من المطار. MoroccoForYou Cars تسلم مباشرة في وصول CMN بأسعار المطار — فرق الراحة يتجاوز فارق السعر الطفيف.' },
   ],
   relatedDestinations: ['casablanca', 'marrakech', 'fes', 'agadir'],
-  relatedPosts: ['dalil-safar-dar-al-bayda', 'afdal-sayyara-listajar-fi-dar-al-bayda', 'limadha-nasaeh-al-dhaka-al-isnadi-an-al-maghrib-khatia'],
+  relatedPosts: ['afdal-sayyara-listajar-fi-dar-al-bayda', 'limadha-nasaeh-al-dhaka-al-isnadi-an-al-maghrib-khatia', 'afdal-sayyara-listajar-li-barnamaj-al-maghrib-bil-dhaka-al-isnadi'],
   alternates: ALTERNATES,
 };
 
+// Update legacy EN post alternates
 const legacyEN = BLOG_POSTS.find((p) => p.slug === SLUG_EN && (p.lang ?? 'en') === 'en');
 if (legacyEN) {
-  legacyEN.alternates = ALTERNATES;
-  legacyEN.metaTitle = 'Car Rental Casablanca Airport CMN — From €23/day | Free Meet & Greet';
-  legacyEN.metaDescription = 'Rent a car at Casablanca Airport (CMN) from €23/day. Free meet & greet in arrivals 24/7, unlimited mileage, WhatsApp confirmation in 1 hour. Economy to 4x4 Duster available.';
-  legacyEN.author = 'Omar L. — Morocco Car Rental Specialist, Casablanca';
-  legacyEN.updatedISO = '2026-08-05';
+  Object.assign(legacyEN, EN);
+} else {
+  BLOG_POSTS.push(EN);
 }
 
-BLOG_POSTS.push(EN, FR, AR)
+BLOG_POSTS.push(FR, AR);

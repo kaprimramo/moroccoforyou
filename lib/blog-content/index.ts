@@ -41,3 +41,4 @@ import './36-casablanca-travel-guide';
 import './37-chefchaouen-travel-guide';
 import './38-casablanca-airport-guide-cmn';
 import './39-marrakech-travel-guide';
+import './40-fes-travel-guide';

@@ -44,3 +44,4 @@ import './39-marrakech-travel-guide';
 import './40-fes-travel-guide';
 import './41-sahara-desert-morocco-travel-guide';
 import './42-agadir-travel-guide';
+import './43-rabat-travel-guide';

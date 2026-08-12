@@ -47,3 +47,4 @@ import './42-agadir-travel-guide';
 import './43-rabat-travel-guide';
 import './44-the-odyssey-morocco-filming-locations';
 import './45-essaouira-travel-guide';
+import './46-luxury-car-rental-casablanca';

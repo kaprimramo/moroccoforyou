@@ -4,7 +4,7 @@ const SLUG_EN = 'luxury-car-rental-casablanca';
 const SLUG_FR = 'location-voiture-luxe-casablanca';
 const SLUG_AR = 'istajar-sayyara-fakhira-dar-al-bayda';
 const ALTERNATES = { en: SLUG_EN, fr: SLUG_FR, ar: SLUG_AR } as const;
-const COVER = pex(36467138);
+const COVER = pex(12997736);
 
 const EN: BlogPost = {
   slug: SLUG_EN,

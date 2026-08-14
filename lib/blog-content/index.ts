@@ -52,3 +52,4 @@ import './47-best-private-morocco-tours';
 import './48-tangier-travel-guide';
 import './49-low-cost-flights-morocco-2026';
 import './50-ouarzazate-travel-guide';
+import './51-marrakech-to-chefchaouen-by-car';

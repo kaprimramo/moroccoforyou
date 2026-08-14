@@ -4,7 +4,7 @@ const SLUG_EN = 'low-cost-flights-to-morocco-2026';
 const SLUG_FR = 'vols-low-cost-maroc-2026';
 const SLUG_AR = 'rihlat-jawiya-rakhisa-ila-maghrib-2026';
 const ALTERNATES = { en: SLUG_EN, fr: SLUG_FR, ar: SLUG_AR } as const;
-const COVER = pex(36467138);
+const COVER = pex(11047535);
 
 const EN: BlogPost = {
   slug: SLUG_EN,

@@ -151,6 +151,7 @@ const EN: BlogPost = {
       },
     },
     {
+      heading: 'Day Trips from Tangier',
       paragraphs: [
         'Tangier\'s position makes it an excellent base for exploring Morocco\'s far north — a region most standard itineraries skip entirely in favor of jumping straight to Chefchaouen or Fes.',
       ],

@@ -4,7 +4,7 @@ const SLUG_EN = 'tangier-travel-guide';
 const SLUG_FR = 'guide-voyage-tanger';
 const SLUG_AR = 'dalil-safar-tanja';
 const ALTERNATES = { en: SLUG_EN, fr: SLUG_FR, ar: SLUG_AR } as const;
-const COVER = pex(36467138);
+const COVER = pex(6555970);
 
 const EN: BlogPost = {
   slug: SLUG_EN,

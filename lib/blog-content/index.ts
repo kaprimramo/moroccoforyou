@@ -50,3 +50,4 @@ import './45-essaouira-travel-guide';
 import './46-luxury-car-rental-casablanca';
 import './47-best-private-morocco-tours';
 import './48-tangier-travel-guide';
+import './49-low-cost-flights-morocco-2026';

@@ -9,9 +9,9 @@ const COVER = pex(2387793);
 const EN: BlogPost = {
   slug: SLUG_EN,
   lang: 'en',
-  metaTitle: 'Morocco Travel Budget Backpacker Guide 2026 — Real Costs',
-  metaDescription: 'How much does Morocco cost for backpackers in 2026? Real daily budgets, cheapest hostels, free things to do, budget food and transport tips from locals.',
-  title: 'Morocco Travel Budget for Backpackers: Real Costs in 2026',
+  metaTitle: 'Morocco on a Budget 2026: Real Backpacker Costs (Daily Breakdown)',
+  title: 'Morocco on a Budget 2026: Real Backpacker Costs (Daily Breakdown)',
+  metaDescription: 'How much does Morocco really cost for backpackers in 2026? Real daily budget breakdown: hostels, food, transport, and how to travel Morocco for under $30/day.',
   description: 'The honest backpacker budget guide for Morocco 2026: daily costs, cheapest accommodation, free activities, budget food, and how to travel Morocco for under €35/day.',
   keyword: 'morocco travel budget backpacker',
   coverImage: COVER,

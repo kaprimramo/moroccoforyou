@@ -9,10 +9,9 @@ const COVER = pex(5472532);
 const EN: BlogPost = {
   slug: SLUG_EN,
   lang: 'en',
-  metaTitle: 'Morocco Dress Code: What to Wear in 2026 (Men & Women)',
-  metaDescription:
-    'Morocco dress code — what to wear in 2026 for medinas, mosques, beaches and dinner. Real-life packing list for men and women. Plan your trip on WhatsApp.',
-  title: 'Morocco Dress Code: What to Wear (2026 Honest Guide)',
+  metaTitle: 'Morocco Dress Code 2026: What to Wear (Real Advice, Not Stereotypes)',
+  title: 'Morocco Dress Code 2026: What to Wear (Real Advice, Not Stereotypes)',
+  metaDescription: 'What to actually wear in Morocco 2026: honest, practical dress code advice for men and women, city by city, from locals who live here — not generic travel-blog guessing.',
   description:
     'The Morocco dress code in 2026, decoded — what to wear in the medinas, mosques, beaches, mountains and desert, for men and women. Packing list and seasonal notes.',
   keyword: 'morocco dress code what to wear',

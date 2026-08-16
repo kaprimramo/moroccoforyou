@@ -9,9 +9,9 @@ const COVER = pex(36467138);
 const EN: BlogPost = {
   slug: SLUG_EN,
   lang: 'en',
-  metaTitle: 'Casablanca Travel Guide 2026 — Is It Worth Visiting? Local Expert Answers',
-  metaDescription: 'Complete Casablanca travel guide 2026: Hassan II Mosque, Corniche, best restaurants, nightlife, day trips and car rental. Written by a Casablanca-based local team.',
-  title: 'Casablanca Travel Guide 2026: Everything You Need to Know (By Locals)',
+  metaTitle: 'Casablanca Travel Guide 2026: Complete Guide to Morocco\'s Business Capital',
+  title: 'Casablanca Travel Guide 2026: Complete Guide to Morocco\'s Business Capital',
+  metaDescription: 'Everything to see in Casablanca 2026: Hassan II Mosque, the Corniche, best restaurants, and honest advice from locals. Real prices, distances, and how to get around.',
   description: 'The complete Casablanca travel guide written by our Casablanca-based team — not a travel blogger passing through for 48 hours. Hassan II Mosque insider tips, the neighborhoods most guides skip, honest answer to "is Casablanca worth visiting," and the car rental advice that makes every day trip actually work.',
   keyword: 'casablanca travel guide',
   coverImage: COVER,

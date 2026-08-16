@@ -10,10 +10,9 @@ const EN: BlogPost = {
   slug: SLUG_EN,
   lang: 'en',
   metaTitle: 'Marrakech to Chefchaouen 2026: Distance, Route & Real Driving Time',
+  title: 'Marrakech to Chefchaouen 2026: Distance, Route & Real Driving Time',
   metaDescription: 'Marrakech to Chefchaouen: 560-580 km via motorway, 7-7.5 hours driving. Complete route guide, toll costs, and why splitting the drive over 2 days beats one long day.',
-  title: 'How to Get from Marrakech to Chefchaouen: 2026 Transport Guide',
-  description:
-    'The four ways to get from Marrakech to Chefchaouen in 2026 — direct overnight CTM bus, train + bus combo, private car, or fly-to-Fes-then-drive. Real prices, times, pros and cons.',
+  description: 'The four ways to get from Marrakech to Chefchaouen in 2026 — direct overnight CTM bus, train + bus combo, private car, or fly-to-Fes-then-drive. Real prices, times, pros and cons.',
   keyword: 'how to get from marrakech to chefchaouen',
   coverImage: COVER,
   coverAlt: 'Blue medina alley in Chefchaouen — how to get from Marrakech to Chefchaouen',
@@ -134,12 +133,9 @@ const EN: BlogPost = {
 const FR: BlogPost = {
   slug: SLUG_FR,
   lang: 'fr',
-  metaTitle: 'Comment aller de Marrakech à Chefchaouen — 2026',
-  metaDescription:
-    'Comment aller de Marrakech à Chefchaouen en 2026 : bus de nuit, train+bus, voiture privée, vol+route. Temps réel, prix réels, itinéraires conseillés.',
-  title: 'Comment aller de Marrakech à Chefchaouen ? Guide 2026',
-  description:
-    'Les 4 façons d’aller de Marrakech à Chefchaouen en 2026 — bus CTM de nuit, train + bus, voiture privée avec étape à Fès, ou vol + route. Comparatif honnête en euros.',
+  metaTitle: 'Marrakech à Chefchaouen 2026 : Distance, Itinéraire & Temps Réel',
+  title: 'Marrakech à Chefchaouen 2026 : Distance, Itinéraire & Temps Réel',
+  metaDescription: 'Marrakech à Chefchaouen : 560-580 km, 7-7,5h de route via autoroute. Guide complet de l\'itinéraire, coûts de péage, et pourquoi diviser le trajet sur 2 jours.',description: 'Les 4 façons d’aller de Marrakech à Chefchaouen en 2026 — bus CTM de nuit, train + bus, voiture privée avec étape à Fès, ou vol + route. Comparatif honnête en euros.',
   keyword: 'comment aller de marrakech à chefchaouen',
   coverImage: COVER,
   coverAlt: 'Ruelle bleue de Chefchaouen — comment aller de Marrakech à Chefchaouen',

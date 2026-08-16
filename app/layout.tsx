@@ -25,14 +25,11 @@ export const viewport: Viewport = {
 
 const LANG_DIR_BOOTSTRAP = `(function(){try{var p=location.pathname;var l=(p==='/ar'||p.indexOf('/ar/')===0)?'ar':(p==='/fr'||p.indexOf('/fr/')===0)?'fr':'en';var e=document.documentElement;if(e.lang!==l)e.lang=l;var d=l==='ar'?'rtl':'ltr';if(e.dir!==d)e.dir=d;}catch(e){}})();`;
 
-const TRAVELPAYOUTS_SCRIPT = `(function(){var script=document.createElement("script");script.async=1;script.src='https://tpembars.com/NTYwMzM2.js?t=560336';document.head.appendChild(script);})();`;
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <body>
         <script dangerouslySetInnerHTML={{ __html: LANG_DIR_BOOTSTRAP }} />
-        <script dangerouslySetInnerHTML={{ __html: TRAVELPAYOUTS_SCRIPT }} />
         {children}
         <GoogleAnalytics gaId="G-GM2BJLWEF1" />
         <script

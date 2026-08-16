@@ -9,9 +9,9 @@ const COVER = pex(36467138);
 const EN: BlogPost = {
   slug: SLUG_EN,
   lang: 'en',
-  metaTitle: 'Casablanca Airport Guide (CMN) 2026 — Terminals, Transport & Insider Tips',
-  metaDescription: 'Complete Casablanca Mohammed V Airport (CMN) guide 2026: terminals, train vs taxi vs car rental prices, hotels near CMN, lounges, Wi-Fi, and what to do on arrival.',
-  title: 'Casablanca Airport (CMN) Complete Guide 2026 — Everything You Need to Know Before You Land',
+  metaTitle: 'Casablanca Airport (CMN) Guide 2026: Terminals, Transport & Tips',
+  title: 'Casablanca Airport (CMN) Guide 2026: Terminals, Transport & Tips',
+  metaDescription: 'Complete Casablanca Mohammed V Airport guide 2026: which terminal, train vs taxi vs car rental prices, hotels near CMN, and insider tips from a local team.',
   description: 'The only CMN airport guide written by people who work there. Real 2026 prices for trains, taxis and car rental, which terminal your flight uses, where to find the ONCF train, how to avoid the taxi touts, hotels near the airport, and why renting a car at CMN is usually the smartest first decision of your Morocco trip.',
   keyword: 'casablanca airport guide cmn',
   coverImage: COVER,

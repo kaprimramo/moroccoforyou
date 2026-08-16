@@ -162,9 +162,9 @@ const EN: BlogPost = {
 const FR: BlogPost = {
   slug: SLUG_FR,
   lang: 'fr',
-  metaTitle: 'Casablanca à Rabat en Voiture : Distance, Temps & Meilleure Route 2026',
-  metaDescription: 'Distance Casablanca-Rabat, temps de trajet et meilleure route — arrêts en chemin, comparaison train vs voiture, et comment louer une voiture à l\'aéroport de Casablanca.',
-  title: 'Casablanca à Rabat en Voiture : Distance, Temps de Trajet, Route & Arrêts (Guide 2026)',
+  metaTitle: 'Casablanca à Rabat en Voiture 2026 : Distance, Péage & Temps Réel',
+  title: 'Casablanca à Rabat en Voiture 2026 : Distance, Péage & Temps Réel',
+  metaDescription: 'Casablanca à Rabat : 95-120 km, 1h-1h20 via autoroute A1. Péage ~30-33 MAD. Guide complet de l\'itinéraire et location de voiture depuis Casablanca.',
   description: 'Tout ce qu\'il faut savoir pour le trajet Casablanca-Rabat : distance et temps réels, meilleure route via l\'autoroute A1, arrêts intéressants en chemin, comparaison avec le train, et où louer une voiture.',
   keyword: 'casablanca rabat en voiture',
   coverImage: COVER,
@@ -315,9 +315,9 @@ const FR: BlogPost = {
 const AR: BlogPost = {
   slug: SLUG_AR,
   lang: 'ar',
-  
   metaTitle: 'من الدار البيضاء إلى الرباط بالسيارة 2026 — المسافة والسعر والوقت الحقيقي',
-  metaDescription: 'الدار البيضاء للرباط بالسيارة: 95-120 كم، ساعة إلى 1:20، رسوم MAD 30-33. دليل كامل للطريق السريع A1 وتأجير السيارات من الدار البيضاء.',title: 'من الدار البيضاء إلى الرباط بالسيارة: المسافة، وقت القيادة، الطريق والمحطات (دليل 2026)',
+  title: 'من الدار البيضاء إلى الرباط بالسيارة 2026 — المسافة والسعر والوقت الحقيقي',
+  metaDescription: 'الدار البيضاء للرباط بالسيارة: 95-120 كم، ساعة إلى 1:20، رسوم MAD 30-33. دليل كامل للطريق السريع A1 وتأجير السيارات من الدار البيضاء.',
   description: 'كل ما تحتاجه لرحلة الدار البيضاء-الرباط: المسافة والوقت الحقيقيان، أفضل طريق عبر الطريق السريع A1، محطات تستحق التوقف، مقارنة مع القطار، وأين تستأجر سيارة.',
   keyword: 'من الدار البيضاء إلى الرباط بالسيارة',
   coverImage: COVER,

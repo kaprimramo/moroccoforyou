@@ -9,9 +9,9 @@ const COVER = pex(36467138);
 const EN: BlogPost = {
   slug: SLUG_EN,
   lang: 'en',
-  metaTitle: 'Car Rental Casablanca Airport CMN — From €23/day | Free Meet & Greet',
-  metaDescription: 'Rent a car at Casablanca Airport (CMN) from €23/day. Free meet & greet in arrivals 24/7, unlimited mileage, WhatsApp confirmation in 1 hour. Economy to 4x4 Duster available.',
-  title: 'Car Rental Casablanca Airport (CMN): Complete 2026 Guide — From €23/day',
+  metaTitle: 'Casablanca Airport Car Rental 2026: Prices, Companies & How to Book',
+  title: 'Casablanca Airport Car Rental 2026: Prices, Companies & How to Book',
+  metaDescription: 'Everything about renting a car at Casablanca Airport 2026: real prices from MAD 250/day, which companies to trust, and how to skip the counter queue with free meet & greet.',
   description: 'Everything you need to rent a car at Casablanca Mohammed V Airport (CMN) in 2026: real prices, best companies, documents, how to drive to Marrakech or Fes, and the quick booking form.',
   keyword: 'casablanca airport car rental',
   coverImage: COVER,

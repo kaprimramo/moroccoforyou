@@ -9,10 +9,9 @@ const COVER = pex(18841386);
 const EN: BlogPost = {
   slug: SLUG_EN,
   lang: 'en',
-  metaTitle: 'Best Beaches in Morocco for Swimming — 2026 Local Guide',
-  metaDescription:
-    'The best beaches in Morocco for swimming in 2026: Atlantic, Mediterranean, family-safe, surf and snorkel. Water temps, season, real local picks. Plan on WhatsApp.',
-  title: 'Best Beaches in Morocco for Swimming: 2026 Local Guide',
+  metaTitle: 'Best Beaches in Morocco for Swimming 2026: Top 10 Ranked & Compared',
+  title: 'Best Beaches in Morocco for Swimming 2026: Top 10 Ranked & Compared',
+  metaDescription: 'The 10 best swimming beaches in Morocco 2026: Agadir, Essaouira, Tangier and more. Real distances from Casablanca and Marrakech, water safety, and local tips for each.',
   description:
     'The best beaches in Morocco for swimming — Atlantic and Mediterranean picks for families, surfers and quiet days, with water temperatures, season tips and how to get there.',
   keyword: 'best beaches in morocco for swimming',
@@ -144,10 +143,9 @@ const EN: BlogPost = {
 const FR: BlogPost = {
   slug: SLUG_FR,
   lang: 'fr',
-  metaTitle: 'Meilleures plages du Maroc pour se baigner — Guide 2026',
-  metaDescription:
-    'Les meilleures plages du Maroc pour la baignade en 2026 : Atlantique et Méditerranée, températures de l’eau, saison, plages familles et surf. Demandez sur WhatsApp.',
-  title: 'Meilleures plages du Maroc pour se baigner : guide 2026',
+  metaTitle: 'Meilleures Plages du Maroc pour se Baigner 2026 : Top 10 Classées',
+  title: 'Meilleures Plages du Maroc pour se Baigner 2026 : Top 10 Classées',
+  metaDescription: 'Les 10 meilleures plages du Maroc pour la baignade 2026 : Agadir, Essaouira, Tanger et plus. Distances réelles depuis Casablanca et Marrakech, sécurité et conseils locaux.',
   description:
     'Quelles sont les meilleures plages du Maroc pour nager ? Comparatif Atlantique vs Méditerranée, températures de l’eau mois par mois, plages familles, surf et coins tranquilles, par une équipe basée à Casablanca.',
   keyword: 'meilleures plages du maroc pour se baigner',
@@ -279,10 +277,9 @@ const FR: BlogPost = {
 const AR: BlogPost = {
   slug: SLUG_AR,
   lang: 'ar',
-  metaTitle: 'أفضل شواطئ المغرب للسباحة — دليل 2026',
-  metaDescription:
-    'أفضل شواطئ المغرب للسباحة 2026: المتوسط والأطلسي، درجات حرارة الماء، شواطئ العائلات والسرف، أوقات الذروة. خطّط رحلتك عبر واتساب.',
-  title: 'أفضل شواطئ المغرب للسباحة في 2026: دليل محلي صريح',
+  metaTitle: 'أفضل شواطئ المغرب للسباحة 2026 — دليل كامل بالأسعار والمسافات',
+  title: 'أفضل شواطئ المغرب للسباحة 2026 — دليل كامل بالأسعار والمسافات',
+  metaDescription: 'أفضل 10 شواطئ للسباحة بالمغرب 2026: أكادير، الصويرة، طنجة والمزيد. مسافات حقيقية من الدار البيضاء ومراكش، ونصائح محلية لكل شاطئ.',
   description:
     'دليل ميداني لأفضل شواطئ المغرب للسباحة في 2026 — مقارنة بين شواطئ المتوسط والأطلسي، درجات حرارة الماء شهرًا بشهر، شواطئ العائلات والسرف.',
   keyword: 'أفضل شواطئ المغرب للسباحة',

@@ -54,3 +54,4 @@ import './49-low-cost-flights-morocco-2026';
 import './50-ouarzazate-travel-guide';
 import './51-marrakech-to-chefchaouen-by-car';
 import './52-morocco-events-calendar-2026';
+import './53-rabat-airport-guide-rba';

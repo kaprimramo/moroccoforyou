@@ -4,7 +4,7 @@ const SLUG_EN = 'rabat-travel-guide';
 const SLUG_FR = 'guide-voyage-rabat';
 const SLUG_AR = 'dalil-safar-ribat';
 const ALTERNATES = { en: SLUG_EN, fr: SLUG_FR, ar: SLUG_AR } as const;
-const COVER = pex(3889929);
+const COVER = pex(31027334);
 
 const EN: BlogPost = {
   slug: SLUG_EN,

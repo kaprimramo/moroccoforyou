@@ -9,8 +9,8 @@ const COVER = pex(36467138);
 const EN: BlogPost = {
   slug: SLUG_EN,
   lang: 'en',
-  metaTitle: 'How to Get from Casablanca Airport to City Centre 2026 — All Options',
-  metaDescription: 'Casablanca Airport (CMN) to city centre: train, taxi, car rental and bus options compared with real 2026 prices, journey times and insider tips from locals.',
+  metaTitle: 'Casablanca Airport to City Centre 2026: Train, Taxi & Car Prices Compared',
+  metaDescription: 'CMN to Casablanca city centre: ONCF train MAD 50 (35 min), taxi MAD 250-300, or rent a car with free meet & greet. Real 2026 prices and honest advice for every option.',
   title: 'How to Get from Casablanca Airport (CMN) to City Centre: Every Option Explained (2026)',
   description: 'Complete guide to getting from Casablanca Mohammed V Airport (CMN) to the city centre in 2026: train, taxi, car rental, and bus — real prices, real times, and which option is right for you.',
   keyword: 'how to get from casablanca airport to city centre',

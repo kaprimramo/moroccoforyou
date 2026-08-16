@@ -4,7 +4,7 @@ const SLUG_EN = 'marrakech-travel-guide';
 const SLUG_FR = 'guide-voyage-marrakech';
 const SLUG_AR = 'dalil-safar-marakish';
 const ALTERNATES = { en: SLUG_EN, fr: SLUG_FR, ar: SLUG_AR } as const;
-const COVER = pex(2166161);
+const COVER = pex(22711558);
 
 const EN: BlogPost = {
   slug: SLUG_EN,

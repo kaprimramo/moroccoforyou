@@ -167,8 +167,8 @@ const EN: BlogPost = {
 const FR: BlogPost = {
   slug: SLUG_FR,
   lang: 'fr',
-  metaTitle: 'Casablanca à Agadir en Voiture : Guide Complet 2026 — Route, Durée, Prix',
-  metaDescription: 'Conduire de Casablanca à Agadir en 2026 : distance, itinéraire autoroute via Marrakech, péages, durée du trajet, meilleurs arrêts (Essaouira, El Jadida) et conseils location.',
+  metaTitle: 'Casablanca Agadir en Voiture 2026 : Distance, Prix Péage & Temps Réel',
+  metaDescription: 'Casablanca à Agadir en voiture : 460 km, 4h45-5h de route, péage ~164 MAD (15€). Itinéraire complet A7, arrêts recommandés, prix carburant et location de voiture depuis Casablanca.',
   title: 'Casablanca à Agadir en Voiture : Guide Complet 2026',
   description: 'Tout pour conduire de Casablanca à Agadir en 2026 — distance, itinéraire autoroute, coût des péages, durée du trajet, arrêts pittoresques et conseils de location de voiture.',
   keyword: 'casablanca agadir en voiture',

@@ -4,7 +4,7 @@ const SLUG_EN = 'rabat-airport-guide-rba';
 const SLUG_FR = 'location-voiture-aeroport-rabat-rba';
 const SLUG_AR = 'dalil-matar-al-ribat-rba';
 const ALTERNATES = { en: SLUG_EN, fr: SLUG_FR, ar: SLUG_AR } as const;
-const COVER = pex(3889929);
+const COVER = pex(30220728);
 
 const EN: BlogPost = {
   slug: SLUG_EN,

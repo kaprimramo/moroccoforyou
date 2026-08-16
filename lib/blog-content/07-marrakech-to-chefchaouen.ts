@@ -9,9 +9,8 @@ const COVER = pex(3889763);
 const EN: BlogPost = {
   slug: SLUG_EN,
   lang: 'en',
-  metaTitle: 'How to Get from Marrakech to Chefchaouen — All 4 Options 2026',
-  metaDescription:
-    'How to get from Marrakech to Chefchaouen in 2026: bus, train+bus, private car, fly+drive. Real times, real costs, the route we recommend. Plan on WhatsApp.',
+  metaTitle: 'Marrakech to Chefchaouen 2026: Distance, Route & Real Driving Time',
+  metaDescription: 'Marrakech to Chefchaouen: 560-580 km via motorway, 7-7.5 hours driving. Complete route guide, toll costs, and why splitting the drive over 2 days beats one long day.',
   title: 'How to Get from Marrakech to Chefchaouen: 2026 Transport Guide',
   description:
     'The four ways to get from Marrakech to Chefchaouen in 2026 — direct overnight CTM bus, train + bus combo, private car, or fly-to-Fes-then-drive. Real prices, times, pros and cons.',

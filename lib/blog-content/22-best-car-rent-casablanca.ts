@@ -9,8 +9,8 @@ const COVER = pex(36467138);
 const EN: BlogPost = {
   slug: SLUG_EN,
   lang: 'en',
-  metaTitle: 'Best Car to Rent in Casablanca Morocco 2026 — Which One to Choose?',
-  metaDescription: 'Which car should you rent in Casablanca in 2026? Economy, SUV or automatic — real prices in MAD and EUR, comparison by trip type and MoroccoForYou Cars recommendations.',
+  metaTitle: 'Best Car to Rent in Casablanca 2026: Prices Compared (Economy to 4x4)',
+  metaDescription: 'Which car should you rent in Casablanca? Real 2026 prices: Dacia Sandero from MAD 250/day, Duster 4x4 from MAD 350/day. Honest comparison for city driving vs road trips to Marrakech or the Sahara.',
   title: 'Best Car to Rent in Casablanca Morocco: Complete Guide 2026',
   description: 'Not sure which car to rent in Casablanca? This guide compares every category — economy, compact, SUV, automatic — by trip type, real 2026 prices and what is actually worth paying for.',
   keyword: 'best car to rent in casablanca morocco',

@@ -4,7 +4,7 @@ const SLUG_EN = 'marrakech-to-merzouga-tours-compared';
 const SLUG_FR = 'excursion-marrakech-merzouga-circuits';
 const SLUG_AR = 'rihla-marakish-mirzuqa-jawlat-fakhira';
 const ALTERNATES = { en: SLUG_EN, fr: SLUG_FR, ar: SLUG_AR } as const;
-const COVER = pex(4869960);
+const COVER = pex(5614643);
 
 const EN: BlogPost = {
   slug: SLUG_EN,

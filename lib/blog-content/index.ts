@@ -59,3 +59,4 @@ import './54-dakhla-travel-guide';
 import './55-canada-to-casablanca-flights';
 import './56-business-travel-casablanca';
 import './57-morocco-sports-events-guide';
+import './58-marrakech-car-rental-airport-transfer';

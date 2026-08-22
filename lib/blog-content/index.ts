@@ -62,3 +62,7 @@ import './57-morocco-sports-events-guide';
 import './58-marrakech-car-rental-airport-transfer';
 import './59-where-to-stay-chefchaouen';
 import './60-marrakech-to-merzouga-tours';
+import './61-merzouga-desert-camps-compared';
+import './62-agadir-car-rental-airport';
+import './63-tangier-private-tours';
+import './64-where-to-stay-essaouira';

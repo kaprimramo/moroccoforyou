@@ -70,3 +70,5 @@ import './65-where-to-stay-rabat';
 import './66-surf-morocco-complete-guide';
 import './67-best-surf-camps-morocco';
 import './68-where-to-stay-tangier';
+import './69-where-to-stay-casablanca';
+import './70-best-tours-from-casablanca';

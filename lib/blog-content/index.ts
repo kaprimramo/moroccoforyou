@@ -66,3 +66,7 @@ import './61-merzouga-desert-camps-compared';
 import './62-agadir-car-rental-airport';
 import './63-tangier-private-tours';
 import './64-where-to-stay-essaouira';
+import './65-where-to-stay-rabat';
+import './66-surf-morocco-complete-guide';
+import './67-best-surf-camps-morocco';
+import './68-where-to-stay-tangier';

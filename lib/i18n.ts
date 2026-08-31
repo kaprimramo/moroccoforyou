@@ -47,20 +47,36 @@ export const GEO_MARKETS = {
 // link must use www to avoid Google Search Console "Redirect error".
 export const SITE_URL = 'https://www.moroccoforyou.com';
 
-export function localizedUrl(locale: Locale, path: string): string {
-  const clean = path.startsWith('/') ? path : `/${path}`;
-  return locale === DEFAULT_LOCALE ? `${SITE_URL}${clean}` : `${SITE_URL}/${locale}${clean}`;
-}
-
 export function normalizePath(path: string): string {
   if (!path.startsWith('/')) return `/${path}`;
   return path;
 }
 
+/** Remove a leading /{locale} segment so the path is locale-neutral.
+ *
+ * `localizedUrl` / `localePath` add the prefix themselves, so a caller that
+ * passes an already-prefixed path (e.g. `/fr/blog/x/`) would otherwise get a
+ * doubled `/fr/fr/blog/x/`. Stripping first makes both functions idempotent:
+ * passing `/blog/x/` or `/fr/blog/x/` yields the same result. No real route
+ * starts with a locale-named segment, so this can't swallow a legitimate path. */
+export function stripLocalePrefix(path: string): string {
+  const clean = normalizePath(path);
+  for (const l of LOCALES) {
+    if (clean === `/${l}` || clean === `/${l}/`) return '/';
+    if (clean.startsWith(`/${l}/`)) return clean.slice(l.length + 1);
+  }
+  return clean;
+}
+
+export function localizedUrl(locale: Locale, path: string): string {
+  return `${SITE_URL}${localePath(locale, path)}`;
+}
+
 /** Locale-prefixed path. EN (default) lives at the root; FR/AR get a /{locale} prefix.
+ * Idempotent — safe to pass an already-prefixed path.
  * Single source of truth — `lib/paths.ts` re-exports this. */
 export function localePath(locale: Locale, path: string): string {
-  const clean = normalizePath(path);
+  const clean = stripLocalePrefix(path);
   return locale === DEFAULT_LOCALE ? clean : `/${locale}${clean}`;
 }
 

@@ -3,8 +3,9 @@ import '@/lib/blog-content';
 
 import type { MetadataRoute } from 'next';
 import { DESTINATIONS } from '@/lib/destinations';
-import { BLOG_POSTS, blogPath } from '@/lib/blog';
-import { LOCALES, SITE_URL, localizedUrl, type Locale } from '@/lib/i18n';
+import { BLOG_POSTS, blogUrl } from '@/lib/blog';
+import { blogAlternateUrls } from '@/lib/blog-seo';
+import { LOCALES, localizedUrl, type Locale } from '@/lib/i18n';
 
 const LOCALIZED_PATHS = [
   { path: '/', priority: 1.0, changeFrequency: 'weekly' as const },
@@ -29,16 +30,11 @@ function alternatesFor(path: string) {
   return { languages: { ...languages, 'x-default': localizedUrl('en', path) } };
 }
 
+// Shares `blogAlternateUrls` with the blog pages' generateMetadata, so a
+// post's sitemap entry and its <link rel="canonical"> / hreflang tags can
+// never drift apart.
 function blogAlternatesFor(post: (typeof BLOG_POSTS)[number]) {
-  if (!post.alternates) return undefined;
-  const languages: Record<string, string> = {};
-
-  if (post.alternates.en) languages['en'] = localizedUrl('en', `/blog/${post.alternates.en}/`);
-  if (post.alternates.fr) languages['fr'] = localizedUrl('fr', `/blog/${post.alternates.fr}/`);
-  if (post.alternates.ar) languages['ar'] = localizedUrl('ar', `/blog/${post.alternates.ar}/`);
-
-  languages['x-default'] = languages['en'] ?? Object.values(languages)[0];
-  return { languages };
+  return { languages: blogAlternateUrls(post, post.lang ?? 'en') };
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -60,10 +56,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const post of BLOG_POSTS) {
     const lang = post.lang ?? 'en';
 
-    const cleanBlogPath = `/blog/${post.slug}/`;
-
     entries.push({
-      url: localizedUrl(lang, cleanBlogPath),
+      // blogUrl(), not localizedUrl() — it owns the /blog/ vs /{locale}/blog/
+      // decision and keeps legacy root-mounted slugs at the root.
+      url: blogUrl(lang, post.slug),
       lastModified: new Date(post.updatedISO ?? post.publishedISO),
       changeFrequency: 'monthly',
       priority: 0.7,

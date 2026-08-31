@@ -6,9 +6,19 @@ export const SITE_NAME = 'MoroccoForYou';
 type BuildMetadataArgs = {
   title: string;
   description: string;
+  /** Locale-neutral path, e.g. `/blog/my-post/`. A leading `/{locale}` segment
+   * is stripped before the prefix for `locale` is applied, so passing an
+   * already-prefixed path can never produce `/fr/fr/...`. */
   path: string;
   locale?: Locale;
   image?: string;
+  /** Override the canonical and og:url. Use when the page's URL isn't simply
+   * `path` under a locale prefix — e.g. blog posts whose legacy slugs stay
+   * mounted at `/blog/{slug}/` in every language. */
+  canonicalUrl?: string;
+  /** Override the hreflang map. Keys are hreflang codes; `x-default` is filled
+   * in from the EN entry when absent. */
+  languages?: Record<string, string>;
 };
 
 export function buildMetadata({
@@ -17,11 +27,15 @@ export function buildMetadata({
   path,
   locale = 'en',
   image,
+  canonicalUrl,
+  languages: languagesOverride,
 }: BuildMetadataArgs): Metadata {
-  const canonical = localizedUrl(locale, path);
-  const languages = Object.fromEntries(
-    LOCALES.map((l) => [l, localizedUrl(l, path)]),
-  ) as Record<Locale, string>;
+  const canonical = canonicalUrl ?? localizedUrl(locale, path);
+  const languages =
+    languagesOverride ??
+    (Object.fromEntries(
+      LOCALES.map((l) => [l, localizedUrl(l, path)]),
+    ) as Record<string, string>);
   const ogImage = image ?? `${SITE_URL}/og-default.jpg`;
 
   return {
@@ -32,7 +46,7 @@ export function buildMetadata({
       canonical,
       languages: {
         ...languages,
-        'x-default': localizedUrl('en', path),
+        'x-default': languages['x-default'] ?? languages['en'] ?? canonical,
       },
     },
     other: {

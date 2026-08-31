@@ -3,12 +3,8 @@ import '@/lib/blog-content';
 
 import type { Metadata } from 'next';
 import { BlogPostView } from '@/components/views/BlogPostView';
-import {
-  getRootBlogSlugs,
-  getBlogPostInLang,
-  blogUrl,
-} from '@/lib/blog';
-import { buildMetadata } from '@/lib/seo';
+import { getRootBlogSlugs, getBlogPostInLang } from '@/lib/blog';
+import { blogPostMetadata, blogAlternatePaths } from '@/lib/blog-seo';
 
 type Params = { slug: string };
 
@@ -21,33 +17,20 @@ export const dynamicParams = false;
 export function generateMetadata({ params }: { params: Params }): Metadata {
   const post = getBlogPostInLang(params.slug, 'en');
   if (!post) return {};
-  const meta = buildMetadata({
-    title: post.metaTitle ?? post.title,
-    description: post.metaDescription ?? post.description,
-    path: `/blog/${post.slug}/`,
-    locale: 'en',
-    image: post.coverImage,
-  });
-  if (post.alternates) {
-    const languages: Record<string, string> = {};
-    if (post.alternates.en) languages['en'] = blogUrl('en', post.alternates.en);
-    if (post.alternates.fr) languages['fr'] = blogUrl('fr', post.alternates.fr);
-    if (post.alternates.ar) languages['ar'] = blogUrl('ar', post.alternates.ar);
-    languages['x-default'] = languages['en'] ?? '';
-    meta.alternates = { ...(meta.alternates ?? {}), languages };
-  }
-  return meta;
+  // This route also serves legacy non-EN posts that stay mounted at /blog/.
+  // Tag them with their real content language so hreflang doesn't claim a
+  // French article is the English version.
+  return blogPostMetadata(post, post.lang ?? 'en');
 }
 
 export default function Page({ params }: { params: Params }) {
   const post = getBlogPostInLang(params.slug, 'en');
 
-  const alternatesPaths: Record<string, string> = {};
-  if (post?.alternates) {
-    if (post.alternates.en) alternatesPaths['en'] = `/blog/${post.alternates.en}/`;
-    if (post.alternates.fr) alternatesPaths['fr'] = `/fr/blog/${post.alternates.fr}/`;
-    if (post.alternates.ar) alternatesPaths['ar'] = `/ar/blog/${post.alternates.ar}/`;
-  }
-
-  return <BlogPostView slug={params.slug} locale="en" alternates={alternatesPaths} />;
+  return (
+    <BlogPostView
+      slug={params.slug}
+      locale="en"
+      alternates={post ? blogAlternatePaths(post, post.lang ?? 'en') : {}}
+    />
+  );
 }

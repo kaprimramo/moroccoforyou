@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { LOCALES, SITE_URL, localizedUrl, type Locale } from './i18n';
+import { stripInlineHtml } from './inline-html';
 
 export const SITE_NAME = 'MoroccoForYou';
 
@@ -131,12 +132,14 @@ export function faqJsonLd(
       '@type': 'SpeakableSpecification',
       cssSelector: ['[itemprop="acceptedAnswer"]'],
     },
+    // Answers may carry inline links for the rendered page; schema.org wants
+    // the plain text.
     mainEntity: faqs.map((f) => ({
       '@type': 'Question',
-      name: f.question,
+      name: stripInlineHtml(f.question),
       acceptedAnswer: {
         '@type': 'Answer',
-        text: f.answer,
+        text: stripInlineHtml(f.answer),
         inLanguage: langMap[locale],
       },
     })),

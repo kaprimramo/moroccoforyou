@@ -1,5 +1,6 @@
 import { dict } from '@/lib/dictionaries';
 import type { Locale } from '@/lib/i18n';
+import { renderRichText } from '@/lib/rich-text';
 
 type FAQItem = { question: string; answer: string };
 
@@ -32,7 +33,7 @@ export function FAQ({
                 </span>
               </span>
             </summary>
-            <p className="mt-3 text-brand-night/80">{f.answer}</p>
+            <p className="mt-3 text-brand-night/80">{renderRichText(f.answer)}</p>
           </details>
         ))}
       </div>

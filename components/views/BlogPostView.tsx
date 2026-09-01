@@ -19,6 +19,7 @@ import { FAQ } from '@/components/FAQ';
 import { WhatsAppCTA } from '@/components/WhatsAppCTA';
 import { TrustSignals } from '@/components/TrustSignals';
 import { breadcrumbJsonLd, faqJsonLd } from '@/lib/seo';
+import { renderRichText } from '@/lib/rich-text';
 import { destinationPath, homePath } from '@/lib/paths';
 import { localizedUrl, type Locale } from '@/lib/i18n';
 import { notFound } from 'next/navigation';
@@ -222,14 +223,18 @@ export function BlogPostView({
           />
         </div>
 
-        <p className="mt-8 text-lg leading-relaxed text-brand-night/90">{post.intro}</p>
+        <p className="mt-8 text-lg leading-relaxed text-brand-night/90">
+          {renderRichText(post.intro)}
+        </p>
 
         {post.sections.map((s, si) => (
           <section key={s.heading} className="mt-10">
             <h2 className="font-display text-2xl font-bold text-brand-night">{s.heading}</h2>
             {s.paragraphs.map((para, i) => (
               <Fragment key={i}>
-                <p className="mt-3 leading-relaxed text-brand-night/85">{para}</p>
+                <p className="mt-3 leading-relaxed text-brand-night/85">
+                  {renderRichText(para)}
+                </p>
                 {si === ctaSectionIdx && i === ctaParagraphIdx && (
                   <AIPlannerCTA locale={locale} variant="inline" />
                 )}
@@ -238,7 +243,7 @@ export function BlogPostView({
             {s.list && (
               <ul className="mt-4 list-disc space-y-2 ps-6 text-brand-night/85">
                 {s.list.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}>{renderRichText(item)}</li>
                 ))}
               </ul>
             )}
@@ -264,7 +269,7 @@ export function BlogPostView({
                       <tr key={ri} className="border-t border-brand-night/10">
                         {row.map((cell, ci) => (
                           <td key={ci} className="px-4 py-2 align-top text-brand-night/90">
-                            {cell}
+                            {renderRichText(cell)}
                           </td>
                         ))}
                       </tr>
@@ -278,7 +283,9 @@ export function BlogPostView({
                 <p className="text-xs font-semibold uppercase tracking-widest text-brand-terracotta">
                   {s.callout.label}
                 </p>
-                <p className="mt-2 leading-relaxed text-brand-night/90">{s.callout.body}</p>
+                <p className="mt-2 leading-relaxed text-brand-night/90">
+                  {renderRichText(s.callout.body)}
+                </p>
               </aside>
             )}
           </section>
@@ -334,7 +341,7 @@ export function BlogPostView({
             {post.peopleAlsoAsk.map((qa) => (
               <div key={qa.question} className="rounded-xl border border-brand-night/10 bg-white p-4">
                 <dt className="font-semibold text-brand-night">{qa.question}</dt>
-                <dd className="mt-1 text-brand-night/80">{qa.answer}</dd>
+                <dd className="mt-1 text-brand-night/80">{renderRichText(qa.answer)}</dd>
               </div>
             ))}
           </dl>

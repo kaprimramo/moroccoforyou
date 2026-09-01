@@ -90,3 +90,19 @@ own `rel` when you need it — an explicit `rel` always wins:
   known tag set, not a sanitiser — don't feed it user input.
 - JSON-LD (FAQ schema) strips these tags via `stripInlineHtml`, so structured
   data stays plain text while the page shows real links.
+
+## Sitemap `lastmod`
+
+`app/sitemap.ts` derives dates automatically wherever it can:
+
+- **Articles** use `updatedISO ?? publishedISO` from the post.
+- **Blog index pages** (`/blog/`, `/fr/blog/`, `/ar/blog/`) use the newest
+  article in that locale, so they move on their own when you publish.
+
+Everything else — home, planner, rent-a-car, destinations — has no dated source,
+so it reads from the `PAGE_UPDATED` map at the top of `app/sitemap.ts`. **Bump
+the relevant entry when you meaningfully change one of those pages.**
+
+Don't be tempted to use the build time instead: it marks all 51 of those URLs as
+changed on every deploy, and a `lastmod` that always says "just now" teaches
+crawlers to ignore the field everywhere, including on articles where it's real.

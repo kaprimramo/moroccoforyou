@@ -3,23 +3,62 @@ import '@/lib/blog-content';
 
 import type { MetadataRoute } from 'next';
 import { DESTINATIONS } from '@/lib/destinations';
-import { BLOG_POSTS, blogUrl } from '@/lib/blog';
+import { BLOG_POSTS, blogUrl, getBlogPostsByLang } from '@/lib/blog';
 import { blogAlternateUrls } from '@/lib/blog-seo';
 import { LOCALES, localizedUrl, type Locale } from '@/lib/i18n';
 
-const LOCALIZED_PATHS = [
-  { path: '/', priority: 1.0, changeFrequency: 'weekly' as const },
-  { path: '/planner/', priority: 0.95, changeFrequency: 'weekly' as const },
+/** Last meaningful content change for pages that aren't driven by dated data.
+ * Bump the relevant entry when you actually change that page.
+ *
+ * Deliberately not the build time. Stamping `new Date()` claimed that all 51
+ * non-article URLs changed on every deploy, and a lastmod that always says
+ * "just now" teaches crawlers to ignore the field — including on the article
+ * entries, where it is accurate and worth trusting. Seed values are the last
+ * commit date that touched each page's sources. */
+const PAGE_UPDATED = {
+  home: '2026-06-29',
+  planner: '2026-07-03',
+  rentACar: '2026-06-29',
+  destinations: '2026-06-29',
+} as const;
+
+/** The blog index lists every article in its locale, so it genuinely does
+ * change whenever one is published or updated there — no manual bumping. */
+function blogIndexUpdated(locale: Locale): Date {
+  const newest = getBlogPostsByLang(locale).reduce<string | undefined>((max, p) => {
+    const d = p.updatedISO ?? p.publishedISO;
+    return !max || d > max ? d : max;
+  }, undefined);
+  return new Date(newest ?? PAGE_UPDATED.home);
+}
+
+const fixed = (iso: string) => () => new Date(iso);
+
+const LOCALIZED_PATHS: {
+  path: string;
+  priority: number;
+  changeFrequency: 'weekly' | 'monthly';
+  lastModified: (locale: Locale) => Date;
+}[] = [
+  { path: '/', priority: 1.0, changeFrequency: 'weekly', lastModified: fixed(PAGE_UPDATED.home) },
+  {
+    path: '/planner/',
+    priority: 0.95,
+    changeFrequency: 'weekly',
+    lastModified: fixed(PAGE_UPDATED.planner),
+  },
   {
     path: '/rent-a-car/casablanca-airport/',
     priority: 0.9,
-    changeFrequency: 'weekly' as const,
+    changeFrequency: 'weekly',
+    lastModified: fixed(PAGE_UPDATED.rentACar),
   },
-  { path: '/blog/', priority: 0.8, changeFrequency: 'weekly' as const },
+  { path: '/blog/', priority: 0.8, changeFrequency: 'weekly', lastModified: blogIndexUpdated },
   ...DESTINATIONS.map((d) => ({
     path: `/destinations/${d.slug}/`,
     priority: 0.8,
     changeFrequency: 'monthly' as const,
+    lastModified: fixed(PAGE_UPDATED.destinations),
   })),
 ];
 
@@ -38,14 +77,13 @@ function blogAlternatesFor(post: (typeof BLOG_POSTS)[number]) {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
 
-  for (const { path, priority, changeFrequency } of LOCALIZED_PATHS) {
+  for (const { path, priority, changeFrequency, lastModified } of LOCALIZED_PATHS) {
     for (const locale of LOCALES) {
       entries.push({
         url: localizedUrl(locale, path),
-        lastModified: now,
+        lastModified: lastModified(locale),
         changeFrequency,
         priority,
         alternates: alternatesFor(path),

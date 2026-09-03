@@ -29,7 +29,10 @@
       "Bash(git commit -m ' *)",
       "PowerShell(npm install *)",
       "Bash(node *)",
-      "PowerShell(npx vercel --prod --yes 2>&1 | Select-Object -Last 20)"
+      "PowerShell(npx vercel --prod --yes 2>&1 | Select-Object -Last 20)",
+      "Bash(npx tsc *)",
+      "Bash(npx tsx -e ' *)",
+      "Bash(npx tsx --tsconfig tsconfig.json -e ' *)"
     ]
   }
 }

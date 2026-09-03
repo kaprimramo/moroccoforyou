@@ -6,6 +6,8 @@ const SLUG_AR = 'amakin-taswir-al-udisa-maghrib';
 const ALTERNATES = { en: SLUG_EN, fr: SLUG_FR, ar: SLUG_AR } as const;
 const COVER = pex(38896288);
 
+const GYG_LINK = 'https://www.getyourguide.com/marrakesh-l208/at-ben-haddou-ouarzazate-priv-dagtrip-vanuit-marrakech-t113458/?partner_id=FMSVUZD';
+
 const EN: BlogPost = {
   slug: SLUG_EN,
   lang: 'en',
@@ -17,7 +19,7 @@ const EN: BlogPost = {
   coverImage: COVER,
   coverAlt: 'The Odyssey filming locations Morocco 2026 — Ait Benhaddou UNESCO ksar which served as Troy in Christopher Nolan\'s film',
   publishedISO: '2026-08-11',
-  updatedISO: '2026-08-11',
+  updatedISO: '2026-09-03',
   author: 'Omar L. — Casablanca Local & Morocco Road Trip Specialist',
   readingMinutes: 13,
   intro: 'Christopher Nolan\'s The Odyssey opened in July 2026 with $264 million worldwide — the biggest global debut of his career, ahead of The Dark Knight Rises and Oppenheimer — and much of its most memorable imagery was filmed in Morocco. The $250 million adaptation of Homer\'s epic, starring Matt Damon as Odysseus alongside Anne Hathaway, Tom Holland, Zendaya, Charlize Theron and Robert Pattinson, used Moroccan landscapes for the burning city of Troy, the beach where the Trojan Horse is discovered, palace interiors, and the mystical island of Ogygia. Our Casablanca-based team already drives clients through several of these exact locations on our standard Sahara and coastal routes — here is exactly what was filmed where, and how to see it for yourself.',
@@ -50,7 +52,17 @@ const EN: BlogPost = {
       ],
       callout: {
         label: '📍 Aït Benhaddou on the Map',
-        body: 'Located 190 km from Marrakech (approximately 3 hours by car) on the road toward Ouarzazate and the Sahara. GPS: 31.0472°N, 7.1319°W. View on Google Maps: maps.google.com/?q=Ait+Benhaddou. This UNESCO site is also a standard stop on the classic road route toward Merzouga and the Sahara desert.',
+        body: 'Located 190 km from Marrakech (approximately 3 hours by car) on the road toward Ouarzazate and the Sahara. GPS: 31.0472°N, 7.1319°W. View on Google Maps: <a href="https://maps.google.com/?q=Ait+Benhaddou" data-btn="outline">Open Map →</a> This UNESCO site is also a standard stop on the classic road route toward Merzouga and the Sahara desert.',
+      },
+    },
+    {
+      heading: 'Visit the Real Troy Skyline Yourself',
+      paragraphs: [
+        'The temporary Troy set is gone, but the real Aït Benhaddou skyline the production built it against is exactly as it appears in the film — and it pairs naturally with a stop at Ouarzazate\'s Atlas Studios, twenty minutes down the road, where the production was based.',
+      ],
+      callout: {
+        label: '🎫 Book This Exact Tour',
+        body: `A verified private day trip from Marrakech covers both Aït Benhaddou and Atlas Studios in one outing, with hotel pickup included: <a href="${GYG_LINK}" data-btn="primary">Book Aït Benhaddou & Ouarzazate Tour →</a>`,
       },
     },
     {
@@ -61,7 +73,7 @@ const EN: BlogPost = {
       ],
       callout: {
         label: '📍 Essaouira on the Map',
-        body: 'GPS: 31.5108°N, 9.7831°W. View on Google Maps: maps.google.com/?q=Essaouira. Essaouira is a UNESCO-listed medina in its own right, with its beach visible from the ramparts — the same coastline used for the film\'s Trojan Horse sequence.',
+        body: 'GPS: 31.5108°N, 9.7831°W. View on Google Maps: <a href="https://maps.google.com/?q=Essaouira" data-btn="outline">Open Map →</a> Essaouira is a UNESCO-listed medina in its own right, with its beach visible from the ramparts — the same coastline used for the film\'s Trojan Horse sequence.',
       },
     },
     {
@@ -72,7 +84,7 @@ const EN: BlogPost = {
       ],
       callout: {
         label: '📍 Ouarzazate / Atlas Studios on the Map',
-        body: 'GPS: 30.9401°N, 6.9696°W. View on Google Maps: maps.google.com/?q=Atlas+Studios+Ouarzazate. Ouarzazate is 360 km from Casablanca (5h–5h30 driving) and sits directly on the standard route toward Merzouga and the Sahara.',
+        body: 'GPS: 30.9401°N, 6.9696°W. View on Google Maps: <a href="https://maps.google.com/?q=Atlas+Studios+Ouarzazate" data-btn="outline">Open Map →</a> Ouarzazate is 360 km from Casablanca (5h–5h30 driving) and sits directly on the standard route toward Merzouga and the Sahara.',
       },
     },
     {
@@ -143,6 +155,10 @@ const EN: BlogPost = {
       answer: 'Yes — Aït Benhaddou, Essaouira, Ouarzazate and Marrakech are all easily visitable and sit along one of Morocco\'s classic road trip routes. The temporary Troy set built for the film has been dismantled, but the real UNESCO-listed ksar of Aït Benhaddou remains exactly as it appears in the movie\'s backdrop. Dakhla is visitable but requires a separate, much longer journey far to the south.',
     },
     {
+      question: 'Is there a guided tour to Aït Benhaddou and Ouarzazate?',
+      answer: 'Yes — verified private day trips run daily from Marrakech, covering both Aït Benhaddou\'s ksar and Ouarzazate\'s Atlas Studios in a single outing with hotel pickup included, typically taking a full day via the Tizi n\'Tichka pass.',
+    },
+    {
       question: 'Is Aït Benhaddou really Troy in The Odyssey?',
       answer: 'The production built the burning city of Troy against the real skyline of Aït Benhaddou, adding more than 60 temporary structures including a "Temple of Athena" and city gates across 2.5 acres. The ksar itself — a 900-year-old UNESCO World Heritage Site — is the same one visible in the film, though the film-specific structures were removed after shooting.',
     },
@@ -161,7 +177,7 @@ const EN: BlogPost = {
     { question: 'Is Essaouira worth visiting besides the film connection?', answer: 'Yes — independent of any film history, Essaouira is a UNESCO World Heritage-listed medina known for its 18th-century ramparts, blue fishing boats, strong Atlantic winds ideal for windsurfing and kitesurfing, fresh seafood, and a genuinely relaxed atmosphere compared to Marrakech. It has drawn filmmakers since Orson Welles shot Othello there in 1949.' },
   ],
   relatedDestinations: ['marrakech', 'casablanca'],
-  relatedPosts: ['sahara-desert-morocco-travel-guide', 'marrakech-travel-guide', 'casablanca-travel-guide', 'casablanca-agadir-by-car', 'casablanca-airport-guide-cmn'],
+  relatedPosts: ['sahara-desert-morocco-travel-guide', 'marrakech-travel-guide', 'casablanca-travel-guide', 'ouarzazate-travel-guide', 'casablanca-airport-guide-cmn'],
   alternates: ALTERNATES,
 };
 
@@ -176,7 +192,7 @@ const FR: BlogPost = {
   coverImage: COVER,
   coverAlt: 'Lieux de tournage L\'Odyssée Maroc 2026 — Ksar UNESCO d\'Aït Benhaddou qui a servi de Troie dans le film de Christopher Nolan',
   publishedISO: '2026-08-11',
-  updatedISO: '2026-08-11',
+  updatedISO: '2026-09-03',
   author: 'Omar L. — Local Casablancais & Spécialiste Road Trip Maroc',
   readingMinutes: 13,
   intro: 'L\'Odyssée de Christopher Nolan a ouvert en juillet 2026 avec 264 millions de dollars dans le monde — le plus grand démarrage mondial de sa carrière, devant The Dark Knight Rises et Oppenheimer — et une grande partie de ses images les plus mémorables a été tournée au Maroc. L\'adaptation à 250 millions de dollars de l\'épopée d\'Homère, avec Matt Damon dans le rôle d\'Ulysse aux côtés d\'Anne Hathaway, Tom Holland, Zendaya, Charlize Theron et Robert Pattinson, a utilisé les paysages marocains pour la cité en flammes de Troie, la plage où le Cheval de Troie est découvert, des intérieurs de palais, et l\'île mystique d\'Ogygie. Notre équipe casablancaise conduit déjà des clients à travers plusieurs de ces lieux exacts sur nos circuits standards Sahara et côtiers.',
@@ -207,111 +223,104 @@ const FR: BlogPost = {
       ],
       callout: {
         label: '📍 Aït Benhaddou sur la Carte',
-        body: 'Situé à 190 km de Marrakech (environ 3 heures en voiture) sur la route vers Ouarzazate et le Sahara. GPS : 31,0472°N, 7,1319°O. Voir sur Google Maps : maps.google.com/?q=Ait+Benhaddou.',
+        body: 'Situé à 190 km de Marrakech (environ 3 heures en voiture) sur la route vers Ouarzazate et le Sahara. GPS : 31,0472°N, 7,1319°O. Voir sur Google Maps : <a href="https://maps.google.com/?q=Ait+Benhaddou" data-btn="outline">Ouvrir la Carte →</a>',
+      },
+    },
+    {
+      heading: 'Visitez le Vrai Skyline de Troie',
+      paragraphs: [
+        'Le décor temporaire de Troie a disparu, mais le vrai skyline d\'Aït Benhaddou contre lequel la production l\'a construit est exactement tel qu\'il apparaît dans le film — et il se combine naturellement avec un arrêt aux Studios Atlas d\'Ouarzazate, à vingt minutes de route.',
+      ],
+      callout: {
+        label: '🎫 Réservez ce Circuit Exact',
+        body: `Un circuit journée privé vérifié depuis Marrakech couvre à la fois Aït Benhaddou et les Studios Atlas en une sortie, avec prise en charge hôtel incluse : <a href="${GYG_LINK}" data-btn="primary">Réservez le Circuit Aït Benhaddou & Ouarzazate →</a>`,
       },
     },
     {
       heading: 'Essaouira — Où le Cheval de Troie a Été Découvert',
       paragraphs: [
-        'Les plages atlantiques balayées par le vent d\'Essaouira ont fourni le cadre de l\'un des moments clés du film : la découverte du Cheval de Troie et le départ des navires d\'Ulysse pour le long voyage retour vers Ithaque. Les remparts fortifiés et la lumière côtière d\'Essaouira ont leur propre longue histoire cinématographique — Orson Welles y a tourné des scènes d\'Othello en 1949.',
+        'Les plages atlantiques balayées par le vent d\'Essaouira ont fourni le cadre de l\'un des moments clés du film : la découverte du Cheval de Troie et le départ des navires d\'Ulysse pour le long voyage retour vers Ithaque.',
       ],
       callout: {
         label: '📍 Essaouira sur la Carte',
-        body: 'GPS : 31,5108°N, 9,7831°O. Voir sur Google Maps : maps.google.com/?q=Essaouira. Essaouira est elle-même une médina classée UNESCO, avec sa plage visible depuis les remparts.',
+        body: 'GPS : 31,5108°N, 9,7831°O. Voir sur Google Maps : <a href="https://maps.google.com/?q=Essaouira" data-btn="outline">Ouvrir la Carte →</a>',
       },
     },
     {
       heading: 'Ouarzazate — La Base de Production aux Studios Atlas',
       paragraphs: [
-        'À vingt minutes d\'Aït Benhaddou se trouve Ouarzazate, le pôle de l\'industrie cinématographique marocaine depuis les années 1980 et siège des Studios Atlas — l\'un des plus grands complexes de studios au monde. La production de L\'Odyssée a utilisé Ouarzazate comme base logistique et technique pour le tournage marocain.',
+        'À vingt minutes d\'Aït Benhaddou se trouve Ouarzazate, le pôle de l\'industrie cinématographique marocaine depuis les années 1980 et siège des Studios Atlas.',
       ],
       callout: {
         label: '📍 Ouarzazate / Studios Atlas sur la Carte',
-        body: 'GPS : 30,9401°N, 6,9696°O. Voir sur Google Maps : maps.google.com/?q=Atlas+Studios+Ouarzazate. Ouarzazate est à 360 km de Casablanca (5h–5h30 de route).',
+        body: 'GPS : 30,9401°N, 6,9696°O. Voir sur Google Maps : <a href="https://maps.google.com/?q=Atlas+Studios+Ouarzazate" data-btn="outline">Ouvrir la Carte →</a> Ouarzazate est à 360 km de Casablanca (5h–5h30 de route).',
       },
     },
     {
       heading: 'Marrakech — Intérieurs de Palais',
       paragraphs: [
-        'Marrakech et ses environs ont fourni des séquences d\'intérieur pour le film, y compris un intérieur de palais utilisé pour des scènes liées à Ménélas. La ville marché de Tahannaout, à environ 20 km au sud de Marrakech, et les plaines rocheuses d\'Agafay ont également servi pour des séquences de paysage supplémentaires.',
+        'Marrakech et ses environs ont fourni des séquences d\'intérieur pour le film, y compris un intérieur de palais utilisé pour des scènes liées à Ménélas.',
       ],
     },
     {
       heading: 'Dakhla — L\'Île d\'Ogygie',
       paragraphs: [
-        'Des reportages post-sortie identifient la Dune Blanche près de Dakhla, sur la côte atlantique loin au sud d\'Agadir, comme le lieu utilisé pour Ogygie — l\'île où Calypso (Charlize Theron) retient Ulysse captif pendant sept ans. La Dune Blanche est une bande de sable pâle prisée des kitesurfeurs plutôt qu\'un site touristique conventionnel.',
-        'Il convient de préciser : Dakhla se situe au Sahara occidental, un territoire dont le statut est contesté et classé par les Nations Unies comme non autonome, administré par le Maroc depuis 1975. Le choix de ce lieu de tournage a suscité des critiques publiques du Festival International du Film du Sahara Occidental pendant le tournage.',
+        'Des reportages post-sortie identifient la Dune Blanche près de Dakhla comme le lieu utilisé pour Ogygie — l\'île où Calypso retient Ulysse captif.',
+        'Dakhla se situe au Sahara occidental, un territoire dont le statut est contesté, administré par le Maroc depuis 1975.',
       ],
     },
     {
-      heading: 'Tous les Lieux de Tournage de L\'Odyssée au Maroc — Tableau Récapitulatif',
-      paragraphs: ['Un aperçu rapide de chaque lieu marocain confirmé, son rôle dans le film, et sa distance depuis Casablanca et Marrakech.'],
+      heading: 'Tous les Lieux de Tournage — Tableau Récapitulatif',
+      paragraphs: ['Un aperçu rapide de chaque lieu marocain confirmé.'],
       table: {
         caption: 'Lieux de tournage de L\'Odyssée au Maroc — guide complet 2026',
         headers: ['Lieu', 'Rôle dans le film', 'Distance depuis Marrakech', 'Distance depuis Casablanca', 'Visitable aujourd\'hui ?'],
         rows: [
-          ['Aït Benhaddou', 'Troie (cité en flammes)', '190 km, ~3h', '~430 km, ~5h30', 'Oui — ksar UNESCO, décor démonté'],
-          ['Essaouira', 'Plage découverte Cheval de Troie', '190 km, ~2h30–3h', '~350 km, ~4h30', 'Oui — médina UNESCO complète'],
-          ['Ouarzazate (Studios Atlas)', 'Base de production', '210 km, ~3h15', '~450 km, ~6h', 'Oui — visites publiques du studio'],
-          ['Marrakech / Tahannaout / Agafay', 'Intérieurs palais, paysages', '—', '~240 km, ~2h30', 'Oui — Marrakech et désert d\'Agafay proche'],
-          ['Dakhla (Dune Blanche)', 'Île d\'Ogygie', '~1 000 km', '~1 200 km', 'Oui mais voyage séparé spécialisé'],
+          ['Aït Benhaddou', 'Troie (cité en flammes)', '190 km, ~3h', '~430 km, ~5h30', 'Oui — ksar UNESCO'],
+          ['Essaouira', 'Plage découverte Cheval de Troie', '190 km, ~2h30–3h', '~350 km, ~4h30', 'Oui — médina UNESCO'],
+          ['Ouarzazate (Studios Atlas)', 'Base de production', '210 km, ~3h15', '~450 km, ~6h', 'Oui — visites publiques'],
+          ['Marrakech / Tahannaout / Agafay', 'Intérieurs palais', '—', '~240 km, ~2h30', 'Oui'],
+          ['Dakhla (Dune Blanche)', 'Île d\'Ogygie', '~1 000 km', '~1 200 km', 'Voyage séparé'],
         ],
       },
     },
     {
-      heading: 'Comment Visiter les Lieux de L\'Odyssée — Un Road Trip Pratique',
-      paragraphs: ['Bonne nouvelle pour les voyageurs : trois des quatre principaux lieux marocains — Aït Benhaddou, Ouarzazate et Marrakech — se situent le long de la route exacte que notre équipe emprunte déjà pour les tours Sahara standards.'],
+      heading: 'Comment Visiter — Un Road Trip Pratique',
+      paragraphs: ['Trois des quatre lieux principaux se situent le long de la route standard vers le Sahara.'],
       table: {
         caption: 'Road trip suggéré lieux L\'Odyssée depuis Casablanca 2026',
         headers: ['Jour', 'Itinéraire', 'Distance/Temps', 'Ce que vous voyez'],
         rows: [
-          ['Jour 1', 'Casablanca (CMN) → Marrakech', '240 km, 2h30–3h', 'Zone tournage intérieurs palais, installation'],
-          ['Jour 2', 'Marrakech → Essaouira (excursion) → Marrakech', '190 km chaque sens, 2h30–3h', 'Plage Cheval de Troie, médina Essaouira'],
-          ['Jour 3', 'Marrakech → Ouarzazate → Aït Benhaddou', '210–240 km, 3h15–3h30', 'Studios Atlas, lieu de tournage Troie'],
-          ['Jour 4+', 'Continuer vers le Sahara ou retour Marrakech/Casablanca', 'Variable', 'Extension Sahara optionnelle via Merzouga'],
+          ['Jour 1', 'Casablanca (CMN) → Marrakech', '240 km, 2h30–3h', 'Zone tournage intérieurs'],
+          ['Jour 2', 'Marrakech → Essaouira → Marrakech', '190 km chaque sens', 'Plage Cheval de Troie'],
+          ['Jour 3', 'Marrakech → Ouarzazate → Aït Benhaddou', '210–240 km', 'Studios Atlas, Troie'],
+          ['Jour 4+', 'Sahara ou retour', 'Variable', 'Extension optionnelle'],
         ],
       },
       callout: {
-        label: '🚗 Construisez Votre Road Trip L\'Odyssée',
-        body: 'Nos tours Sahara passent déjà par Aït Benhaddou et Ouarzazate en route vers Merzouga, et nous pouvons construire un itinéraire privé ajoutant Essaouira. Louez votre voiture à l\'aéroport de Casablanca (CMN) — économique dès MAD 250/jour (23€), Dacia Duster 4x4 dès MAD 350/jour (32€) recommandé. +212 634 276 534',
+        label: '🚗 Construisez Votre Road Trip',
+        body: 'Nos tours Sahara passent déjà par Aït Benhaddou et Ouarzazate. Louez votre voiture à Casablanca (CMN) — dès MAD 250/jour (23€). +212 634 276 534',
       },
     },
     {
-      heading: 'Meilleure Période pour la Même Lumière Cinématographique',
-      paragraphs: [
-        'La lumière qui a rendu ces lieux dignes d\'être filmés est saisonnière. D\'octobre à avril offre la lumière la plus claire et dramatique sur le corridor Aït Benhaddou–Ouarzazate–Sahara, avec des températures diurnes confortables. Essaouira est une destination véritablement toute l\'année grâce à sa brise côtière.',
-      ],
+      heading: 'Meilleure Période pour la Même Lumière',
+      paragraphs: ['Octobre à avril offre la lumière la plus claire sur le corridor Aït Benhaddou–Ouarzazate–Sahara.'],
     },
   ],
   faqs: [
-    {
-      question: 'Où a été tournée L\'Odyssée au Maroc ?',
-      answer: 'Christopher Nolan a tourné L\'Odyssée dans cinq lieux marocains confirmés : Aït Benhaddou (cité en flammes de Troie), les plages atlantiques d\'Essaouira (découverte et départ du Cheval de Troie), les Studios Atlas d\'Ouarzazate (base logistique), Marrakech et Tahannaout (intérieurs de palais et paysages), et la Dune Blanche de Dakhla (île d\'Ogygie).',
-    },
-    {
-      question: 'Peut-on visiter les lieux de tournage de L\'Odyssée ?',
-      answer: 'Oui — Aït Benhaddou, Essaouira, Ouarzazate et Marrakech sont tous facilement visitables et se situent le long d\'une des routes classiques du Maroc. Le décor temporaire de Troie a été démonté, mais le vrai ksar UNESCO d\'Aït Benhaddou reste exactement tel qu\'il apparaît en arrière-plan du film.',
-    },
-    {
-      question: 'Aït Benhaddou est-il vraiment Troie dans L\'Odyssée ?',
-      answer: 'La production a construit la cité en flammes de Troie contre le véritable horizon d\'Aït Benhaddou, ajoutant plus de 60 structures temporaires sur 2,5 hectares. Le ksar lui-même — site UNESCO vieux de 900 ans — est le même que celui visible dans le film.',
-    },
-    {
-      question: 'À quelle distance est Aït Benhaddou de Marrakech ?',
-      answer: 'Aït Benhaddou est à environ 190 km de Marrakech, soit environ 3 heures de route via Ouarzazate. Il se situe sur l\'ancienne route caravanière entre Marrakech et le Sahara.',
-    },
-    {
-      question: 'Qu\'est-ce qui est controversé à propos de Dakhla dans L\'Odyssée ?',
-      answer: 'Dakhla se situe au Sahara occidental, un territoire que les Nations Unies classent comme non autonome et dont la souveraineté est contestée ; il est administré par le Maroc depuis 1975. Le Festival International du Film du Sahara Occidental a publiquement critiqué la production pour y avoir tourné.',
-    },
+    { question: 'Où a été tournée L\'Odyssée au Maroc ?', answer: 'Cinq lieux confirmés : Aït Benhaddou (Troie), Essaouira (Cheval de Troie), Studios Atlas d\'Ouarzazate (base), Marrakech/Tahannaout (intérieurs), Dune Blanche de Dakhla (Ogygie).' },
+    { question: 'Peut-on visiter les lieux de tournage ?', answer: 'Oui — Aït Benhaddou, Essaouira, Ouarzazate et Marrakech sont tous facilement visitables le long d\'une route classique du Maroc.' },
+    { question: 'Existe-t-il un circuit guidé vers Aït Benhaddou et Ouarzazate ?', answer: 'Oui — des circuits journée privés vérifiés partent quotidiennement de Marrakech, couvrant le ksar d\'Aït Benhaddou et les Studios Atlas en une sortie avec prise en charge hôtel incluse.' },
+    { question: 'Aït Benhaddou est-il vraiment Troie ?', answer: 'La production a construit Troie contre le véritable horizon d\'Aït Benhaddou, ajoutant plus de 60 structures temporaires.' },
+    { question: 'Qu\'est-ce qui est controversé à propos de Dakhla ?', answer: 'Dakhla se situe au Sahara occidental, territoire dont la souveraineté est contestée.' },
   ],
   peopleAlsoAsk: [
-    { question: 'Combien d\'argent L\'Odyssée a-t-elle rapporté ?', answer: 'L\'Odyssée a ouvert avec 264,1 millions de dollars dans le monde en juillet 2026 — le plus grand démarrage mondial de Christopher Nolan, dépassant les 249 millions de dollars de The Dark Knight Rises en 2012.' },
-    { question: 'Quels autres films ont été tournés à Aït Benhaddou ?', answer: 'Aït Benhaddou est apparu dans de nombreuses productions majeures depuis les années 1960, dont Lawrence d\'Arabie, les deux Gladiator de Ridley Scott, La Momie, Kingdom of Heaven, Game of Thrones (comme Yunkai), et maintenant L\'Odyssée (comme Troie).' },
-    { question: 'Essaouira vaut-elle le détour indépendamment du film ?', answer: 'Oui — indépendamment de toute histoire cinématographique, Essaouira est une médina classée UNESCO connue pour ses remparts du 18e siècle, ses bateaux de pêche bleus, ses forts vents atlantiques idéaux pour le windsurf, ses fruits de mer frais, et une atmosphère authentiquement détendue.' },
+    { question: 'Combien d\'argent L\'Odyssée a-t-elle rapporté ?', answer: '264,1 millions de dollars dans le monde en juillet 2026 — plus grand démarrage mondial de Nolan.' },
+    { question: 'Quels autres films ont été tournés à Aït Benhaddou ?', answer: 'Lawrence d\'Arabie, les deux Gladiator, La Momie, Kingdom of Heaven, Game of Thrones, et maintenant L\'Odyssée.' },
+    { question: 'Essaouira vaut-elle le détour indépendamment du film ?', answer: 'Oui — médina classée UNESCO connue pour ses remparts, ses bateaux bleus et ses vents atlantiques.' },
   ],
   relatedDestinations: ['marrakech', 'casablanca'],
-  relatedPosts: ['guide-voyage-sahara-maroc', 'guide-voyage-marrakech', 'guide-voyage-casablanca', 'casablanca-agadir-en-voiture', 'guide-aeroport-casablanca-cmn'],
+  relatedPosts: ['guide-voyage-sahara-maroc', 'guide-voyage-marrakech', 'guide-voyage-casablanca', 'guide-voyage-ouarzazate', 'guide-aeroport-casablanca-cmn'],
   alternates: ALTERNATES,
 };
 
@@ -321,147 +330,132 @@ const AR: BlogPost = {
   metaTitle: 'أماكن تصوير فيلم الأوديسة (2026) في المغرب — آيت بن حدو، الصويرة والمزيد',
   metaDescription: 'أين صُوِّر فيلم الأوديسة في المغرب؟ دليل شامل لمواقع كريستوفر نولان — آيت بن حدو كطروادة، شاطئ حصان طروادة في الصويرة، أستوديوهات أطلس في ورززات، مراكش والداخلة، مع خرائط وكيفية زيارة كل موقع.',
   title: 'أماكن تصوير الأوديسة (2026) في المغرب: أين تجد طروادة وشاطئ الحصان الخشبي والمزيد',
-  description: 'حقق فيلم الأوديسة لكريستوفر نولان أكبر افتتاح عالمي في مسيرته — وصُوِّر جزء كبير منه في المغرب. يغطي هذا الدليل كل موقع مغربي مؤكد: آيت بن حدو كمدينة طروادة المشتعلة، شواطئ الصويرة الأطلسية لاكتشاف حصان طروادة، أستوديوهات أطلس بورززات كقاعدة إنتاج، مراكش لداخليات القصور، وكثيب الداخلة الأبيض كأوجيجيا.',
+  description: 'حقق فيلم الأوديسة لكريستوفر نولان أكبر افتتاح عالمي في مسيرته — وصُوِّر جزء كبير منه في المغرب. يغطي هذا الدليل كل موقع مغربي مؤكد.',
   keyword: 'أماكن تصوير الأوديسة المغرب',
   coverImage: COVER,
-  coverAlt: 'أماكن تصوير الأوديسة في المغرب 2026 — قصبة آيت بن حدو المدرجة في اليونسكو التي مثلت طروادة في فيلم كريستوفر نولان',
+  coverAlt: 'أماكن تصوير الأوديسة في المغرب 2026 — قصبة آيت بن حدو المدرجة في اليونسكو التي مثلت طروادة',
   publishedISO: '2026-08-11',
-  updatedISO: '2026-08-11',
+  updatedISO: '2026-09-03',
   author: 'عمر ل. — مقيم في الدار البيضاء ومتخصص في الرحلات البرية بالمغرب',
   readingMinutes: 13,
-  intro: 'افتُتح فيلم الأوديسة لكريستوفر نولان في يوليو 2026 بإيرادات 264.1 مليون دولار عالمياً — أكبر افتتاح عالمي في مسيرته، متجاوزاً The Dark Knight Rises وOppenheimer — وصُوِّر جزء كبير من أكثر مشاهده تأثيراً في المغرب. اقتباس بميزانية 250 مليون دولار لملحمة هوميروس، بطولة مات ديمون في دور أوديسيوس إلى جانب آن هاثاواي وتوم هولاند وزندايا وشارليز ثيرون وروبرت باتينسون، استخدم مناظر مغربية لمدينة طروادة المشتعلة، والشاطئ حيث اكتُشف حصان طروادة، وداخليات القصور، وجزيرة أوجيجيا الأسطورية. فريقنا المقيم في الدار البيضاء يقود بالفعل عملاء عبر عدة من هذه المواقع بالضبط في مسارات الصحراء والساحل المعتادة.',
+  intro: 'افتُتح فيلم الأوديسة لكريستوفر نولان في يوليو 2026 بإيرادات 264.1 مليون دولار عالمياً — أكبر افتتاح عالمي في مسيرته، متجاوزاً The Dark Knight Rises وOppenheimer — وصُوِّر جزء كبير من أكثر مشاهده تأثيراً في المغرب.',
   sections: [
     {
       heading: 'الأوديسة — حقائق سريعة',
-      paragraphs: ['نظرة سريعة قبل تفاصيل المواقع، لفهم سبب أهمية هذا الفيلم للسياحة المغربية.'],
+      paragraphs: ['نظرة سريعة قبل تفاصيل المواقع.'],
       table: {
         caption: 'الأوديسة (2026) — الحقائق الأساسية',
         headers: ['المعلومة', 'التفصيل'],
         rows: [
-          ['المخرج', 'كريستوفر نولان (Oppenheimer، ثلاثية The Dark Knight، Interstellar)'],
-          ['الممثلون الرئيسيون', 'مات ديمون (أوديسيوس)، آن هاثاواي (بينيلوبي)، توم هولاند (تيليماخوس)، زندايا، شارليز ثيرون (كاليبسو)، روبرت باتينسون'],
+          ['المخرج', 'كريستوفر نولان'],
+          ['الممثلون الرئيسيون', 'مات ديمون، آن هاثاواي، توم هولاند، زندايا، شارليز ثيرون'],
           ['تاريخ الإصدار', '17 يوليو 2026'],
-          ['عطلة نهاية أسبوع الافتتاح', '264.1 مليون دولار عالمياً — أكبر افتتاح عالمي لنولان'],
+          ['عطلة نهاية أسبوع الافتتاح', '264.1 مليون دولار عالمياً'],
           ['الميزانية', '~250 مليون دولار'],
-          ['فترة التصوير', 'فبراير–أغسطس 2025'],
-          ['الدول المستخدمة', 'المغرب، إيطاليا (صقلية)، اليونان، آيسلندا، اسكتلندا، مالطا، أمريكا (استوديو)'],
-          ['المواقع المغربية', 'آيت بن حدو، الصويرة، ورززات، منطقة مراكش، الداخلة'],
+          ['المواقع المغربية', 'آيت بن حدو، الصويرة، ورززات، مراكش، الداخلة'],
         ],
       },
     },
     {
       heading: 'آيت بن حدو — مدينة طروادة المشتعلة',
       paragraphs: [
-        'صُوِّرت سقطة طروادة — المشهد الافتتاحي للفيلم — في آيت بن حدو، قرية محصنة (قصبة) مدرجة في اليونسكو من الطين والعمارة الترابية الحمراء على طريق القوافل التاريخي بين مراكش والصحراء. بنى الإنتاج أكثر من 60 هيكلاً مؤقتاً على مساحة 2.5 هكتار، بما فيها "معبد أثينا" ذو الأعمدة وبوابات المدينة، ورفع بالرافعة 15 شجرة زيتون بالغة.',
-        'هذا ليس ظهور آيت بن حدو الأول على الشاشة. مثلت هذه القصبة العمرها 900 عام القدس، ويونكاي في Game of Thrones، ومدينة الحلبة في فيلمي Gladiator لريدلي سكوت، ومواقع من Lawrence of Arabia.',
+        'صُوِّرت سقطة طروادة في آيت بن حدو، قصبة مدرجة في اليونسكو من الطين والعمارة الترابية الحمراء على طريق القوافل التاريخي.',
+        'مثلت هذه القصبة العمرها 900 عام القدس، ويونكاي في Game of Thrones، ومدينة الحلبة في فيلمي Gladiator.',
       ],
       callout: {
         label: '📍 آيت بن حدو على الخريطة',
-        body: 'تقع على بعد 190 كم من مراكش (حوالي 3 ساعات بالسيارة) على الطريق نحو ورززات والصحراء. GPS: 31.0472°شمالاً، 7.1319°غرباً. شاهد على خرائط جوجل: maps.google.com/?q=Ait+Benhaddou',
+        body: 'تقع على بعد 190 كم من مراكش. GPS: 31.0472°شمالاً، 7.1319°غرباً. <a href="https://maps.google.com/?q=Ait+Benhaddou" data-btn="outline">افتح الخريطة ←</a>',
+      },
+    },
+    {
+      heading: 'زر أفق طروادة الحقيقي بنفسك',
+      paragraphs: [
+        'اختفى ديكور طروادة المؤقت، لكن أفق آيت بن حدو الحقيقي الذي بنى الإنتاج طروادة أمامه يبقى تماماً كما يظهر بالفيلم.',
+      ],
+      callout: {
+        label: '🎫 احجز هذه الجولة بالضبط',
+        body: `رحلة يوم خاصة موثقة من مراكش تغطي آيت بن حدو وأستوديوهات أطلس بجولة واحدة، مع استلام من الفندق: <a href="${GYG_LINK}" data-btn="primary">احجز جولة آيت بن حدو وورززات ←</a>`,
       },
     },
     {
       heading: 'الصويرة — حيث اكتُشف حصان طروادة',
-      paragraphs: [
-        'قدمت شواطئ الصويرة الأطلسية التي تعصف بها الرياح خلفية أحد اللحظات المحورية في الفيلم: اكتشاف حصان طروادة ومغادرة سفن أوديسيوس في رحلة العودة الطويلة إلى إيثاكا. لأسوار الصويرة المحصنة وضوئها الساحلي تاريخ سينمائي طويل خاص بها — صوّر أورسون ويلز مشاهد Othello على نفس الأسوار عام 1949.',
-      ],
+      paragraphs: ['قدمت شواطئ الصويرة الأطلسية خلفية اكتشاف حصان طروادة.'],
       callout: {
         label: '📍 الصويرة على الخريطة',
-        body: 'GPS: 31.5108°شمالاً، 9.7831°غرباً. شاهد على خرائط جوجل: maps.google.com/?q=Essaouira',
+        body: 'GPS: 31.5108°شمالاً، 9.7831°غرباً. <a href="https://maps.google.com/?q=Essaouira" data-btn="outline">افتح الخريطة ←</a>',
       },
     },
     {
-      heading: 'ورززات — قاعدة الإنتاج في أستوديوهات أطلس',
-      paragraphs: [
-        'على بعد عشرين دقيقة من آيت بن حدو تقع ورززات، مركز صناعة السينما المغربية منذ الثمانينيات وموطن أستوديوهات أطلس — أحد أكبر مجمعات الأستوديوهات في العالم. استخدم إنتاج الأوديسة ورززات كقاعدة لوجستية وتقنية للتصوير المغربي.',
-      ],
+      heading: 'ورززات — قاعدة الإنتاج',
+      paragraphs: ['على بعد عشرين دقيقة من آيت بن حدو تقع ورززات، موطن أستوديوهات أطلس.'],
       callout: {
-        label: '📍 ورززات / أستوديوهات أطلس على الخريطة',
-        body: 'GPS: 30.9401°شمالاً، 6.9696°غرباً. شاهد على خرائط جوجل: maps.google.com/?q=Atlas+Studios+Ouarzazate. ورززات على بعد 360 كم من الدار البيضاء (5–5:30 ساعة قيادة).',
+        label: '📍 ورززات على الخريطة',
+        body: 'GPS: 30.9401°شمالاً، 6.9696°غرباً. ورززات على بعد 360 كم من الدار البيضاء. <a href="https://maps.google.com/?q=Atlas+Studios+Ouarzazate" data-btn="outline">افتح الخريطة ←</a>',
       },
     },
     {
       heading: 'مراكش — داخليات القصور',
-      paragraphs: [
-        'قدمت مراكش وضواحيها مشاهد داخلية للفيلم، بما فيها داخلية قصر استُخدمت لمشاهد مرتبطة بمينيلاوس. استُخدمت أيضاً بلدة سوق تاهناوت، على بعد حوالي 20 كم جنوب مراكش، وسهول أكفاي الصخرية لمشاهد مناظر إضافية.',
-      ],
+      paragraphs: ['قدمت مراكش وضواحيها مشاهد داخلية للفيلم.'],
     },
     {
       heading: 'الداخلة — جزيرة أوجيجيا',
       paragraphs: [
-        'تحدد التقارير بعد الإصدار الكثيب الأبيض قرب الداخلة، على الساحل الأطلسي جنوب أكادير بعيداً، كموقع استُخدم لأوجيجيا — الجزيرة حيث تحتجز كاليبسو (شارليز ثيرون) أوديسيوس أسيراً لسبع سنوات. الكثيب الأبيض شريط رمل شاحب شهير بين راكبي الكايت أكثر منه موقعاً سياحياً تقليدياً.',
-        'يجدر التوضيح مباشرة: تقع الداخلة داخل الصحراء الغربية، إقليم متنازع على وضعه وتصنفه الأمم المتحدة كإقليم غير متمتع بالحكم الذاتي، ويديره المغرب منذ 1975. أثار اختيار موقع التصوير هذا انتقادات علنية من مهرجان الصحراء الغربية الدولي للأفلام أثناء التصوير.',
+        'يحدد التقارير الكثيب الأبيض قرب الداخلة كموقع أوجيجيا.',
+        'تقع الداخلة في الصحراء الغربية، إقليم متنازع عليه، يديره المغرب منذ 1975.',
       ],
     },
     {
-      heading: 'كل مواقع تصوير الأوديسة في المغرب — جدول ملخص',
-      paragraphs: ['مرجع سريع لكل موقع تصوير مغربي مؤكد، ودوره في الفيلم، ومسافته من الدار البيضاء ومراكش.'],
+      heading: 'كل المواقع — جدول ملخص',
+      paragraphs: ['مرجع سريع لكل موقع مؤكد.'],
       table: {
-        caption: 'مواقع تصوير الأوديسة في المغرب — الدليل الكامل 2026',
-        headers: ['الموقع', 'الدور في الفيلم', 'المسافة من مراكش', 'المسافة من الدار البيضاء', 'قابل للزيارة اليوم؟'],
+        caption: 'مواقع تصوير الأوديسة — الدليل الكامل 2026',
+        headers: ['الموقع', 'الدور', 'من مراكش', 'من الدار البيضاء', 'قابل للزيارة؟'],
         rows: [
-          ['آيت بن حدو', 'طروادة (المدينة المشتعلة)', '190 كم، ~3 ساعات', '~430 كم، ~5:30 ساعة', 'نعم — قصبة يونسكو، الديكور فُكِّك'],
-          ['الصويرة', 'شاطئ اكتشاف حصان طروادة', '190 كم، ~2:30–3 ساعات', '~350 كم، ~4:30 ساعة', 'نعم — مدينة عتيقة يونسكو كاملة'],
-          ['ورززات (أستوديوهات أطلس)', 'قاعدة الإنتاج', '210 كم، ~3:15 ساعة', '~450 كم، ~6 ساعات', 'نعم — جولات استوديو عامة متاحة'],
-          ['مراكش / تاهناوت / أكفاي', 'داخليات قصور، مناظر', '—', '~240 كم، ~2:30 ساعة', 'نعم — مراكش وصحراء أكفاي القريبة'],
-          ['الداخلة (الكثيب الأبيض)', 'جزيرة أوجيجيا', '~1,000 كم', '~1,200 كم', 'نعم لكن رحلة منفصلة متخصصة'],
+          ['آيت بن حدو', 'طروادة', '190 كم', '~430 كم', 'نعم'],
+          ['الصويرة', 'شاطئ الحصان', '190 كم', '~350 كم', 'نعم'],
+          ['ورززات', 'قاعدة الإنتاج', '210 كم', '~450 كم', 'نعم'],
+          ['مراكش', 'داخليات', '—', '~240 كم', 'نعم'],
+          ['الداخلة', 'أوجيجيا', '~1,000 كم', '~1,200 كم', 'رحلة منفصلة'],
         ],
       },
     },
     {
-      heading: 'كيف تزور مواقع الأوديسة — رحلة برية عملية',
-      paragraphs: ['الخبر السار للمسافرين: ثلاثة من المواقع المغربية الرئيسية الأربعة — آيت بن حدو وورززات ومراكش — تقع على نفس المسار الذي يقود فيه فريقنا بالفعل عملاء لجولات الصحراء المعتادة.'],
+      heading: 'كيف تزور — رحلة برية عملية',
+      paragraphs: ['ثلاثة من المواقع الأربعة تقع على المسار المعتاد للصحراء.'],
       table: {
-        caption: 'رحلة برية مقترحة لمواقع الأوديسة من الدار البيضاء 2026',
-        headers: ['اليوم', 'المسار', 'المسافة/الوقت', 'ما تراه'],
+        caption: 'رحلة برية مقترحة من الدار البيضاء 2026',
+        headers: ['اليوم', 'المسار', 'المسافة', 'ما تراه'],
         rows: [
-          ['اليوم 1', 'الدار البيضاء (CMN) ← مراكش', '240 كم، 2:30–3 ساعات', 'منطقة تصوير داخليات القصور، الاستقرار'],
-          ['اليوم 2', 'مراكش ← الصويرة (رحلة يوم) ← مراكش', '190 كم كل اتجاه، 2:30–3 ساعات', 'شاطئ حصان طروادة، مدينة الصويرة العتيقة'],
-          ['اليوم 3', 'مراكش ← ورززات ← آيت بن حدو', '210–240 كم، 3:15–3:30 ساعة', 'أستوديوهات أطلس، موقع تصوير طروادة'],
-          ['اليوم 4+', 'متابعة نحو الصحراء أو العودة لمراكش/الدار البيضاء', 'متغير', 'امتداد صحراوي اختياري عبر مرزوقة'],
+          ['اليوم 1', 'الدار البيضاء ← مراكش', '240 كم', 'منطقة التصوير'],
+          ['اليوم 2', 'مراكش ← الصويرة ← مراكش', '190 كم', 'شاطئ الحصان'],
+          ['اليوم 3', 'مراكش ← ورززات ← آيت بن حدو', '210-240 كم', 'أستوديوهات أطلس'],
+          ['اليوم 4+', 'الصحراء أو العودة', 'متغير', 'امتداد اختياري'],
         ],
       },
       callout: {
-        label: '🚗 ابنِ رحلتك البرية لمواقع الأوديسة',
-        body: 'جولاتنا الصحراوية تمر بالفعل عبر آيت بن حدو وورززات في الطريق لمرزوقة، ويمكننا بناء برنامج خاص يضيف الصويرة. استأجر سيارتك من مطار الدار البيضاء (CMN) — اقتصادية من MAD 250/يوم (23€)، داشيا دوستر 4x4 من MAD 350/يوم (32€) موصى بها. +212 634 276 534',
+        label: '🚗 ابنِ رحلتك البرية',
+        body: 'جولاتنا الصحراوية تمر بالفعل عبر آيت بن حدو وورززات. استأجر سيارتك من الدار البيضاء — من MAD 250/يوم. +212 634 276 534',
       },
     },
     {
       heading: 'أفضل وقت لنفس الضوء السينمائي',
-      paragraphs: [
-        'الضوء الذي جعل هذه المواقع تستحق التصوير موسمي. أكتوبر حتى أبريل يجلب أوضح وأكثر ضوء درامي عبر ممر آيت بن حدو-ورززات-الصحراء، مع درجات حرارة نهارية مريحة. الصويرة وجهة على مدار السنة فعلياً بفضل نسيمها الساحلي.',
-      ],
+      paragraphs: ['أكتوبر حتى أبريل يجلب أوضح ضوء عبر الممر.'],
     },
   ],
   faqs: [
-    {
-      question: 'أين صُوِّر فيلم الأوديسة في المغرب؟',
-      answer: 'صوّر كريستوفر نولان الأوديسة في خمسة مواقع مغربية مؤكدة: آيت بن حدو (مدينة طروادة المشتعلة)، شواطئ الصويرة الأطلسية (اكتشاف ومغادرة حصان طروادة)، أستوديوهات أطلس بورززات (القاعدة اللوجستية)، مراكش وتاهناوت (داخليات القصور والمناظر)، وكثيب الداخلة الأبيض (جزيرة أوجيجيا).',
-    },
-    {
-      question: 'هل يمكن زيارة مواقع تصوير الأوديسة؟',
-      answer: 'نعم — آيت بن حدو والصويرة وورززات ومراكش كلها قابلة للزيارة بسهولة وتقع على أحد المسارات الكلاسيكية بالمغرب. فُكِّك ديكور طروادة المؤقت، لكن قصبة آيت بن حدو الحقيقية المدرجة في اليونسكو تبقى تماماً كما تظهر في خلفية الفيلم.',
-    },
-    {
-      question: 'هل آيت بن حدو فعلاً طروادة في الأوديسة؟',
-      answer: 'بنى الإنتاج مدينة طروادة المشتعلة أمام أفق آيت بن حدو الحقيقي، مضيفاً أكثر من 60 هيكلاً مؤقتاً على مساحة 2.5 هكتار. القصبة نفسها — موقع يونسكو عمره 900 عام — هي نفسها الظاهرة في الفيلم.',
-    },
-    {
-      question: 'كم تبعد آيت بن حدو عن مراكش؟',
-      answer: 'آيت بن حدو على بعد حوالي 190 كم من مراكش، حوالي 3 ساعات قيادة عبر ورززات. تقع على طريق القوافل التاريخي بين مراكش والصحراء.',
-    },
-    {
-      question: 'ما المثير للجدل بخصوص الداخلة في الأوديسة؟',
-      answer: 'تقع الداخلة في الصحراء الغربية، إقليم تصنفه الأمم المتحدة كغير متمتع بالحكم الذاتي ومتنازع على سيادته، ويديره المغرب منذ 1975. انتقد مهرجان الصحراء الغربية الدولي للأفلام علناً الإنتاج للتصوير هناك.',
-    },
+    { question: 'أين صُوِّر فيلم الأوديسة في المغرب؟', answer: 'خمسة مواقع مؤكدة: آيت بن حدو (طروادة)، الصويرة (حصان طروادة)، ورززات (قاعدة الإنتاج)، مراكش (داخليات)، الداخلة (أوجيجيا).' },
+    { question: 'هل يمكن زيارة المواقع؟', answer: 'نعم — كلها قابلة للزيارة بسهولة على طريق كلاسيكي بالمغرب.' },
+    { question: 'هل توجد جولة مرشدة لآيت بن حدو وورززات؟', answer: 'نعم — رحلات يوم خاصة موثقة تنطلق يومياً من مراكش، تغطي القصبة والأستوديوهات بجولة واحدة مع استلام من الفندق.' },
+    { question: 'هل آيت بن حدو فعلاً طروادة؟', answer: 'بنى الإنتاج طروادة أمام أفق آيت بن حدو الحقيقي.' },
+    { question: 'ما المثير للجدل بخصوص الداخلة؟', answer: 'تقع في الصحراء الغربية، إقليم متنازع على سيادته.' },
   ],
   peopleAlsoAsk: [
-    { question: 'كم من المال حقق فيلم الأوديسة؟', answer: 'افتتح فيلم الأوديسة بإيرادات 264.1 مليون دولار عالمياً في يوليو 2026 — أكبر افتتاح عالمي لكريستوفر نولان، متجاوزاً 249 مليون دولار لـThe Dark Knight Rises عام 2012.' },
-    { question: 'ما الأفلام الأخرى التي صُوِّرت في آيت بن حدو؟', answer: 'ظهرت آيت بن حدو في العديد من الإنتاجات الكبرى منذ الستينيات، بما فيها Lawrence of Arabia وكلا فيلمي Gladiator لريدلي سكوت وThe Mummy وKingdom of Heaven وGame of Thrones (كيونكاي)، والآن الأوديسة (كطروادة).' },
-    { question: 'هل تستحق الصويرة الزيارة بعيداً عن ارتباطها بالفيلم؟', answer: 'نعم — بعيداً عن أي تاريخ سينمائي، الصويرة مدينة عتيقة مدرجة في اليونسكو معروفة بأسوارها من القرن 18 وقواربها الزرقاء ورياحها الأطلسية القوية المثالية لركوب الأمواج الشراعي ومأكولاتها البحرية الطازجة.' },
+    { question: 'كم من المال حقق الفيلم؟', answer: '264.1 مليون دولار عالمياً في يوليو 2026.' },
+    { question: 'ما الأفلام الأخرى المصورة بآيت بن حدو؟', answer: 'Lawrence of Arabia وGladiator وGame of Thrones والآن الأوديسة.' },
+    { question: 'هل تستحق الصويرة الزيارة بعيداً عن الفيلم؟', answer: 'نعم — مدينة عتيقة يونسكو بأسوار وقوارب زرقاء ورياح أطلسية.' },
   ],
   relatedDestinations: ['marrakech', 'casablanca'],
-  relatedPosts: ['dalil-safar-sahara-maghrib', 'dalil-safar-marakish', 'dalil-safar-dar-al-bayda', 'min-dar-al-bayda-ila-agadir-bis-sayyara', 'dalil-matar-dar-al-bayda-cmn'],
+  relatedPosts: ['dalil-safar-sahara-maghrib', 'dalil-safar-marakish', 'dalil-safar-dar-al-bayda', 'dalil-safar-warzazat', 'dalil-matar-dar-al-bayda-cmn'],
   alternates: ALTERNATES,
 };
 

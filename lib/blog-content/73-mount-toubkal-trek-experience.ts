@@ -13,7 +13,7 @@ const EN: BlogPost = {
   metaTitle: 'Mount Toubkal Trek: What to Really Expect on the 2-Day Climb (2026)',
   metaDescription: 'What is the Mount Toubkal 2-day trek actually like? Real day-by-day breakdown, what previous trekkers say about the guides, refuge, food, and summit push, plus honest tips on what to pack and how hard it really is.',
   title: 'Mount Toubkal Trek: What to Really Expect on the 2-Day Climb to North Africa\'s Highest Peak',
-  description: 'Quick answer: the standard Mount Toubkal trek is 2 days, 1 night — a moderate but genuinely demanding hike from Imlil to a mountain refuge on day one, followed by a pre-dawn summit push to 4,167m and a long descent back to Imlil on day two. It requires no technical climbing, but altitude, an early 4am wake-up, and a final 500m of loose scree make it harder than it looks on paper. This guide walks through what actually happens each day, based on what past trekkers consistently report, what to pack, and what a licensed guide adds that solo trekking can't.',
+  description: 'Quick answer: the standard Mount Toubkal trek is 2 days, 1 night — a moderate but genuinely demanding hike from Imlil to a mountain refuge on day one, followed by a pre-dawn summit push to 4,167m and a long descent back to Imlil on day two. It requires no technical climbing, but altitude, an early 4am wake-up, and a final 500m of loose scree make it harder than it looks on paper. This guide walks through what actually happens each day, based on what past trekkers consistently report, what to pack, and what a licensed guide adds that solo trekking can\'t.',
   keyword: 'mount toubkal trek',
   coverImage: COVER,
   coverAlt: 'Mount Toubkal trek 2026 — trekkers ascending the summit ridge at sunrise with the High Atlas Mountains stretching below',
@@ -123,7 +123,6 @@ const EN: BlogPost = {
       question: 'Do I need mountaineering experience for Mount Toubkal?',
       answer: 'No — the standard route requires no technical climbing skills for most of the year. What matters more is reasonable physical fitness and mental preparedness for a genuinely demanding day at altitude, not prior mountaineering background.',
     },
-  ],
     {
       question: 'When is the best time to climb Mount Toubkal?',
       answer: 'May, June and September are widely considered the best months for the standard non-technical route, offering mild temperatures and clearer trails. July-August is warmer but busier. December through March requires winter mountaineering gear (crampons, ice axe) due to snow and ice above the refuge.',
@@ -236,7 +235,6 @@ const FR: BlogPost = {
     { question: 'Que dois-je emporter pour le trek Toubkal ?', answer: 'Bouchons d\'oreille et masque de sommeil, votre propre papier toilette, argent liquide pour pourboires, couches chaudes, chaussures de randonnée solides.' },
     { question: 'À quelle heure démarre la poussée sommet ?', answer: 'Vers 4h, pour atteindre le sommet au lever du soleil et permettre assez de lumière du jour pour la descente complète.' },
     { question: 'Ai-je besoin d\'expérience d\'alpinisme pour le Toubkal ?', answer: 'Non — l\'itinéraire standard ne nécessite aucune compétence d\'escalade technique la majeure partie de l\'année.' },
-  ],
     {
       question: 'Quelle est la meilleure période pour gravir le Mont Toubkal ?',
       answer: 'Mai, juin et septembre sont largement considérés comme les meilleurs mois pour l\'itinéraire standard non technique, offrant températures douces et sentiers plus dégagés. Décembre à mars nécessite un équipement d\'alpinisme hivernal (crampons, piolet) en raison de la neige et glace au-dessus du refuge.',
@@ -347,7 +345,6 @@ const AR: BlogPost = {
     { question: 'ماذا أحزم لرحلة توبقال؟', answer: 'سدادات أذن وقناع نوم، ورق مرحاض خاص، نقود للإكراميات، طبقات دافئة، أحذية مشي متينة.' },
     { question: 'في أي وقت يبدأ صعود القمة؟', answer: 'حوالي الساعة 4 فجراً، للوصول للقمة عند الشروق والسماح بضوء نهار كافٍ للنزول الكامل.' },
     { question: 'هل أحتاج خبرة تسلق جبال لتوبقال؟', answer: 'لا — المسار القياسي لا يتطلب مهارات تسلق تقنية معظم السنة.' },
-  ],
     {
       question: 'ما أفضل وقت لتسلق جبل توبقال؟',
       answer: 'مايو ويونيو وسبتمبر تُعتبر عموماً أفضل الأشهر للمسار القياسي غير التقني، بحرارة معتدلة ومسارات أوضح. ديسمبر حتى مارس يتطلب معدات تسلق جبال شتوي (مسامير ثلجية وفأس ثلج) بسبب الثلج والجليد فوق الملجأ.',

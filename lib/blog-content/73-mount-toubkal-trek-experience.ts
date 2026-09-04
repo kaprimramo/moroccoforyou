@@ -10,10 +10,10 @@ const GYG_LINK = 'https://www.getyourguide.fr/atlas-l7918/mont-toubkal-ascent-ex
 const EN: BlogPost = {
   slug: SLUG_EN,
   lang: 'en',
-    metaTitle: 'Mount Toubkal Trek: What to Really Expect on the 2-Day Climb (2026)',
+  metaTitle: 'Mount Toubkal Trek: What to Really Expect on the 2-Day Climb (2026)',
   metaDescription: 'What is the Mount Toubkal 2-day trek actually like? Real day-by-day breakdown, what previous trekkers say about the guides, refuge, food, and summit push, plus honest tips on what to pack and how hard it really is.',
   title: 'Mount Toubkal Trek: What to Really Expect on the 2-Day Climb to North Africa\'s Highest Peak',
-  description: 'Quick answer: the standard Mount Toubkal trek is 2 days, 1 night — a moderate but genuinely demanding hike from Imlil to a mountain refuge on day one, followed by a pre-dawn summit push to 4,167m and a long descent back to Imlil on day two. It requires no technical climbing, but altitude, an early 4am wake-up, and a final 500m of loose scree make it harder than it looks on paper. This guide walks through what actually happens each day, based on what past trekkers consistently report, what to pack, and what a licensed guide adds that solo trekking can\'t.',
+  description: 'Quick answer: the standard Mount Toubkal trek is 2 days, 1 night — a moderate but genuinely demanding hike from Imlil to a mountain refuge on day one, followed by a pre-dawn summit push to 4,167m and a long descent back to Imlil on day two. It requires no technical climbing, but altitude, an early 4am wake-up, and a final 500m of loose scree make it harder than it looks on paper. This guide walks through what actually happens each day, based on what past trekkers consistently report, what to pack, and what a licensed guide adds that solo trekking can't.',
   keyword: 'mount toubkal trek',
   coverImage: COVER,
   coverAlt: 'Mount Toubkal trek 2026 — trekkers ascending the summit ridge at sunrise with the High Atlas Mountains stretching below',
@@ -69,6 +69,23 @@ const EN: BlogPost = {
       ],
     },
     {
+      heading: 'Best Time to Climb Mount Toubkal',
+      paragraphs: [
+        'The summit route is open year-round, but conditions and difficulty shift dramatically by season, which genuinely affects how hard the trek feels day to day.',
+      ],
+      table: {
+        caption: 'Best time to climb Mount Toubkal by season 2026',
+        headers: ['Period', 'Conditions', 'Verdict'],
+        rows: [
+          ['May–June', 'Snow largely melted, mild temperatures, clear trails', 'Widely considered the best window for the standard non-technical route'],
+          ['September', 'Stable weather, fewer crowds than spring', 'Another top-rated month for a summit attempt'],
+          ['July–August', 'Warm, generally clear, but busier trail and refuge', 'Doable, though higher demand for guides during peak season'],
+          ['October–November', 'Cooling temperatures, first snow possible at altitude', 'Still feasible for most trekkers, pack for colder nights'],
+          ['December–March', 'Full snow and ice above the refuge', 'Winter mountaineering only — crampons, ice axe and cold-weather experience required'],
+        ],
+      },
+    },
+    {
       heading: 'How Hard Is It, Really?',
       paragraphs: [
         'This is a non-technical trek — no ropes, no climbing gear, no prior mountaineering experience required for most of the year. What makes it hard is altitude (which affects everyone differently above 3,000m), a genuinely early start on summit day, and a final push over loose, unstable terrain that demands sustained effort rather than technical skill. Reasonable fitness matters more than experience — several reviewers with limited hiking background completed it successfully, guided at a pace matched to the group.',
@@ -105,6 +122,15 @@ const EN: BlogPost = {
     {
       question: 'Do I need mountaineering experience for Mount Toubkal?',
       answer: 'No — the standard route requires no technical climbing skills for most of the year. What matters more is reasonable physical fitness and mental preparedness for a genuinely demanding day at altitude, not prior mountaineering background.',
+    },
+  ],
+    {
+      question: 'When is the best time to climb Mount Toubkal?',
+      answer: 'May, June and September are widely considered the best months for the standard non-technical route, offering mild temperatures and clearer trails. July-August is warmer but busier. December through March requires winter mountaineering gear (crampons, ice axe) due to snow and ice above the refuge.',
+    },
+    {
+      question: 'What is Kasbah du Toubkal?',
+      answer: 'Kasbah du Toubkal is a well-known lodge in Imlil, founded by Englishman Mike McHugo, whose community-focused work helped put the village on the map for international trekkers. It sits near the start of the standard Toubkal trekking route and is often mentioned alongside the trek itself in traveler research.',
     },
   ],
   peopleAlsoAsk: [
@@ -175,6 +201,21 @@ const FR: BlogPost = {
       ],
     },
     {
+      heading: 'Meilleure Période pour Gravir le Mont Toubkal',
+      paragraphs: ['L\'itinéraire sommet est ouvert toute l\'année, mais les conditions et la difficulté varient dramatiquement selon la saison.'],
+      table: {
+        caption: 'Meilleure période pour gravir le Mont Toubkal par saison 2026',
+        headers: ['Période', 'Conditions', 'Verdict'],
+        rows: [
+          ['Mai–Juin', 'Neige largement fondue, températures douces, sentiers dégagés', 'Largement considérée comme la meilleure fenêtre pour l\'itinéraire standard non technique'],
+          ['Septembre', 'Météo stable, moins de foule qu\'au printemps', 'Autre mois top pour une tentative sommet'],
+          ['Juillet–Août', 'Chaud, généralement dégagé, mais sentier et refuge plus fréquentés', 'Faisable, mais demande plus élevée de guides en haute saison'],
+          ['Octobre–Novembre', 'Températures en baisse, première neige possible en altitude', 'Encore faisable pour la plupart, prévoir des nuits plus froides'],
+          ['Décembre–Mars', 'Neige et glace complètes au-dessus du refuge', 'Alpinisme hivernal uniquement — crampons, piolet et expérience grand froid requis'],
+        ],
+      },
+    },
+    {
       heading: 'C\'est Difficile à Quel Point, Vraiment ?',
       paragraphs: [
         'C\'est un trek non technique — pas de cordes, pas de matériel d\'escalade, aucune expérience d\'alpinisme préalable requise la majeure partie de l\'année. Ce qui le rend difficile, c\'est l\'altitude, un départ vraiment matinal le jour du sommet, et une poussée finale sur terrain instable qui demande un effort soutenu plutôt qu\'une compétence technique.',
@@ -195,6 +236,15 @@ const FR: BlogPost = {
     { question: 'Que dois-je emporter pour le trek Toubkal ?', answer: 'Bouchons d\'oreille et masque de sommeil, votre propre papier toilette, argent liquide pour pourboires, couches chaudes, chaussures de randonnée solides.' },
     { question: 'À quelle heure démarre la poussée sommet ?', answer: 'Vers 4h, pour atteindre le sommet au lever du soleil et permettre assez de lumière du jour pour la descente complète.' },
     { question: 'Ai-je besoin d\'expérience d\'alpinisme pour le Toubkal ?', answer: 'Non — l\'itinéraire standard ne nécessite aucune compétence d\'escalade technique la majeure partie de l\'année.' },
+  ],
+    {
+      question: 'Quelle est la meilleure période pour gravir le Mont Toubkal ?',
+      answer: 'Mai, juin et septembre sont largement considérés comme les meilleurs mois pour l\'itinéraire standard non technique, offrant températures douces et sentiers plus dégagés. Décembre à mars nécessite un équipement d\'alpinisme hivernal (crampons, piolet) en raison de la neige et glace au-dessus du refuge.',
+    },
+    {
+      question: 'Qu\'est-ce que la Kasbah du Toubkal ?',
+      answer: 'La Kasbah du Toubkal est un lodge bien connu à Imlil, fondé par l\'Anglais Mike McHugo, dont le travail communautaire a aidé à mettre le village sur la carte des trekkeurs internationaux. Elle se situe près du départ de l\'itinéraire de trek standard du Toubkal.',
+    },
   ],
   peopleAlsoAsk: [
     { question: 'Combien de personnes dans un groupe de trek Toubkal ?', answer: 'Varie significativement selon l\'opérateur — certains circuits sont vraiment privés, d\'autres combinent plusieurs réservations en un groupe pouvant atteindre 10+ personnes.' },
@@ -264,6 +314,21 @@ const AR: BlogPost = {
       ],
     },
     {
+      heading: 'أفضل وقت لتسلق جبل توبقال',
+      paragraphs: ['مسار القمة مفتوح طوال السنة، لكن الظروف والصعوبة تتغير بشكل كبير حسب الموسم.'],
+      table: {
+        caption: 'أفضل وقت لتسلق جبل توبقال حسب الموسم 2026',
+        headers: ['الفترة', 'الظروف', 'الحكم'],
+        rows: [
+          ['مايو–يونيو', 'الثلج ذاب غالباً، حرارة معتدلة، مسارات واضحة', 'يُعتبر عموماً أفضل نافذة للمسار القياسي غير التقني'],
+          ['سبتمبر', 'طقس مستقر، زحام أقل من الربيع', 'شهر جيد آخر لمحاولة القمة'],
+          ['يوليو–أغسطس', 'دافئ، عموماً واضح، لكن مسار وملجأ أكثر ازدحاماً', 'ممكن، لكن طلب أعلى على المرشدين بذروة الموسم'],
+          ['أكتوبر–نوفمبر', 'حرارة منخفضة، أول ثلج ممكن بالارتفاع', 'لا يزال ممكناً لمعظم المتسلقين'],
+          ['ديسمبر–مارس', 'ثلج وجليد كامل فوق الملجأ', 'تسلق جبال شتوي فقط — مسامير ثلجية وفأس ثلج وخبرة برد قارس مطلوبة'],
+        ],
+      },
+    },
+    {
       heading: 'كم هي صعبة فعلاً؟',
       paragraphs: ['هذه رحلة غير تقنية — بلا حبال أو معدات تسلق أو خبرة تسلق جبال مسبقة مطلوبة معظم السنة.'],
     },
@@ -282,6 +347,15 @@ const AR: BlogPost = {
     { question: 'ماذا أحزم لرحلة توبقال؟', answer: 'سدادات أذن وقناع نوم، ورق مرحاض خاص، نقود للإكراميات، طبقات دافئة، أحذية مشي متينة.' },
     { question: 'في أي وقت يبدأ صعود القمة؟', answer: 'حوالي الساعة 4 فجراً، للوصول للقمة عند الشروق والسماح بضوء نهار كافٍ للنزول الكامل.' },
     { question: 'هل أحتاج خبرة تسلق جبال لتوبقال؟', answer: 'لا — المسار القياسي لا يتطلب مهارات تسلق تقنية معظم السنة.' },
+  ],
+    {
+      question: 'ما أفضل وقت لتسلق جبل توبقال؟',
+      answer: 'مايو ويونيو وسبتمبر تُعتبر عموماً أفضل الأشهر للمسار القياسي غير التقني، بحرارة معتدلة ومسارات أوضح. ديسمبر حتى مارس يتطلب معدات تسلق جبال شتوي (مسامير ثلجية وفأس ثلج) بسبب الثلج والجليد فوق الملجأ.',
+    },
+    {
+      question: 'ما هي قصبة توبقال؟',
+      answer: 'قصبة توبقال نُزل معروف بإمليل، أسسه الإنجليزي مايك ماكهوغو، الذي ساعد عمله المجتمعي بوضع القرية على خريطة المتسلقين الدوليين. تقع قرب انطلاق مسار تسلق توبقال القياسي.',
+    },
   ],
   peopleAlsoAsk: [
     { question: 'كم عدد الأشخاص بمجموعة رحلة توبقال؟', answer: 'يتفاوت كثيراً حسب المشغل — بعض الجولات خاصة فعلاً، أخرى تجمع حجوزات متعددة بمجموعة تصل +10.' },

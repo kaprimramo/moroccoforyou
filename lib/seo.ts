@@ -50,12 +50,24 @@ export function buildMetadata({
         'x-default': languages['x-default'] ?? languages['en'] ?? canonical,
       },
     },
+    // Legacy geotagging tags. Search engines ignore them (Google has said so
+    // explicitly, and Bing doesn't document them), so they describe the
+    // subject rather than target an audience: MoroccoForYou sells Morocco, to
+    // travellers from anywhere. Real international targeting is done by the
+    // hreflang annotations above — language-only codes (`en`, not `en-US`), so
+    // the English pages are offered to English speakers in every country —
+    // plus the generic .com domain and the LocalBusiness JSON-LD.
+    //
+    // Do not reintroduce a per-market tag here. There was a `target-market`
+    // (USA / Europe / GCC) and a matching `geo.region` (US / EU / AE) on all
+    // 269 pages; both were inert, and both claimed a single-country audience
+    // this business does not have. `geo.region` is the ISO code of the region
+    // the content is *about*, hence MA.
     other: {
-      'geo.region': locale === 'ar' ? 'AE' : locale === 'fr' ? 'EU' : 'US',
+      'geo.region': 'MA',
       'geo.placename': 'Morocco',
       'geo.position': '33.5731;-7.5898',
       ICBM: '33.5731, -7.5898',
-      'target-market': locale === 'ar' ? 'GCC' : locale === 'fr' ? 'Europe' : 'USA',
       'content-language': locale,
     },
     openGraph: {

@@ -72,3 +72,5 @@ import './67-best-surf-camps-morocco';
 import './68-where-to-stay-tangier';
 import './69-where-to-stay-casablanca';
 import './70-best-tours-from-casablanca';
+import './72-imlil-atlas-mountains-travel-guide';
+import './73-mount-toubkal-trek-experience';

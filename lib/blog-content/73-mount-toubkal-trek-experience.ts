@@ -10,10 +10,10 @@ const GYG_LINK = 'https://www.getyourguide.fr/atlas-l7918/mont-toubkal-ascent-ex
 const EN: BlogPost = {
   slug: SLUG_EN,
   lang: 'en',
-  metaTitle: 'Mount Toubkal Trek: What to Really Expect on the 2-Day Climb (2026)',
+    metaTitle: 'Mount Toubkal Trek: What to Really Expect on the 2-Day Climb (2026)',
   metaDescription: 'What is the Mount Toubkal 2-day trek actually like? Real day-by-day breakdown, what previous trekkers say about the guides, refuge, food, and summit push, plus honest tips on what to pack and how hard it really is.',
   title: 'Mount Toubkal Trek: What to Really Expect on the 2-Day Climb to North Africa\'s Highest Peak',
-  description: 'Quick answer: the standard Mount Toubkal trek is 2 days, 1 night — a moderate but genuinely demanding hike from Imlil to a mountain refuge on day one, followed by a pre-dawn summit push to 4,167m and a long descent back to Imlil on day two. It requires no technical climbing, but altitude, an early 4am wake-up, and a final 500m of loose scree make it harder than it looks on paper. This guide walks through what actually happens each day, based on what past trekkers consistently report, what to pack, and what a licensed guide adds that solo trekking can't.',
+  description: 'Quick answer: the standard Mount Toubkal trek is 2 days, 1 night — a moderate but genuinely demanding hike from Imlil to a mountain refuge on day one, followed by a pre-dawn summit push to 4,167m and a long descent back to Imlil on day two. It requires no technical climbing, but altitude, an early 4am wake-up, and a final 500m of loose scree make it harder than it looks on paper. This guide walks through what actually happens each day, based on what past trekkers consistently report, what to pack, and what a licensed guide adds that solo trekking can\'t.',
   keyword: 'mount toubkal trek',
   coverImage: COVER,
   coverAlt: 'Mount Toubkal trek 2026 — trekkers ascending the summit ridge at sunrise with the High Atlas Mountains stretching below',

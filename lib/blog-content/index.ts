@@ -75,4 +75,5 @@ import './70-best-tours-from-casablanca';
 import './71-marrakech-hot-air-balloon';
 import './72-imlil-atlas-mountains-travel-guide';
 import './73-mount-toubkal-trek-experience';
+import './74-rabat-airport-cars-comparison';
 import './75-casablanca-airport-cars-comparison';

@@ -80,3 +80,4 @@ import './75-casablanca-airport-cars-comparison';
 import './76-casablanca-meet-and-greet';
 import './77-casablanca-car-rental-agencies-compared';
 import './78-marrakech-hammam-massage';
+import './79-long-term-car-rental-casablanca';
